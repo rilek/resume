@@ -6,7 +6,9 @@ module.exports = {
   pathPrefix: "/resume",
   plugins: [
     "gatsby-plugin-emotion",
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-tailwindcss",
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-filesystem",

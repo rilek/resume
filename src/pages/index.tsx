@@ -70,7 +70,7 @@ const Separator = styled.span`
 `;
 
 const Section = styled.section`
-  :not(:first-child) {
+  :not(:first-of-type) {
     ${tw`border-t-8`}
   }
 

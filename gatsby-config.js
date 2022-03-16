@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: `Rafał Ileczko`,
-    siteUrl: `https://rafalileczko.com`,
+    siteUrl: `https://rileczko.com`,
   },
   pathPrefix: "/resume",
   plugins: [
     "gatsby-plugin-emotion",
-    "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-tailwindcss",
     "gatsby-plugin-postcss",
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {

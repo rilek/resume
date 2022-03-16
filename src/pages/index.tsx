@@ -1,110 +1,27 @@
-import styled from "@emotion/styled";
+import { graphql, useStaticQuery } from "gatsby";
 import { map } from "lodash";
-import * as React from "react";
-import tw from "twin.macro";
+import React from "react";
+import {
+  BulletList,
+  BulletListItem,
+  List,
+  ListItem,
+  ListItemContent,
+  ListItemTitle,
+  Section,
+  SectionContent,
+  SectionHeader,
+  SectionTitle,
+  Separator,
+  Subsection,
+  SubsectionContent,
+  SubsectionDate,
+  SubsectionHeader,
+  SubsectionTitle,
+} from "../components/Common";
+import { Layout } from "../components/Layout";
 
-const Wrapper = styled.main`
-  ${tw`max-w-6xl mx-24 py-12`}
-
-  a {
-    ${tw`text-blue-700`}
-    transition: color 0.15s;
-    &:hover {
-      ${tw`text-blue-500`}
-    }
-  }
-
-  @media print {
-    margin: 0;
-    padding: 0;
-  }
-`;
-
-const Grid = styled.div`
-  ${tw`grid grid-cols-2 grid-rows-2 gap-x-12`}
-  grid-template-columns: 250px auto;
-  grid-template-rows: auto;
-
-  @media print {
-    grid-template-columns: 200px auto;
-  }
-`;
-
-const GridItem = styled.div<{ top?: boolean }>`
-  ${({ top }) => top && tw`border-b-8 py-4 align-self[flex-end]`}
-`;
-
-const Header = styled.header``;
-const Title = styled.h1`
-  ${tw`text-4xl font-black text-gray-900`}
-`;
-const Subtitle = styled.h2`
-  ${tw`text-xl text-gray-500 `}
-`;
-
-const List = styled.ul`
-  ${tw`py-3`}
-`;
-const ListItem = styled.li`
-  ${tw`py-3`}
-`;
-const ListItemTitle = styled.h3`
-  ${tw`mb-1`}
-`;
-const ListItemContent = styled.span`
-  ${tw`text-sm`}
-`;
-
-const BulletList = styled.ul`
-  ${tw`list-disc`}
-`;
-const BulletListItem = styled.li`
-  ${tw`ml-4`}
-`;
-
-const Separator = styled.span`
-  ${tw`text-gray-300`}
-  ::before {
-    content: "|";
-  }
-`;
-
-const Section = styled.section`
-  :not(:first-of-type) {
-    ${tw`border-t-8`}
-  }
-
-  page-break-inside: avoid;
-`;
-const SectionHeader = styled.header`
-  ${tw`py-4`}
-
-  page-break-inside: avoid;
-`;
-const SectionTitle = styled.h3`
-  ${tw`font-light text-3xl`}
-`;
-const SectionContent = styled.div``;
-
-const Subsection = styled.section`
-  ${tw`border-t-2`}
-
-  page-break-inside: avoid;
-`;
-const SubsectionHeader = styled.header`
-  ${tw`py-2`}
-`;
-const SubsectionTitle = styled.h3`
-  ${tw`text-lg font-medium`}
-`;
-const SubsectionDate = styled.h4`
-  ${tw`text-gray-500`}
-`;
-const SubsectionContent = styled.p`
-  ${tw`pb-4`}
-`;
-
-const featuresList: Record<"title" | "content", string | JSX.Element>[] = [
+const personalData: Record<"title" | "content", string | JSX.Element>[] = [
   {
     title: "Adres email",
     content: <a href="mailto:rileczko@gmail.com">rileczko@gmail.com</a>,
@@ -117,11 +34,19 @@ const featuresList: Record<"title" | "content", string | JSX.Element>[] = [
     title: "Linki",
     content: (
       <div>
-        <a href="https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/">
+        <a
+          href="https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/"
+          data-short-url="bit.ly/3JiTv61"
+        >
           LinkedIn
         </a>
         <br />
-        <a href="https://github.com/rilek">Github</a>
+        <a
+          href="https://github.com/rilek"
+          data-short-url="bit.ly/3q7b2Xd"
+        >
+          Github
+        </a>
       </div>
     ),
   },
@@ -168,7 +93,8 @@ const sections: SectionType[] = [
               Projektowanie architektury rozwiązań chmurowych;
             </BulletListItem>
             <BulletListItem>
-              Wsparcie merytoryczne z perspektywy technologii podczas planowania strategii biznesowych;
+              Wsparcie merytoryczne z perspektywy technologii podczas planowania
+              strategii biznesowych;
             </BulletListItem>
             <BulletListItem>
               Podejmowanie kluczowych decyzji technologicznych;
@@ -176,9 +102,7 @@ const sections: SectionType[] = [
             <BulletListItem>
               Mentoring młodszych stażem programistów;
             </BulletListItem>
-            <BulletListItem>
-              Zarządzanie projektem IT.
-            </BulletListItem>
+            <BulletListItem>Zarządzanie projektem IT.</BulletListItem>
           </BulletList>
         ),
       },
@@ -286,67 +210,61 @@ const sections: SectionType[] = [
       {
         title: "Tworzenie aplikacji biznesowych",
         content:
-          "ReactJS, Rum, React Native, Node.JS, Electron, .Net Core, MSSQL, PostgreSQL, ElasticSearch, Apache Kafka, Storybook",
+          "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby",
       },
     ],
   },
 ];
 
+const title = "Rafał Ileczko";
+
+const subtitle = (
+  <>
+    Lider zespołu <Separator /> Programista
+  </>
+);
+
+const sidebar = (
+  <List>
+    <ul>
+      {map(personalData, ({ title, content }, i) => (
+        <li key={i}>
+          <h3>{title}</h3>
+          <span>{content}</span>
+        </li>
+      ))}
+    </ul>
+  </List>
+);
+
 // markup
-const IndexPage = () => {
+const IndexPage = (props: any) => {
   return (
-    <Wrapper>
-      <Grid>
-        <GridItem tw="grid-column[1/2] grid-row[1]" top>
-          <Header>
-            <Title>Rafał Ileczko</Title>
-          </Header>
-        </GridItem>
-        <GridItem tw="grid-row[1] grid-column[2]" top>
-          <Subtitle>
-            Architekt systemów IT <Separator /> Programista <Separator />{" "}
-            Inżynier danych
-          </Subtitle>
-        </GridItem>
-        <GridItem tw="grid-row[2] grid-column[1]">
-          <List>
-            {map(featuresList, ({ title, content }, i) => (
-              <ListItem key={i}>
-                <ListItemTitle>{title}</ListItemTitle>
-                <ListItemContent>{content}</ListItemContent>
-              </ListItem>
+    <Layout title={title} subtitle={subtitle} sidebar={sidebar}>
+      {map(sections, ({ title, subsections }, i) => (
+        <Section key={i}>
+          <SectionHeader>
+            <SectionTitle id={title}>{title}</SectionTitle>
+          </SectionHeader>
+          <SectionContent>
+            {map(subsections, ({ title, company, content, date }, i) => (
+              <Subsection key={i}>
+                <SubsectionHeader>
+                  <SubsectionTitle>{title}</SubsectionTitle>
+                  {(date || company) && (
+                    <SubsectionDate>
+                      {company ? `${company + (date ? " · " : "")}` : ""}
+                      {date}
+                    </SubsectionDate>
+                  )}
+                </SubsectionHeader>
+                {content && <SubsectionContent>{content}</SubsectionContent>}
+              </Subsection>
             ))}
-          </List>
-        </GridItem>
-        <GridItem tw="grid-row[2] grid-column[2]">
-          {map(sections, ({ title, subsections }) => (
-            <Section>
-              <SectionHeader>
-                <SectionTitle>{title}</SectionTitle>
-              </SectionHeader>
-              <SectionContent>
-                {map(subsections, ({ title, company, content, date }, i) => (
-                  <Subsection>
-                    <SubsectionHeader>
-                      <SubsectionTitle>{title}</SubsectionTitle>
-                      {(date || company) && (
-                        <SubsectionDate>
-                          {company ? `${company + (date ? " · " : "")}` : ""}
-                          {date}
-                        </SubsectionDate>
-                      )}
-                    </SubsectionHeader>
-                    {content && (
-                      <SubsectionContent>{content}</SubsectionContent>
-                    )}
-                  </Subsection>
-                ))}
-              </SectionContent>
-            </Section>
-          ))}
-        </GridItem>
-      </Grid>
-    </Wrapper>
+          </SectionContent>
+        </Section>
+      ))}
+    </Layout>
   );
 };
 

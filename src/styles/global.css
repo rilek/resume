@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@page {
+  size: A4;
+  margin: 16pt 24pt;
+}
+
 @media print {
   html,
   body {
-    font-size: 12px;
+    width: 210mm;
+    height: 297mm;
+    font-size: 12pt;
   }
 }

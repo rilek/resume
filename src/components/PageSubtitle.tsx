@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
-import tw from "twin.macro";
+import tw, { styled } from "twin.macro";
 import { GridItem } from "./Grid";
 
-const Subtitle = tw.h2`text-xl text-gray-500 dark:text-gray-400 print:text-base`;
+const Subtitle = styled.h2`
+  ${tw`text-xl text-gray-500 dark:text-gray-400 print:text-base`}
+`;
 
 interface Props {
   className?: string;

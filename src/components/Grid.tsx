@@ -10,6 +10,10 @@ export const Grid = styled.div`
   }
 `;
 
-export const GridItem = styled.div<{ top?: boolean }>`
-  ${({ top }) => top && tw`border-b-8 dark:border-b-gray-800 py-4 align-self[flex-end]`}
+type GridItemProps = {
+  top?: boolean;
+};
+
+export const GridItem = styled.div<GridItemProps>`
+  ${({ top }) => top && tw`py-4 align-self[flex-end]`}
 `;

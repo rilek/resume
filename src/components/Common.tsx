@@ -21,9 +21,6 @@ export const List = styled.div`
     }
   }
 `;
-export const ListItem = tw.li``;
-export const ListItemTitle = tw.h3``;
-export const ListItemContent = tw.span`text-sm`;
 
 export const BulletList = styled.ul`
   ${tw`list-disc`}
@@ -37,16 +34,14 @@ export const BulletList = styled.ul`
 export const BulletListItem = tw.li`ml-6`;
 
 export const Separator = styled.span`
-  ${tw`text-gray-300 dark:text-gray-700`}
+  ${tw`opacity-50`}
   ::before {
     content: "|";
   }
 `;
 
 export const Section = styled.section`
-  :not(:first-of-type) {
-    ${tw`border-t-4 dark:border-t-gray-800`}
-  }
+  ${tw`border-t-4 dark:border-t-gray-800 transition[border-color] ease-linear duration-300`}
 
   page-break-inside: avoid;
 `;
@@ -57,7 +52,7 @@ export const SectionHeader = styled.header`
   page-break-inside: avoid;
 `;
 
-export const SectionTitle = tw.h3`font-light text-3xl print:text-xl print:font-bold`;
+export const SectionTitle = tw.h3`print:font-bold text-3xl print:text-xl`;
 
 export const SectionContent = styled.div`
   @media print {
@@ -68,15 +63,24 @@ export const SectionContent = styled.div`
 `;
 
 export const Subsection = styled.section`
-  ${tw`border-t-2 dark:border-t-gray-800`}
+  ${tw`border-t-2 dark:border-t-gray-800 transition[border-color] ease-linear duration-300`}
 
   page-break-inside: avoid;
 `;
 
 export const SubsectionHeader = tw.header`py-2`;
 
-export const SubsectionTitle = tw.h3`screen:text-lg print:text-base font-medium`;
+export const SubsectionTitle = styled.h3`
+  ${tw`screen:text-lg print:text-base font-medium`}
+`;
 
-export const SubsectionDate = tw.h4`text-gray-800 print:text-sm dark:text-gray-400`;
+export const SubsectionDate = styled.h4`
+  ${tw`opacity-50 print:text-sm`}
+`;
 
 export const SubsectionContent = tw.div`pb-4 print:text-sm`;
+
+export const Button = styled.button<{ active?: boolean }>`
+  ${tw`text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5 transition-colors duration-300`}
+  ${({ active }) => (active ? tw`bg-gray-200 dark:bg-gray-700` : undefined)}
+`;

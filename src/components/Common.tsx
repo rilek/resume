@@ -37,7 +37,7 @@ export const BulletList = styled.ul`
 export const BulletListItem = tw.li`ml-6`;
 
 export const Separator = styled.span`
-  ${tw`text-gray-300`}
+  ${tw`text-gray-300 dark:text-gray-700`}
   ::before {
     content: "|";
   }
@@ -45,7 +45,7 @@ export const Separator = styled.span`
 
 export const Section = styled.section`
   :not(:first-of-type) {
-    ${tw`border-t-4`}
+    ${tw`border-t-4 dark:border-t-gray-800`}
   }
 
   page-break-inside: avoid;
@@ -68,7 +68,7 @@ export const SectionContent = styled.div`
 `;
 
 export const Subsection = styled.section`
-  ${tw`border-t-2`}
+  ${tw`border-t-2 dark:border-t-gray-800`}
 
   page-break-inside: avoid;
 `;
@@ -77,6 +77,6 @@ export const SubsectionHeader = tw.header`py-2`;
 
 export const SubsectionTitle = tw.h3`screen:text-lg print:text-base font-medium`;
 
-export const SubsectionDate = tw.h4`text-gray-700 print:text-sm`;
+export const SubsectionDate = tw.h4`text-gray-800 print:text-sm dark:text-gray-400`;
 
 export const SubsectionContent = tw.div`pb-4 print:text-sm`;

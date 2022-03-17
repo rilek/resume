@@ -7,8 +7,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-tailwindcss",
-    "gatsby-plugin-postcss",
     "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",

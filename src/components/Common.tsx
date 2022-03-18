@@ -41,7 +41,7 @@ export const Separator = styled.span`
 `;
 
 export const Section = styled.section`
-  ${tw`border-t-4 dark:border-t-gray-800 transition[border-color] ease-linear duration-300`}
+  ${tw`border-t-4 dark:border-t-gray-800`}
 
   page-break-inside: avoid;
 `;
@@ -63,7 +63,7 @@ export const SectionContent = styled.div`
 `;
 
 export const Subsection = styled.section`
-  ${tw`border-t-2 dark:border-t-gray-800 transition[border-color] ease-linear duration-300`}
+  ${tw`border-t-2 dark:border-t-gray-800`}
 
   page-break-inside: avoid;
 `;
@@ -81,6 +81,6 @@ export const SubsectionDate = styled.h4`
 export const SubsectionContent = tw.div`pb-4 print:text-sm`;
 
 export const Button = styled.button<{ active?: boolean }>`
-  ${tw`text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5 transition-colors duration-300`}
+  ${tw`text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded text-sm p-2.5`}
   ${({ active }) => (active ? tw`bg-gray-200 dark:bg-gray-700` : undefined)}
 `;

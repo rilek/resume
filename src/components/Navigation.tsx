@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import tw, { styled } from "twin.macro";
-import { useThemeContext } from "../utils/theme";
+import { useBlendContext } from "../utils/blend";
+import { Theme, useThemeContext } from "../utils/theme";
 import { Button } from "./Common";
 
 const Nav = styled.nav`
@@ -7,7 +9,7 @@ const Nav = styled.nav`
 `;
 
 const Box = styled.div`
-  ${tw`rounded bg-gray-100 dark:bg-gray-800 transition-colors duration-300 ease-linear`}
+  ${tw`rounded bg-gray-100 dark:bg-gray-800`}
 `;
 
 const SystemThemeIcon = () => (
@@ -56,33 +58,36 @@ const LightThemeIcon = () => (
   </svg>
 );
 
-export const Navigation = ({ className }: any) => {
-  const { theme, localTheme, pickTheme } = useThemeContext();
+const ThemeButton = ({ children, theme, ...rest }: any) => {
+  const { theme: _theme, localTheme, pickTheme } = useThemeContext();
+  const { trigger } = useBlendContext();
 
+  const onPickTheme = () => trigger({ onMiddle: () => pickTheme(theme) });
+
+  return (
+    <Button
+      onClick={_theme !== theme ? () => onPickTheme() : undefined}
+      active={theme ? _theme === localTheme : !theme}
+      {...rest}
+    >
+      {children}
+    </Button>
+  );
+};
+
+export const Navigation = ({ className }: any) => {
   return (
     <Nav className={className}>
       <Box>
-        <Button
-          onClick={() => pickTheme(undefined)}
-          active={localTheme === undefined}
-          tw={"rounded-b-none"}
-        >
+        <ThemeButton theme={undefined} tw={"rounded-b-none"}>
           <SystemThemeIcon />
-        </Button>
-        <Button
-          onClick={() => pickTheme("light")}
-          active={localTheme === "light"}
-          tw={"rounded-none"}
-        >
+        </ThemeButton>
+        <ThemeButton theme={"light"} tw={"rounded-none"}>
           <LightThemeIcon />
-        </Button>
-        <Button
-          onClick={() => pickTheme("dark")}
-          active={localTheme === "dark"}
-          tw={"rounded-t-none"}
-        >
+        </ThemeButton>
+        <ThemeButton theme={"dark"} tw={"rounded-t-none"}>
           <DarkThemeIcon />
-        </Button>
+        </ThemeButton>
       </Box>
       <Box>
         <Button tw={"rounded-b-none width[40px]"} active>

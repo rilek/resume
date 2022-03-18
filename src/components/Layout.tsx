@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useRef,
+  useState,
+} from "react";
 import tw, { styled, GlobalStyles } from "twin.macro";
 import { Grid } from "./Grid";
 import { PageSubtitle as _PageSubtitle } from "./PageSubtitle";
@@ -8,11 +14,13 @@ import { Content as _Content } from "./Content";
 import { SectionContent } from "./Common";
 import { Navigation as _Navigation } from "./Navigation";
 import { ThemeContext, useTheme } from "../utils/theme";
+import { Blend } from "./SlidingBlend";
+import { BlendContext, useBlend, useBlendContext } from "../utils/blend";
 
 // #2c2e34
 
 const Bg = styled.div`
-  ${tw`dark:bg-gray-900 bg-white dark:text-gray-200 transition-colors ease-linear duration-300`}
+  ${tw`dark:bg-gray-900 bg-white dark:text-gray-200`}
   isolation: isolate;
 
   &.invert {
@@ -24,10 +32,7 @@ const Wrapper = styled.main`
   ${tw`max-w-6xl mx-24 py-12 print:mx-0 print:py-0`}
 
   a {
-    ${tw`text-blue-700 print:text-black dark:text-blue-400 transition-colors ease-linear duration-300`}
-    &:hover {
-      ${tw`text-blue-500`}
-    }
+    ${tw`text-blue-700 print:text-black dark:text-blue-400 hover:text-blue-500`}
   }
 
   [data-short-url] {
@@ -52,7 +57,6 @@ const Content = styled(_Content)`
 const Navigation = styled(_Navigation)`
   ${tw`grid-row[2] grid-column[3]`}
 `;
-
 interface Props {
   title: ReactNode;
   subtitle: ReactNode;
@@ -61,12 +65,17 @@ interface Props {
 }
 
 export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
-  const context = useTheme();
+  const nodeRef = useRef(null);
+  const themeContext = useTheme();
+  const blendContext = useBlend({ ref: nodeRef });
+
+  console.log(nodeRef);
 
   return (
-    <ThemeContext.Provider value={context}>
-      <Bg>
-        <GlobalStyles />
+    <ThemeContext.Provider value={themeContext}>
+      <BlendContext.Provider value={blendContext}>
+        <Bg>
+          <GlobalStyles />
           <Wrapper>
             <Grid>
               <Navigation />
@@ -76,7 +85,9 @@ export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
               <Content>{children}</Content>
             </Grid>
           </Wrapper>
-      </Bg>
+          <Blend ref={nodeRef} />
+        </Bg>
+      </BlendContext.Provider>
     </ThemeContext.Provider>
   );
 };

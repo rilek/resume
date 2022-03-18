@@ -3,7 +3,6 @@ module.exports = {
     title: `Rafał Ileczko`,
     siteUrl: `https://rileczko.com`,
   },
-  pathPrefix: "/resume",
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",

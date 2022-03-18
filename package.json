@@ -41,6 +41,7 @@
     "twin.macro": "^2.8.2"
   },
   "devDependencies": {
+    "express": "^4.17.3",
     "gh-pages": "^3.2.3"
   }
 }

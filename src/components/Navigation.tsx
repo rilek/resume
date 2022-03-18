@@ -67,7 +67,7 @@ const ThemeButton = ({ children, theme, ...rest }: any) => {
   return (
     <Button
       onClick={_theme !== theme ? () => onPickTheme() : undefined}
-      active={theme ? _theme === localTheme : !theme}
+      active={_theme ? theme === localTheme : !theme}
       {...rest}
     >
       {children}

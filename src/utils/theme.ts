@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 
+const isNode = typeof window === "undefined";
+
 export type Theme = "light" | "dark" | undefined;
 
 interface ContextProps {
@@ -18,11 +20,17 @@ interface ContextProps {
 }
 
 const darkThemePrefers = "(prefers-color-scheme: dark)";
-const getDarkThemeMatch = () => window.matchMedia(darkThemePrefers);
+const getDarkThemeMatch = () =>
+  !isNode ? window.matchMedia(darkThemePrefers) : null;
 
-const getOSTheme = () => (getDarkThemeMatch().matches ? "dark" : "light");
+const getOSTheme = () => (getDarkThemeMatch()?.matches ? "dark" : "light");
 
-const getTheme = () => (localStorage.theme ? localStorage.theme : undefined);
+const getTheme = () => {
+  if (isNode) return;
+  if ((window as any) && "localStorage" in window) {
+    return window.localStorage?.theme ? window.localStorage?.theme : undefined;
+  }
+};
 
 const saveThemeToStorage = (storage: Storage, theme: Theme): void => {
   if (theme) storage.setItem("theme", theme);
@@ -45,8 +53,8 @@ const useOsTheme = (): Theme => {
   };
 
   useEffect(() => {
-    getDarkThemeMatch().addEventListener("change", pickOsTheme);
-    return getDarkThemeMatch().removeEventListener("change", pickOsTheme);
+    getDarkThemeMatch()?.addEventListener("change", pickOsTheme);
+    return getDarkThemeMatch()?.removeEventListener("change", pickOsTheme);
   }, []);
 
   return osTheme;
@@ -68,7 +76,7 @@ export const useTheme = () => {
     if (!localTheme) applyThemeClass(document.documentElement, osTheme);
   }, [osTheme, localTheme]);
 
-  if (!initialized.current) {
+  if (!initialized.current && !isNode) {
     applyThemeClass(document.documentElement, localTheme || osTheme);
     initialized.current = true;
   }

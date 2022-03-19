@@ -69,8 +69,6 @@ export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
   const themeContext = useTheme();
   const blendContext = useBlend({ ref: nodeRef });
 
-  console.log(nodeRef);
-
   return (
     <ThemeContext.Provider value={themeContext}>
       <BlendContext.Provider value={blendContext}>

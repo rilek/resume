@@ -1,7 +1,6 @@
-import { useContext } from "react";
 import tw, { styled } from "twin.macro";
 import { useBlendContext } from "../utils/blend";
-import { Theme, useThemeContext } from "../utils/theme";
+import { useThemeContext } from "../utils/theme";
 import { Button } from "./Common";
 
 const Nav = styled.nav`
@@ -59,15 +58,16 @@ const LightThemeIcon = () => (
 );
 
 const ThemeButton = ({ children, theme, ...rest }: any) => {
-  const { theme: _theme, localTheme, pickTheme } = useThemeContext();
+  const { theme: contextTheme, localTheme, pickTheme } = useThemeContext();
   const { trigger } = useBlendContext();
 
   const onPickTheme = () => trigger({ onMiddle: () => pickTheme(theme) });
+  const onClick = localTheme !== theme ? () => onPickTheme() : undefined;
 
   return (
     <Button
-      onClick={_theme !== theme ? () => onPickTheme() : undefined}
-      active={_theme ? theme === localTheme : !theme}
+      onClick={onClick}
+      active={contextTheme ? theme === localTheme : !theme}
       {...rest}
     >
       {children}

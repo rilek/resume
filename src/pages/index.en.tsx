@@ -38,10 +38,7 @@ const personalData: Record<"title" | "content", string | JSX.Element>[] = [
           LinkedIn
         </a>
         <br />
-        <a
-          href="https://github.com/rilek"
-          data-short-url="bit.ly/3q7b2Xd"
-        >
+        <a href="https://github.com/rilek" data-short-url="bit.ly/3q7b2Xd">
           Github
         </a>
       </div>
@@ -87,19 +84,11 @@ const sections: SectionType[] = [
         content: (
           <BulletList>
             <BulletListItem>
-              Projektowanie architektury rozwiązań chmurowych;
+              Substantive support from the perspective of technology during
+              planning business strategies;
             </BulletListItem>
-            <BulletListItem>
-              Wsparcie merytoryczne z perspektywy technologii podczas planowania
-              strategii biznesowych;
-            </BulletListItem>
-            <BulletListItem>
-              Podejmowanie kluczowych decyzji technologicznych;
-            </BulletListItem>
-            <BulletListItem>
-              Mentoring młodszych stażem programistów;
-            </BulletListItem>
-            <BulletListItem>Zarządzanie projektem IT.</BulletListItem>
+            <BulletListItem>Making key technological decisions;</BulletListItem>
+            <BulletListItem>Managing IT project</BulletListItem>
           </BulletList>
         ),
       },
@@ -110,18 +99,21 @@ const sections: SectionType[] = [
         content: (
           <BulletList>
             <BulletListItem>
-              Programowanie biznesowych aplikacji w językach Clojure,
-              Javascript, Pyton;
+              Developing applications using Clojure, Javascript, Pyton
+              languages;
             </BulletListItem>
             <BulletListItem>
-              Wsparcie w budowaniu infrastruktry hybrydowej (chmurowej i
+              Supporting creating of hybrid applications (both cloud and
               on-premise);
             </BulletListItem>
             <BulletListItem>
-              Wsparcie w budowaniu modeli algorytmów głębokiego uczenia
-              maszynowego i wizji komputerowej;
+              Supporting development of Data sciene and Computer Vision platform
+              from frontend perspective;
             </BulletListItem>
-            <BulletListItem>Zarządzanie zespołem programistów.</BulletListItem>
+            <BulletListItem>
+              Leading a team of frontend developers.
+            </BulletListItem>
+            <BulletListItem>Couching younger developers;</BulletListItem>
           </BulletList>
         ),
       },
@@ -132,20 +124,21 @@ const sections: SectionType[] = [
         content: (
           <BulletList>
             <BulletListItem>
-              Rozwijanie i wsparcie w tworzeniu aplikacji e-commerce opartych o
-              frameworki ReactJS oraz AngularJS;
+              Developing leading e-commerce platforms based on ReactJS and
+              AngularJS frameworks;
             </BulletListItem>
             <BulletListItem>
-              Realizacja innych aplikacji biznesowych opartych o języki
-              programowania Clojure, JavaScript i Python;
+              Creating web applications based on programming languages:
+              Clojure(script), Javascript and Python;
             </BulletListItem>
             <BulletListItem>
-              Konsultacje wymagań biznoesowych z menedżerami projektu;
+              Consulting requirements with project management team;
             </BulletListItem>
-            <BulletListItem>Wyceny prac technologicznych.</BulletListItem>
+            <BulletListItem>
+              Creating pricing for coding projects.
+            </BulletListItem>
           </BulletList>
         ),
-        // "Rozwijanie i wsparcie w tworzeniu aplikacji e-commerce opartych o frameworki ReactJS oraz AngularJS. Wsparcie merytoryczne podczas planowania strategii biznesowych. Realizacja innych aplikacji opartych o języki programowania Clojure, JavaScript i Python.",
       },
       {
         title: "Web developer",
@@ -154,13 +147,11 @@ const sections: SectionType[] = [
         content: (
           <BulletList>
             <BulletListItem>
-              Tworzenie stron internetowych, zarządzanie istniejącymi
-              projektami, najczęściej wykorzystującymi CMS Wordpress,
-              przyspieszanie działania, optymalizacja pod kątem wyszukiwarek
-              internetowych;
+              Creating websites; managing existing ones, mostly based od
+              Wordpress; SEO optimizations; Speed optimizations
             </BulletListItem>
             <BulletListItem>
-              Tworzenie projektów graficznych stron internetowych, prezentacji
+              Designing websites and other form of digital designs
             </BulletListItem>
           </BulletList>
         ),
@@ -168,46 +159,46 @@ const sections: SectionType[] = [
     ],
   },
   {
-    title: "Edukacja",
+    title: "Education",
     subsections: [
       {
-        title: "Informatyka - studia magisterskie",
-        company: "Politechnika Rzeszowska",
+        title: "Information Technology - Masters Degree",
+        company: "Rzeszów University of Technology",
         date: "2018 - 2019",
       },
       {
-        title: "Automatyka i Robotyka - studia inżynierskie",
+        title: "Automatics and Robotics - Bachelors",
         date: "2014 - 2018",
-        company: "Politechnika Rzeszowska",
+        company: "Rzeszów University of Technology",
       },
       {
-        title: "Technik elektronik - specjalizacja Automatyka przemysłowa",
-        company: "Zespół Szkół Elektronicznych w Rzeszowie",
+        title: "Electronics Technician - Specialization: Industrial Automation",
+        company: "Electronic School Complex in Rzeszów",
         date: "2010 - 2014",
       },
     ],
   },
   {
-    title: "Umiejętności",
+    title: "Skills",
     subsections: [
       {
-        title: "Prowadzenie projektu IT",
+        title: "Managing IT project",
         content:
-          "Zarządzanie zespołem programistów, wybór technologii i narzędzi, przeprowadzanie wycen, kierowanie strategią technologiczną, analiza ryzyka, optymalizacja",
+          "Leading team of developers, choosing technology and tools, preparing pricing of IT projects, leading tech strategy, risk analysis, optimizations",
       },
       {
-        title: "Języki programowania",
+        title: "Programming languages",
         content:
           "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS",
       },
       {
-        title: "Uczenie maszynowe i wizja komputerowa",
+        title: "Machine Learning and Data Science (fundamentals)",
         content: "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV",
       },
       {
-        title: "Tworzenie aplikacji biznesowych",
+        title: "Developing Business Applications",
         content:
-          "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby",
+          "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby, Azure",
       },
     ],
   },

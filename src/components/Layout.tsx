@@ -15,9 +15,9 @@ import { SectionContent } from "./Common";
 import { Navigation as _Navigation } from "./Navigation";
 import { ThemeContext, useTheme } from "../utils/theme";
 import { Blend } from "./SlidingBlend";
-import { BlendContext, useBlend, useBlendContext } from "../utils/blend";
-
-// #2c2e34
+import { BlendContext, useBlend } from "../utils/blend";
+import { graphql } from "gatsby";
+import '../data/i18n';
 
 const Bg = styled.div`
   ${tw`dark:bg-gray-900 bg-white dark:text-gray-200`}
@@ -72,12 +72,14 @@ export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
   return (
     <ThemeContext.Provider value={themeContext}>
       <BlendContext.Provider value={blendContext}>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             const preferredTheme = window.localStorage.getItem("theme");
             if(preferredTheme) document.body.className = preferredTheme;
-          `
-        }} />
+          `,
+          }}
+        />
         <Bg>
           <GlobalStyles />
           <Wrapper>
@@ -95,3 +97,16 @@ export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
     </ThemeContext.Provider>
   );
 };
+
+const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        languages {
+          defaultLangKey
+          langs
+        }
+      }
+    }
+  }
+`;

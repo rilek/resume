@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 import { useBlendContext } from "../utils/blend";
 import { useThemeContext } from "../utils/theme";
@@ -76,6 +77,11 @@ const ThemeButton = ({ children, theme, ...rest }: any) => {
 };
 
 export const Navigation = ({ className }: any) => {
+  const {
+    t,
+    i18n: { language, changeLanguage },
+  } = useTranslation();
+
   return (
     <Nav className={className}>
       <Box>
@@ -90,10 +96,20 @@ export const Navigation = ({ className }: any) => {
         </ThemeButton>
       </Box>
       <Box>
-        <Button tw={"rounded-b-none width[40px]"} active>
+        <Button
+          tw={"rounded-b-none width[40px]"}
+          onClick={() => changeLanguage("pl")}
+          active={language === "pl"}
+        >
           PL
         </Button>
-        <Button tw={"rounded-t-none width[40px]"}>EN</Button>
+        <Button
+          tw={"rounded-t-none width[40px]"}
+          onClick={() => changeLanguage("en")}
+          active={language === "en"}
+        >
+          EN
+        </Button>
       </Box>
     </Nav>
   );

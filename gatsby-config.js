@@ -1,12 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Rafał Ileczko`,
+    title: `Rafał Ileczko - Frontend Developer`,
     siteUrl: `https://rileczko.com`,
   },
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyForNull: "en",
+        langKeyDefault: "en",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

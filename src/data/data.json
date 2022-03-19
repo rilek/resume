@@ -1,0 +1,116 @@
+{
+  "pl": {
+    "common": {
+      "title": "Rafał Ileczko",
+      "subtitle": "Lider zespołu | Developer"
+    },
+    "sidebar": {
+      "sections": [
+        {
+          "title": "Adres email",
+          "content": [
+            {
+              "text": "rileczko@gmail.com",
+              "href": "mailto:rileczko@gmail.com"
+            }
+          ]
+        },
+        {
+          "title": "Strona internetowa",
+          "content": [
+            {
+              "text": "rileczko.com",
+              "href": "https://rileczko.com"
+            }
+          ]
+        },
+        {
+          "title": "Linki",
+          "content": [
+            {
+              "text": "LinkedIn",
+              "href": "https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/",
+              "short-url": "bit.ly/3JiTv61"
+            },
+            {
+              "text": "Github",
+              "href": "https://github.com/rilek",
+              "short-url": "bit.ly/3q7b2Xd"
+            }
+          ]
+        },
+        {
+          "title": "Języki",
+          "content": [
+            {
+              "text": "Polski"
+            },
+            {
+              "text": "Angielski - C1"
+            },
+            {
+              "text": "Francuski - A1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en": {
+    "common": {
+      "title": "Rafał Ileczko",
+      "subtitle": "Team Lead | Developer"
+    },
+    "sidebar": {
+      "sections": [
+        {
+          "title": "Email address",
+          "content": [
+            {
+              "text": "rileczko@gmail.com",
+              "href": "mailto:rileczko@gmail.com"
+            }
+          ]
+        },
+        {
+          "title": "Website",
+          "content": [
+            {
+              "text": "rileczko.com",
+              "href": "https://rileczko.com"
+            }
+          ]
+        },
+        {
+          "title": "Links",
+          "content": [
+            {
+              "text": "LinkedIn",
+              "href": "https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/",
+              "short-url": "bit.ly/3JiTv61"
+            },
+            {
+              "text": "Github",
+              "href": "https://github.com/rilek",
+              "short-url": "bit.ly/3q7b2Xd"
+            }
+          ]
+        },
+        {
+          "title": "Languages",
+          "content": [
+            {
+              "text": "Polish"
+            },
+            {
+              "text": "English - C1"
+            },
+            {
+              "text": "French - A1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,12 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 const isNode = typeof window === "undefined";
 
@@ -25,11 +17,9 @@ const getDarkThemeMatch = () =>
 
 const getOSTheme = () => (getDarkThemeMatch()?.matches ? "dark" : "light");
 
-const getTheme = () => {
-  if (isNode) return;
-  if ((window as any) && "localStorage" in window) {
-    return window.localStorage?.theme ? window.localStorage?.theme : undefined;
-  }
+const getTheme = (storage: Storage): Theme => {
+  if (isNode || !storage) return undefined;
+  return storage.getItem("theme") as Theme;
 };
 
 const saveThemeToStorage = (storage: Storage, theme: Theme): void => {
@@ -62,7 +52,8 @@ const useOsTheme = (): Theme => {
 
 export const useTheme = () => {
   const initialized = useRef<boolean>(false);
-  const [localTheme, setLocalTheme] = useState<Theme>(getTheme());
+  const defaultTheme = isNode ? undefined : getTheme(window.localStorage);
+  const [localTheme, setLocalTheme] = useState<Theme>(defaultTheme);
   const osTheme = useOsTheme();
 
   const pickTheme = (theme?: Theme) => {

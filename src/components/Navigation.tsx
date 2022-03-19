@@ -67,7 +67,7 @@ const ThemeButton = ({ children, theme, ...rest }: any) => {
   return (
     <Button
       onClick={onClick}
-      active={contextTheme ? theme === localTheme : !theme}
+      active={theme ? theme === localTheme : !localTheme}
       {...rest}
     >
       {children}

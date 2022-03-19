@@ -72,6 +72,12 @@ export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
   return (
     <ThemeContext.Provider value={themeContext}>
       <BlendContext.Provider value={blendContext}>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            const preferredTheme = window.localStorage.getItem("theme");
+            if(preferredTheme) document.body.className = preferredTheme;
+          `
+        }} />
         <Bg>
           <GlobalStyles />
           <Wrapper>

@@ -11,13 +11,13 @@ import { PageSubtitle as _PageSubtitle } from "./PageSubtitle";
 import { PageTitle as _PageTitle } from "./PageTitle";
 import { Sidebar as _Sidebar } from "./Sidebar";
 import { Content as _Content } from "./Content";
-import { SectionContent } from "./Common";
 import { Navigation as _Navigation } from "./Navigation";
-import { ThemeContext, useTheme } from "../utils/theme";
-import { Blend } from "./Blend/SlidingBlend";
-import { BlendContext, useBlend } from "./Blend/blend";
+import { ThemeContext, useTheme } from "../../utils/theme";
+import { Blend } from "../Blend/SlidingBlend";
+import { BlendContext, useBlend } from "../Blend/blend";
 import { graphql } from "gatsby";
-import '../data/i18n';
+import '../../data/i18n';
+import { SectionContent } from "../Common/Section";
 
 const Bg = styled.div`
   ${tw`dark:bg-gray-900 bg-white dark:text-gray-200`}

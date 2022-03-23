@@ -1,7 +1,7 @@
 {
   "pl": {
     "common": {
-      "title": "Rafał Ileczko",
+      "title": "Rafał Ileczko",
       "subtitle": "Lider zespołu | Senior Developer"
     },
     "sidebar": {
@@ -54,11 +54,65 @@
           ]
         }
       ]
+    },
+    "experience": {
+      "title": "Doświadczenie",
+      "subsections": [
+        {
+          "title": "CTO / Co-Founder",
+          "company": "RWS Sp. z o.o",
+          "date": "VII 2021 - III 2022"
+        },
+        {
+          "title": "Lead Developer",
+          "company": "Retailic Sp. z o.o.o",
+          "date": "2020 - now",
+          "content": [
+            "Designing architecture for cloud based applications",
+            "Wsparcie merytoryczne z perspektywy technologii podczas planowania",
+            "strategii biznesowych;",
+            "Podejmowanie kluczowych decyzji technologicznych;",
+            "Zarządzanie projektem IT."
+          ]
+        },
+        {
+          "title": "Senior Software Developer",
+          "company": "Retailic Sp. z o.o.o",
+          "date": "2018 - 2020",
+          "content": [
+            "Programowanie biznesowych aplikacji w językach Clojure, Javascript, Pyton;",
+            "Wsparcie w budowaniu infrastruktry hybrydowej (chmurowej i on-premise);",
+            "Wsparcie w budowaniu modeli algorytmów głębokiego uczenia maszynowego i wizji komputerowej;",
+            "Zarządzanie zespołem programistów;",
+            "Mentoring młodszych stażem programistów."
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "company": "Retailic Sp. z o.o.o",
+          "date": "VII 2016 - 2018",
+          "content": [
+            "Rozwijanie i wsparcie w tworzeniu aplikacji e-commerce opartych o frameworki ReactJS oraz AngularJS;",
+            "Realizacja innych aplikacji biznesowych opartych o języki programowania Clojure, JavaScript i Python;",
+            "Konsultacje wymagań biznoesowych z menedżerami projektu;",
+            "Wyceny prac technologicznych."
+          ]
+        },
+        {
+          "title": "Web developer",
+          "company": "Social Karma Sp. z o.o.",
+          "date": "X 2015 - VII 2016",
+          "content": [
+            "Tworzenie stron internetowych, zarządzanie istniejącymi projektami, najczęściej wykorzystującymi CMS Wordpress, przyspieszanie działania, optymalizacja pod kątem wyszukiwarek internetowych;",
+            "Tworzenie projektów graficznych stron internetowych, prezentacji."
+          ]
+        }
+      ]
     }
   },
   "en": {
     "common": {
-      "title": "Rafał Ileczko",
+      "title": "Rafał Ileczko",
       "subtitle": "Team Lead | Senior Developer"
     },
     "sidebar": {

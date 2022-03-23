@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
-import { useBlendContext } from "./Blend/blend";
-import { useThemeContext } from "../utils/theme";
-import { Button } from "./Common";
+import { useBlendContext } from "../Blend/blend";
+import { useThemeContext } from "../../utils/theme";
+import { Button } from "../Common/Common";
 
 const Nav = styled.nav`
   ${tw`flex flex-col gap-2 print:hidden rounded-lg self-start`}

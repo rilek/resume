@@ -14,6 +14,7 @@ i18n
     debug: true,
     fallbackLng: "pl",
     defaultNS: "common",
+    returnObjects: true,
 
     interpolation: {
       escapeValue: false, // react already safes from xss

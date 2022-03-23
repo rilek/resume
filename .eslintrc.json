@@ -5,14 +5,17 @@
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "mdx/code-blocks": true,
+    "mdx/language-mapper": {}
   },
   "extends": [
     "react-app",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:mdx/recommended"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
@@ -31,5 +34,11 @@
     "tw": true,
 
     "__PATH_PREFIX__": true
-  }
+  },
+  "overrides": [
+    {
+      "files": "*.mdx",
+      "parser": "eslint-mdx"
+    }
+  ]
 }

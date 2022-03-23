@@ -71,7 +71,7 @@ type SectionType = {
 
 const sections: SectionType[] = [
   {
-    title: "Experience",
+    title: "Doświadczenie",
     subsections: [
       {
         title: "CTO / Co-Founder",
@@ -213,8 +213,6 @@ const sections: SectionType[] = [
 const Sidebar = () => {
   const { t } = useTranslation("sidebar");
   const sections = t("sections");
-
-  console.log(sections)
 
   return (
     <List>

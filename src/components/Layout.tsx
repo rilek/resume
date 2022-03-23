@@ -14,8 +14,8 @@ import { Content as _Content } from "./Content";
 import { SectionContent } from "./Common";
 import { Navigation as _Navigation } from "./Navigation";
 import { ThemeContext, useTheme } from "../utils/theme";
-import { Blend } from "./SlidingBlend";
-import { BlendContext, useBlend } from "../utils/blend";
+import { Blend } from "./Blend/SlidingBlend";
+import { BlendContext, useBlend } from "./Blend/blend";
 import { graphql } from "gatsby";
 import '../data/i18n';
 

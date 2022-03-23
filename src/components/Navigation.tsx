@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
-import { useBlendContext } from "../utils/blend";
+import { useBlendContext } from "./Blend/blend";
 import { useThemeContext } from "../utils/theme";
 import { Button } from "./Common";
 
@@ -58,17 +58,26 @@ const LightThemeIcon = () => (
   </svg>
 );
 
-const ThemeButton = ({ children, theme, ...rest }: any) => {
-  const { theme: contextTheme, localTheme, pickTheme } = useThemeContext();
+const ThemeButton = ({ children, theme: targetTheme, ...rest }: any) => {
+  const {
+    theme: contextTheme,
+    osTheme,
+    localTheme,
+    pickTheme,
+  } = useThemeContext();
   const { trigger } = useBlendContext();
 
-  const onPickTheme = () => trigger({ onMiddle: () => pickTheme(theme) });
-  const onClick = localTheme !== theme ? () => onPickTheme() : undefined;
+  const onPickTheme = (
+    targetTheme ? contextTheme === targetTheme : osTheme === contextTheme
+  )
+    ? () => pickTheme(targetTheme)
+    : () => trigger({ onMiddle: () => pickTheme(targetTheme) });
+  const onClick = localTheme !== targetTheme ? () => onPickTheme() : undefined;
 
   return (
     <Button
       onClick={onClick}
-      active={theme ? theme === localTheme : !localTheme}
+      active={targetTheme ? targetTheme === localTheme : !localTheme}
       {...rest}
     >
       {children}
@@ -76,12 +85,25 @@ const ThemeButton = ({ children, theme, ...rest }: any) => {
   );
 };
 
-export const Navigation = ({ className }: any) => {
+const LanguageButton = ({ children, targetLanguage, ...rest }: any) => {
+  const { trigger } = useBlendContext();
   const {
-    t,
     i18n: { language, changeLanguage },
   } = useTranslation();
 
+  const onPickLanguage = () =>
+    trigger({ onMiddle: () => changeLanguage(targetLanguage) });
+  const onClick =
+    language !== targetLanguage ? () => onPickLanguage() : undefined;
+
+  return (
+    <Button onClick={onClick} active={language === targetLanguage} {...rest}>
+      {children}
+    </Button>
+  );
+};
+
+export const Navigation = ({ className }: any) => {
   return (
     <Nav className={className}>
       <Box>
@@ -96,20 +118,8 @@ export const Navigation = ({ className }: any) => {
         </ThemeButton>
       </Box>
       <Box>
-        <Button
-          tw={"rounded-b-none width[40px]"}
-          onClick={() => changeLanguage("pl")}
-          active={language === "pl"}
-        >
-          PL
-        </Button>
-        <Button
-          tw={"rounded-t-none width[40px]"}
-          onClick={() => changeLanguage("en")}
-          active={language === "en"}
-        >
-          EN
-        </Button>
+        <LanguageButton targetLanguage="pl">PL</LanguageButton>
+        <LanguageButton targetLanguage="en">EN</LanguageButton>
       </Box>
     </Nav>
   );

@@ -3,6 +3,26 @@
     "title": "Rafał Ileczko",
     "subtitle": "Lider zespołu | Senior Developer"
   },
+  "navigation": {
+    "print": {
+      "title": "Wydrukuj"
+    },
+    "systemTheme": {
+      "title": "Ustaw motyw systemowy"
+    },
+    "lightTheme": {
+      "title": "Ustaw motyw jasny"
+    },
+    "darkTheme": {
+      "title": "Ustaw motyw ciemny"
+    },
+    "languagePl": {
+      "title": "Ustaw język polski"
+    },
+    "languageEn": {
+      "title": "Ustaw język angielski"
+    }
+  },
   "sidebar": {
     "email": "Adres email",
     "webpage": "Strona internetowa",

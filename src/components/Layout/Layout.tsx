@@ -14,7 +14,7 @@ import "../../locales/i18n";
 import { SectionContent } from "../Common/Section";
 
 const Bg = styled.div`
-  ${tw`dark:bg-gray-900 bg-white dark:text-gray-200`}
+  ${tw`dark:bg-gray-900 bg-white text-gray-800 dark:text-gray-200`}
   isolation: isolate;
   min-height: 100vh;
 `;
@@ -23,12 +23,12 @@ const Wrapper = styled.main`
   ${tw`max-w-6xl mx-24 py-12 print:mx-0 print:py-0`}
 
   a {
-    ${tw`text-blue-700 print:text-black dark:text-blue-400 hover:text-blue-500`}
+    ${tw`text-blue-700 print:color[inherit] dark:text-blue-400 hover:text-blue-500`}
   }
 
   [data-short-url] {
     &::after {
-      ${tw`hidden print:text-black print:inline print:content[attr(data-short-url)] print:ml-2`}
+      ${tw`hidden print:color[inherit] print:inline print:content[attr(data-short-url)] print:ml-2`}
     }
   }
 `;

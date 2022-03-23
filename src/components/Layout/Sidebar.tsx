@@ -25,9 +25,6 @@ export const Component = styled(GridItem)`
   svg {
     ${tw`text-gray-500 fill-current`}
   }
-  br {
-    ${tw`print:hidden`}
-  }
 `;
 
 interface Props {

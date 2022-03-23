@@ -4,7 +4,7 @@ import { PrintButton } from "./components/PrintButton";
 import { ThemeButtons } from "./components/ThemeButtons";
 
 const Nav = styled.nav`
-  ${tw`flex flex-col gap-2 print:hidden rounded-lg self-start`}
+  ${tw`flex flex-col gap-2 print:hidden rounded-lg self-start sticky top-8`}
 `;
 
 export const Navigation = ({ className }: any) => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "twin.macro";
 import { useTranslation } from "react-i18next";
 import { map } from "lodash";
@@ -35,11 +35,11 @@ const Sidebar = () => {
       <li>
         <h3>{t("languages")}</h3>
         <p>
-          {map(t("languages-list"), (str) => (
-            <>
+          {map(t("languages-list"), (str, i) => (
+            <Fragment key={i}>
               {str}
               <br />
-            </>
+            </Fragment>
           ))}
         </p>
       </li>

@@ -12,6 +12,18 @@ import { BlendContext, useBlend } from "../Blend/blend";
 import { graphql } from "gatsby";
 import "../../locales/i18n";
 import { SectionContent } from "../Common/Section";
+import { SEO } from "../SEO";
+
+const DefaultThemeScript = () => (
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+  const preferredTheme = window.localStorage.getItem("theme");
+  if(preferredTheme) document.body.className = preferredTheme;
+`,
+    }}
+  />
+);
 
 const Bg = styled.div`
   ${tw`dark:bg-gray-900 bg-white text-gray-800 dark:text-gray-200`}
@@ -63,14 +75,8 @@ export const Layout = ({ title, subtitle, sidebar, children }: Props) => {
   return (
     <ThemeContext.Provider value={themeContext}>
       <BlendContext.Provider value={blendContext}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            const preferredTheme = window.localStorage.getItem("theme");
-            if(preferredTheme) document.body.className = preferredTheme;
-          `,
-          }}
-        />
+        <DefaultThemeScript />
+        <SEO />
         <Bg>
           <GlobalStyles />
           <Wrapper>

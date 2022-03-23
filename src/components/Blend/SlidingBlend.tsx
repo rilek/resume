@@ -1,7 +1,7 @@
 import tw, { styled } from "twin.macro";
 
 export const Blend = styled.div`
-  ${tw`bg-gray-900`}
+  ${tw`bg-black`}
   transform-origin: right;
   position: fixed;
   transform: scaleX(0%);

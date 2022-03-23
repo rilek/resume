@@ -1,31 +1,22 @@
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  useRef,
-  useState,
-} from "react";
+import { ReactNode, Suspense, useRef } from "react";
 import tw, { styled, GlobalStyles } from "twin.macro";
 import { Grid } from "./Grid";
 import { PageSubtitle as _PageSubtitle } from "./PageSubtitle";
 import { PageTitle as _PageTitle } from "./PageTitle";
 import { Sidebar as _Sidebar } from "./Sidebar";
 import { Content as _Content } from "./Content";
-import { Navigation as _Navigation } from "./Navigation";
+import { Navigation as _Navigation } from "../Navigation/Navigation";
 import { ThemeContext, useTheme } from "../../utils/theme";
 import { Blend } from "../Blend/SlidingBlend";
 import { BlendContext, useBlend } from "../Blend/blend";
 import { graphql } from "gatsby";
-import '../../data/i18n';
+import "../../locales/i18n";
 import { SectionContent } from "../Common/Section";
 
 const Bg = styled.div`
   ${tw`dark:bg-gray-900 bg-white dark:text-gray-200`}
   isolation: isolate;
-
-  &.invert {
-    mix-blend-mode: difference;
-  }
+  min-height: 100vh;
 `;
 
 const Wrapper = styled.main`

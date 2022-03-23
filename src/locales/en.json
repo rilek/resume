@@ -1,0 +1,98 @@
+{
+  "common": {
+    "title": "Rafał Ileczko",
+    "subtitle": "Team Lead | Senior Developer"
+  },
+  "sidebar": {
+    "email": "Email address",
+    "webpage": "Webpage",
+    "links": "Links",
+    "languages": "Languages",
+    "languages-list": [
+      "Polish",
+      "English - B2",
+      "French - A1"
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "sections": [
+      {
+        "title": "CTO / Co-Founder",
+        "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022"
+      },
+      {
+        "title": "Lead Developer",
+        "subtitle": "Retailic Sp. z o.o.o · 2020 - now",
+        "content": [
+          "Substantive support from the perspective of technology during planning business strategies;",
+          "Making key technological decisions;",
+          "IT project management."
+        ]
+      },
+      {
+        "title": "Senior Software Developer",
+        "subtitle": "Retailic Sp. z o.o.o · 2018 - 2020",
+        "content": [
+          "Programming of business applications in Clojure, Javascript, Python;",
+          "Support in building a hybrid infrastructure (cloud and on-premise);",
+          "Support in building models of deep machine learning and computer vision algorithms;",
+          "Managing a team of developers;",
+          "Mentoring for junior programmers."
+        ]
+      },
+      {
+        "title": "Frontend Developer",
+        "subtitle": "Retailic Sp. z o.o.o · VII 2016 - 2018",
+        "content": [
+          "Development and support in creating e-commerce applications based on ReactJS and AngularJS frameworks;",
+          "Implementation of other business applications based on the Clojure, JavaScript and Python programming languages;",
+          "Consultation of business requirements with project managers;",
+          "Valuation of technological works."
+        ]
+      },
+      {
+        "title": "Web developer",
+        "subtitle": "Social Karma Sp. z o.o. · X 2015 - VII 2016",
+        "content": [
+          "Creating websites, managing existing projects, most often using CMS Wordpress, speeding up operations, optimization for search engines;",
+          "Creating graphic designs for websites and presentations."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "sections": [
+      {
+        "title": "Computer Science - Masters Degree",
+        "subtitle": "Rzeszów University of Technology · 2018 - 2019"
+      },
+      {
+        "title": "Automatics and Robotics - Bachelors",
+        "subtitle": "Rzeszów University of Technology · 2014 - 2018"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "sections": [
+      {
+        "title": "IT Project Management",
+        "content": "Managing a team of programmers, selecting technologies and tools, conducting valuations, managing a technological strategy, risk analysis"
+      },
+      {
+        "title": "Programming Languages",
+        "content": "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS"
+      },
+      {
+        "title": "Deep Learning and Computer Vision (Fundamentals)",
+        "content": "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV"
+      },
+      {
+        "title": "Development of business applications",
+        "content": "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby"
+      }
+    ]
+  }
+}

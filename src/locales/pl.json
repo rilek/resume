@@ -1,0 +1,98 @@
+{
+  "common": {
+    "title": "Rafał Ileczko",
+    "subtitle": "Lider zespołu | Senior Developer"
+  },
+  "sidebar": {
+    "email": "Adres email",
+    "webpage": "Strona internetowa",
+    "links": "Linki",
+    "languages": "Języki",
+    "languages-list": [
+      "Polski",
+      "Angielski - B2",
+      "Francuski - A1"
+    ]
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "sections": [
+      {
+        "title": "CTO / Co-Founder",
+        "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022"
+      },
+      {
+        "title": "Lead Developer",
+        "subtitle": "Retailic Sp. z o.o.o · 2020 - now",
+        "content": [
+          "Wsparcie merytoryczne z perspektywy technologii podczas planowania strategii biznesowych;",
+          "Podejmowanie kluczowych decyzji technologicznych;",
+          "Zarządzanie projektem IT."
+        ]
+      },
+      {
+        "title": "Senior Software Developer",
+        "subtitle": "Retailic Sp. z o.o.o · 2018 - 2020",
+        "content": [
+          "Programowanie biznesowych aplikacji w językach Clojure, Javascript, Pyton;",
+          "Wsparcie w budowaniu infrastruktry hybrydowej (chmurowej i on-premise);",
+          "Wsparcie w budowaniu modeli algorytmów głębokiego uczenia maszynowego i wizji komputerowej;",
+          "Zarządzanie zespołem programistów;",
+          "Mentoring młodszych stażem programistów."
+        ]
+      },
+      {
+        "title": "Frontend Developer",
+        "subtitle": "Retailic Sp. z o.o.o · VII 2016 - 2018",
+        "content": [
+          "Rozwijanie i wsparcie w tworzeniu aplikacji e-commerce opartych o frameworki ReactJS oraz AngularJS;",
+          "Realizacja innych aplikacji biznesowych opartych o języki programowania Clojure, JavaScript i Python;",
+          "Konsultacje wymagań biznoesowych z menedżerami projektu;",
+          "Wyceny prac technologicznych."
+        ]
+      },
+      {
+        "title": "Web developer",
+        "subtitle": "Social Karma Sp. z o.o. · X 2015 - VII 2016",
+        "content": [
+          "Tworzenie stron internetowych, zarządzanie istniejącymi projektami, najczęściej wykorzystującymi CMS Wordpress, przyspieszanie działania, optymalizacja pod kątem wyszukiwarek internetowych;",
+          "Tworzenie projektów graficznych stron internetowych, prezentacji."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Edukacja",
+    "sections": [
+      {
+        "title": "Informatyka - studia magisterskie",
+        "subtitle": "Politechnika Rzeszowska · 2018 - 2019"
+      },
+      {
+        "title": "Automatyka i Robotyka - studia inżynierskie",
+        "subtitle": "Politechnika Rzeszowska · 2014 - 2018"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Edukacja",
+    "sections": [
+      {
+        "title": "Prowadzenie projektów IT",
+        "content": "Zarządzanie zespołem programistów, wybór technologii i narzędzi, przeprowadzanie wycen, kierowanie strategią technologiczną, analiza ryzyka"
+      },
+      {
+        "title": "Języki programowania",
+        "content": "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS"
+      },
+      {
+        "title": "Uczenie maszynowe i wizja komputerowa (Podstawy)",
+        "content": "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV"
+      },
+      {
+        "title": "Tworzenie aplikacji biznesowych",
+        "content": "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby"
+      }
+    ]
+  }
+}

@@ -13,7 +13,7 @@ export const SubsectionTitle = styled.h3`
   ${tw`screen:text-lg print:text-base font-medium`}
 `;
 
-export const SubsectionDate = styled.h4`
+export const SubsectionSubtitle = styled.h4`
   ${tw`opacity-50 print:text-sm`}
 `;
 
@@ -21,17 +21,17 @@ export const SubsectionContent = tw.div`pb-4 print:text-sm`;
 
 interface Props {
   title?: ReactNode;
-  date?: ReactNode;
+  subtitle?: ReactNode;
   children?: ReactNode;
 }
 
-export const Subsection = ({ title, date, children }: Props) => {
+export const Subsection = ({ title, subtitle, children }: Props) => {
   return (
     <SubsectionContainer>
-      {(title || date) && (
+      {(title || subtitle) && (
         <SubsectionHeader>
           {title && <SubsectionTitle>{title}</SubsectionTitle>}
-          {date && <SubsectionDate>{date}</SubsectionDate>}
+          {subtitle && <SubsectionSubtitle>{subtitle}</SubsectionSubtitle>}
         </SubsectionHeader>
       )}
       {children && <SubsectionContent>{children}</SubsectionContent>}

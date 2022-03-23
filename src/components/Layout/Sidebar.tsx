@@ -15,7 +15,8 @@ export const Component = styled(GridItem)`
   h3 {
     ${tw`mb-1 font-medium`}
   }
-  p, a {
+  p,
+  a {
     ${tw`text-sm`}
   }
   a {
@@ -23,6 +24,9 @@ export const Component = styled(GridItem)`
   }
   svg {
     ${tw`text-gray-500 fill-current`}
+  }
+  br {
+    ${tw`print:hidden`}
   }
 `;
 

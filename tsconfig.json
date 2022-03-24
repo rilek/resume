@@ -19,5 +19,5 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
-  "include": ["./src/**/*", "twin.d.ts"]
+  "include": ["./src/**/*", "src/types/twin.d.ts"]
 }

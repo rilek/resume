@@ -1,4 +1,4 @@
-import { ReactNode, Suspense, useRef } from "react";
+import { ReactNode, useRef } from "react";
 import tw, { styled, GlobalStyles } from "twin.macro";
 import { Grid } from "./Grid";
 import { PageSubtitle as _PageSubtitle } from "./PageSubtitle";
@@ -26,13 +26,13 @@ const DefaultThemeScript = () => (
 );
 
 const Bg = styled.div`
-  ${tw`dark:bg-gray-900 bg-white text-gray-800 dark:text-gray-200`}
+  ${tw`bg-white text-gray-800 dark:(bg-gray-900 text-gray-200)`}
   isolation: isolate;
   min-height: 100vh;
 `;
 
 const Wrapper = styled.main`
-  ${tw`max-w-6xl mx-24 py-12 print:mx-0 print:py-0`}
+  ${tw`max-w-6xl mx-24 py-12 print:(mx-0 py-0)`}
 
   a {
     ${tw`text-blue-700 print:color[inherit] dark:text-blue-400 hover:text-blue-500`}
@@ -40,7 +40,7 @@ const Wrapper = styled.main`
 
   [data-short-url] {
     &::after {
-      ${tw`hidden print:color[inherit] print:inline print:content[attr(data-short-url)] print:ml-2`}
+      ${tw`hidden print:(color[inherit] inline content[attr(data-short-url)] ml-2)`}
     }
   }
 `;
@@ -48,13 +48,13 @@ const Wrapper = styled.main`
 const PageTitle = tw(_PageTitle)`grid-column[1/2] grid-row[1]`;
 const PageSubtitle = tw(_PageSubtitle)`grid-row[1] grid-column[2]`;
 const Sidebar = styled(_Sidebar)`
-  ${tw`grid-row[2] grid-column[1] print:grid-column[span 2] print:border-b-4 print:dark:border-b-gray-800`}
+  ${tw`grid-row[2] grid-column[1] print:(grid-column[span 2] border-b-4 dark:border-b-gray-800)`}
 `;
 const Content = styled(_Content)`
-  ${tw`grid-row[2] grid-column[2] print:grid-row[3] print:grid-column[span 2]`}
+  ${tw`grid-row[2] grid-column[2] print:(grid-row[3] grid-column[span 2])`}
 
   ${SectionContent} {
-    ${tw`print:columns[2] print:gap-x-10`}
+    ${tw`print:(columns[2] gap-x-10)`}
   }
 `;
 const Navigation = styled(_Navigation)`

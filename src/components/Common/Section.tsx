@@ -13,7 +13,7 @@ export const SectionHeader = styled.header`
   page-break-inside: avoid;
 `;
 
-export const SectionTitle = tw.h3`print:font-bold text-3xl print:text-xl`;
+export const SectionTitle = tw.h3`text-3xl print:(font-bold text-xl)`;
 
 export const SectionContent = styled.div`
   @media print {

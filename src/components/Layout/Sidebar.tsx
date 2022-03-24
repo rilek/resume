@@ -7,10 +7,10 @@ export const Component = styled(GridItem)`
   ${tw`py-6 print:py-4`}
 
   ul {
-    ${tw`flex flex-col gap-6 print:flex-row print:gap-x-2 print:justify-between`}
+    ${tw`flex flex-col gap-6 print:(flex-row gap-x-2 justify-between)`}
   }
   li {
-    ${tw`print:flex-1 print:text-sm`}
+    ${tw`print:(flex-1 text-sm)`}
   }
   h3 {
     ${tw`mb-1 font-medium`}

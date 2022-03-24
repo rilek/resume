@@ -15,5 +15,5 @@ type GridItemProps = {
 };
 
 export const GridItem = styled.div<GridItemProps>`
-  ${({ top }) => top && tw`py-4 align-self[flex-end]`}
+  ${({ top }) => top && tw`py-4 self-end`}
 `;

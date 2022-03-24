@@ -34,11 +34,5 @@
     "tw": true,
 
     "__PATH_PREFIX__": true
-  },
-  "overrides": [
-    {
-      "files": "*.mdx",
-      "parser": "eslint-mdx"
-    }
-  ]
+  }
 }

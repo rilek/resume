@@ -10,7 +10,7 @@ i18n
   .init({
     resources: { pl, en },
     debug: true,
-    fallbackLng: "pl",
+    fallbackLng: "en",
     defaultNS: "common",
     ns: ["common", "sidebar", "experience", "education", "skills"],
     returnObjects: true,

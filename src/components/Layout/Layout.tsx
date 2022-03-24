@@ -63,7 +63,7 @@ const Content = styled(_Content)`
   }
 `;
 const Navigation = styled(_Navigation)`
-  ${tw`grid-column[1] sticky bottom-0 z-10 mx--4 justify-center px-4 py-2 bg-gradient-to-b from-transparent to-white dark:(to-gray-900) lg:(block grid-row[2] grid-column[3]) print:(hidden)`}
+  ${tw`grid-column[1] sticky bottom-0 z-10 mx--4 justify-center px-4 py-2 bg-gradient-to-b from-transparent to-white dark:(to-gray-900) lg:(grid-row[2] grid-column[3]) print:(hidden)`}
   ${Box} {
     ${tw`flex flex-row lg:flex-col`}
   }

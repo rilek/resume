@@ -10,14 +10,12 @@ i18n
   .init({
     resources: { pl, en },
     debug: true,
-    fallbackLng: "en",
+    lng: "en",
     defaultNS: "common",
     ns: ["common", "sidebar", "experience", "education", "skills"],
     returnObjects: true,
 
-    interpolation: {
-      escapeValue: false // react already safes from xss
-    }
+    interpolation: { escapeValue: false },
   });
 
 export default i18n;

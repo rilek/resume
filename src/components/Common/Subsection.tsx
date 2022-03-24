@@ -10,7 +10,7 @@ export const SubsectionContainer = styled.section`
 export const SubsectionHeader = tw.header`py-2`;
 
 export const SubsectionTitle = styled.h3`
-  ${tw`screen:text-lg print:text-base font-medium`}
+  ${tw`font-medium screen:text-lg print:text-base`}
 `;
 
 export const SubsectionSubtitle = styled.h4`

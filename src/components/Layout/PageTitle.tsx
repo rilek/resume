@@ -4,11 +4,11 @@ import { GridItem } from "./Grid";
 
 const Header = tw.header``;
 const Title = styled.h1`
-  ${tw`text-4xl font-black print:text-3xl`}
+  ${tw`text-2xl lg:text-4xl font-black print:text-3xl`}
 `;
 
 interface Props {
-  className?: string
+  className?: string;
   children: ReactNode;
 }
 

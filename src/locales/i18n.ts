@@ -12,7 +12,7 @@ i18n
     debug: false,
     lng: "en",
     defaultNS: "common",
-    ns: ["common", "sidebar", "experience", "education", "skills"],
+    ns: Object.keys(pl),
     returnObjects: true,
 
     interpolation: { escapeValue: false },

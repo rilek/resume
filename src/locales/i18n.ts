@@ -9,7 +9,7 @@ i18n
   .use(LanguageDetector)
   .init({
     resources: { pl, en },
-    debug: true,
+    debug: false,
     lng: "en",
     defaultNS: "common",
     ns: ["common", "sidebar", "experience", "education", "skills"],

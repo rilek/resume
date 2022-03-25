@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
-const isNode = typeof window === "undefined";
+export const isNode = typeof window === "undefined";
 
-export type Theme = "light" | "dark" | undefined;
+export type Theme = "light" | "dark" | undefined | null;
 
 interface ContextProps {
   theme: Theme;
@@ -19,7 +19,7 @@ const getOSTheme = () => (getDarkThemeMatch()?.matches ? "dark" : "light");
 
 const getTheme = (storage: Storage): Theme => {
   if (isNode || !storage) return undefined;
-  return storage.getItem("theme") as Theme;
+  return (storage.getItem("theme") || undefined) as Theme;
 };
 
 const saveThemeToStorage = (storage: Storage, theme: Theme): void => {
@@ -52,9 +52,10 @@ const useOsTheme = (): Theme => {
 
 export const useTheme = () => {
   const initialized = useRef<boolean>(false);
-  const defaultTheme = isNode ? undefined : getTheme(window.localStorage);
+  const defaultTheme = isNode ? null : getTheme(window.localStorage);
   const [localTheme, setLocalTheme] = useState<Theme>(defaultTheme);
   const osTheme = useOsTheme();
+  const theme = !localTheme ? osTheme : localTheme;
 
   const pickTheme = (theme?: Theme) => {
     const newTheme = theme || getOSTheme();
@@ -63,16 +64,17 @@ export const useTheme = () => {
     setLocalTheme(theme);
   };
 
-  useEffect(() => {
-    if (!localTheme) applyThemeClass(document.body, osTheme);
-  }, [osTheme, localTheme]);
-
   if (!initialized.current && !isNode) {
     applyThemeClass(document.body, localTheme || osTheme);
     initialized.current = true;
   }
 
-  return { theme: localTheme || osTheme, localTheme, osTheme, pickTheme };
+  useEffect(() => {
+    if (!localTheme) applyThemeClass(document.body, osTheme);
+  }, [osTheme, localTheme]);
+
+
+  return { theme, localTheme, osTheme, pickTheme };
 };
 
 export const useThemeContext = () => useContext(ThemeContext);

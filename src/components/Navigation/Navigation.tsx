@@ -1,3 +1,4 @@
+import { isNode } from "../../utils/theme";
 import tw, { styled } from "twin.macro";
 import { LanguageButtons } from "./components/LanguageButtons/LanguageButtons";
 import { PrintButton } from "./components/PrintButton";
@@ -8,6 +9,8 @@ const Nav = styled.nav`
 `;
 
 export const Navigation = ({ className }: any) => {
+  if (isNode) return null;
+
   return (
     <Nav className={className}>
       <ThemeButtons />

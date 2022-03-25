@@ -13,21 +13,16 @@ export const ThemeButton = ({
     localTheme,
     pickTheme,
   } = useThemeContext();
-  const { trigger } = useBlendContext();
 
-  const onPickTheme = (
-    targetTheme ? contextTheme === targetTheme : osTheme === contextTheme
-  )
+  const { trigger } = useBlendContext();
+  const isActive = targetTheme === localTheme;
+  const isSameAsActive = targetTheme
+    ? contextTheme === targetTheme
+    : osTheme === contextTheme;
+
+  const onPickTheme = isSameAsActive
     ? () => pickTheme(targetTheme)
     : () => trigger({ onMiddle: () => pickTheme(targetTheme) });
 
-  const onClick = localTheme !== targetTheme ? () => onPickTheme() : undefined;
-
-  return (
-    <Button
-      onClick={onClick}
-      active={targetTheme ? targetTheme === localTheme : !localTheme}
-      {...rest}
-    />
-  );
+  return <Button onClick={onPickTheme} active={isActive} {...rest} />;
 };

@@ -54,7 +54,7 @@
         "title": "Senior Software Developer",
         "subtitle": "Retailic Sp. z o.o. · 2018 - 2020",
         "content": [
-          "Programming of business applications in Clojure, Javascript, Python;",
+          "Programming of business applications in Clojure(Script) with React, Python, and Javascript/Typescript with React and React Native",
           "Support in building a hybrid infrastructure (cloud and on-premise);",
           "Support in building models of deep machine learning and computer vision algorithms;",
           "Managing a team of developers;",
@@ -111,7 +111,7 @@
       },
       {
         "title": "Development of business applications",
-        "content": "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby"
+        "content": "React, Rum, React Native, Node.JS, .NET Core, MSSQL, PostgreSQL, Storybook, Gatsby"
       }
     ]
   }

@@ -39,11 +39,11 @@
     "sections": [
       {
         "title": "CTO / Co-Founder",
-        "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022"
+        "subtitle": "RWS Sp. z o.o. · VII 2021 - III 2022"
       },
       {
         "title": "Lead Developer",
-        "subtitle": "Retailic Sp. z o.o.o · 2020 - now",
+        "subtitle": "Retailic Sp. z o.o. · 2020 - now",
         "content": [
           "Substantive support from the perspective of technology during planning business strategies;",
           "Making key technological decisions;",
@@ -52,7 +52,7 @@
       },
       {
         "title": "Senior Software Developer",
-        "subtitle": "Retailic Sp. z o.o.o · 2018 - 2020",
+        "subtitle": "Retailic Sp. z o.o. · 2018 - 2020",
         "content": [
           "Programming of business applications in Clojure, Javascript, Python;",
           "Support in building a hybrid infrastructure (cloud and on-premise);",
@@ -63,7 +63,7 @@
       },
       {
         "title": "Frontend Developer",
-        "subtitle": "Retailic Sp. z o.o.o · VII 2016 - 2018",
+        "subtitle": "Retailic Sp. z o.o. · VII 2016 - 2018",
         "content": [
           "Development and support in creating e-commerce applications based on ReactJS and AngularJS frameworks;",
           "Implementation of other business applications based on the Clojure, JavaScript and Python programming languages;",

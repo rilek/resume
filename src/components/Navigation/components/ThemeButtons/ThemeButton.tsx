@@ -20,6 +20,7 @@ export const ThemeButton = ({
   )
     ? () => pickTheme(targetTheme)
     : () => trigger({ onMiddle: () => pickTheme(targetTheme) });
+
   const onClick = localTheme !== targetTheme ? () => onPickTheme() : undefined;
 
   return (

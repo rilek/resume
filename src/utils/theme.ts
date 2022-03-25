@@ -59,16 +59,16 @@ export const useTheme = () => {
   const pickTheme = (theme?: Theme) => {
     const newTheme = theme || getOSTheme();
     saveThemeToStorage(localStorage, theme);
-    applyThemeClass(document.documentElement, newTheme);
+    applyThemeClass(document.body, newTheme);
     setLocalTheme(theme);
   };
 
   useEffect(() => {
-    if (!localTheme) applyThemeClass(document.documentElement, osTheme);
+    if (!localTheme) applyThemeClass(document.body, osTheme);
   }, [osTheme, localTheme]);
 
   if (!initialized.current && !isNode) {
-    applyThemeClass(document.documentElement, localTheme || osTheme);
+    applyThemeClass(document.body, localTheme || osTheme);
     initialized.current = true;
   }
 

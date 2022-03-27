@@ -1,7 +1,7 @@
 {
   "common": {
     "title": "Rafał Ileczko",
-    "subtitle": "Team Lead | Senior Developer"
+    "subtitle": "Team Lead | Senior Software Developer"
   },
   "navigation": {
     "print": {
@@ -30,7 +30,7 @@
     "languages": "Languages",
     "languages-list": [
       "Polish",
-      "English - B2",
+      "English - C1",
       "French - A1"
     ]
   },
@@ -42,7 +42,7 @@
         "subtitle": "RWS Sp. z o.o. · VII 2021 - III 2022"
       },
       {
-        "title": "Lead Developer",
+        "title": "Lead Software Developer",
         "subtitle": "Retailic Sp. z o.o. · 2020 - now",
         "content": [
           "Substantive support from the perspective of technology during planning business strategies;",

@@ -1,7 +1,7 @@
 {
   "common": {
     "title": "Rafał Ileczko",
-    "subtitle": "Lider zespołu | Senior Developer"
+    "subtitle": "Lider zespołu | Senior Software Developer"
   },
   "navigation": {
     "print": {
@@ -30,7 +30,7 @@
     "languages": "Języki",
     "languages-list": [
       "Polski",
-      "Angielski - B2",
+      "Angielski - C1",
       "Francuski - A1"
     ]
   },
@@ -42,8 +42,8 @@
         "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022"
       },
       {
-        "title": "Lead Developer",
-        "subtitle": "Retailic Sp. z o.o.o · 2020 - now",
+        "title": "Lead Software Developer",
+        "subtitle": "Retailic Sp. z o.o. · 2020 - now",
         "content": [
           "Wsparcie merytoryczne z perspektywy technologii podczas planowania strategii biznesowych;",
           "Podejmowanie kluczowych decyzji technologicznych;",
@@ -52,7 +52,7 @@
       },
       {
         "title": "Senior Software Developer",
-        "subtitle": "Retailic Sp. z o.o.o · 2018 - 2020",
+        "subtitle": "Retailic Sp. z o.o. · 2018 - 2020",
         "content": [
           "Programowanie biznesowych aplikacji w językach Clojure, Javascript, Pyton;",
           "Wsparcie w budowaniu infrastruktry hybrydowej (chmurowej i on-premise);",
@@ -63,7 +63,7 @@
       },
       {
         "title": "Frontend Developer",
-        "subtitle": "Retailic Sp. z o.o.o · VII 2016 - 2018",
+        "subtitle": "Retailic Sp. z o.o. · VII 2016 - 2018",
         "content": [
           "Rozwijanie i wsparcie w tworzeniu aplikacji e-commerce opartych o frameworki ReactJS oraz AngularJS;",
           "Realizacja innych aplikacji biznesowych opartych o języki programowania Clojure, JavaScript i Python;",

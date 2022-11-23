@@ -38,6 +38,14 @@
     "title": "Doświadczenie",
     "sections": [
       {
+        "title": "Senior Clojure Developer",
+        "subtitle": "Kleene · Sierpień 2022 - now",
+        "content": [
+          "Rozwój aplikacji full-stackowej opartej na Clojure",
+          "Wycenianie zadań, konsultowanie decyzji UXowych oraz funkcjonalności"
+        ]
+      },
+      {
         "title": "CTO / Co-Founder",
         "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022"
       },

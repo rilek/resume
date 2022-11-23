@@ -12,8 +12,8 @@ const IndexPage = () => {
   return (
     <Layout title={t("title")} subtitle={t("subtitle")} sidebar={<Sidebar />}>
       <Experience />
-      <Education />
       <Skills />
+      <Education />
     </Layout>
   );
 };

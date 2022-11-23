@@ -30,24 +30,32 @@
     "languages": "Languages",
     "languages-list": [
       "Polish",
-      "English - C1",
-      "French - A1"
+      "English - B2/C1"
     ]
   },
   "experience": {
     "title": "Experience",
     "sections": [
       {
+        "title": "Senior Clojure Developer",
+        "subtitle": "Kleene · August 2022 - now",
+        "content": [
+          "Development of full stack Clojure-based application",
+          "Doing estimations, consulting UX and feature decisions"
+        ]
+      },
+      {
         "title": "CTO / Co-Founder",
         "subtitle": "RWS Sp. z o.o. · VII 2021 - III 2022"
       },
       {
         "title": "Lead Software Developer",
-        "subtitle": "Retailic Sp. z o.o. · 2020 - now",
+        "subtitle": "Retailic Sp. z o.o. · 2020 - July 2022",
         "content": [
           "Substantive support from the perspective of technology during planning business strategies;",
           "Making key technological decisions;",
-          "IT project management."
+          "IT project management.",
+          "Team management"
         ]
       },
       {
@@ -57,7 +65,6 @@
           "Programming of business applications in Clojure(Script) with React, Python, and Javascript/Typescript with React and React Native",
           "Support in building a hybrid infrastructure (cloud and on-premise);",
           "Support in building models of deep machine learning and computer vision algorithms;",
-          "Managing a team of developers;",
           "Mentoring for junior programmers."
         ]
       },
@@ -89,7 +96,7 @@
         "subtitle": "Rzeszów University of Technology · 2018 - 2019"
       },
       {
-        "title": "Automatics and Robotics - Bachelors",
+        "title": "Automatics and Robotics - Bachelors Degree",
         "subtitle": "Rzeszów University of Technology · 2014 - 2018"
       }
     ]
@@ -99,7 +106,7 @@
     "sections": [
       {
         "title": "IT Project Management",
-        "content": "Managing a team of programmers, selecting technologies and tools, conducting valuations, managing a technological strategy, risk analysis"
+        "content": "Team management, selecting technologies and tools, conducting valuations, managing a technological strategy"
       },
       {
         "title": "Programming Languages",
@@ -111,7 +118,7 @@
       },
       {
         "title": "Development of business applications",
-        "content": "React, Rum, React Native, Node.JS, .NET Core, MSSQL, PostgreSQL, Storybook, Gatsby"
+        "content": "React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Gatsby"
       }
     ]
   }

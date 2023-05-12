@@ -1,7 +1,42 @@
 {
   "common": {
     "title": "Rafał Ileczko",
-    "subtitle": "Lider zespołu | Senior Software Developer"
+    "subtitle": "Lider zespołu | Senior Software Developer",
+    "sidebar": {
+      "email": {
+        "title": "Adres email",
+        "value": "rileczko@gmail.com"
+      },
+      "webpage": {
+        "title": "Strona internetowa",
+        "value": "rileczko@com"
+      },
+      "links": {
+        "title": "Linki",
+        "data": [
+          {
+            "title": "LinkedIn",
+            "icon": "icon",
+            "href": "https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/",
+            "shortUrl": "bit.ly/3JiTv61"
+          },
+          {
+            "title": "Github",
+            "icon": "",
+            "href": "https://github.com/rilek",
+            "shortUrl": "bit.ly/3q7b2Xd"
+          }
+        ]
+      },
+      "languages": {
+        "title": "Języki",
+        "data": [
+          "Polski",
+          "Angielski - C1",
+          "Francuski - A1"
+        ]
+      }
+    }
   },
   "navigation": {
     "print": {
@@ -22,17 +57,6 @@
     "languageEn": {
       "title": "Ustaw język angielski"
     }
-  },
-  "sidebar": {
-    "email": "Adres email",
-    "webpage": "Strona internetowa",
-    "links": "Linki",
-    "languages": "Języki",
-    "languages-list": [
-      "Polski",
-      "Angielski - C1",
-      "Francuski - A1"
-    ]
   },
   "experience": {
     "title": "Doświadczenie",

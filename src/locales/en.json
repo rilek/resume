@@ -1,125 +1,129 @@
 {
   "common": {
     "title": "Rafał Ileczko",
-    "subtitle": "Team Lead | Senior Software Developer"
-  },
-  "navigation": {
-    "print": {
-      "title": "Print"
+    "subtitle": "Team Lead | Senior Software Developer",
+    "sidebar": {
+      "email": {
+        "title": "E-mail address",
+        "value": "rileczko@gmail.com"
+      },
+      "webpage": {
+        "title": "Website",
+        "value": "rileczko.com"
+      },
+      "languages": {
+        "title": "Languages",
+        "data": [
+          "Polish",
+          "English - C1",
+          "French - A1"
+        ]
+      },
+      "links": {
+        "title": "Links",
+        "data": [
+          {
+            "title": "LinkedIn",
+            "icon": "linkedin",
+            "href": "https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/",
+            "shortUrl": "bit.ly/3JiTv61"
+          },
+          {
+            "title": "Github",
+            "icon": "github",
+            "href": "https://github.com/rilek",
+            "shortUrl": "bit.ly/3q7b2Xd"
+          }
+        ]
+      }
     },
-    "systemTheme": {
-      "title": "Set OS Theme"
+    "experience": {
+      "title": "Experience",
+      "sections": [
+        {
+          "title": "Senior Clojure Developer",
+          "subtitle": "Kleene · August 2022 - now",
+          "content": [
+            "Designed and implemented end-to-end features across multiple layers, ensuring seamless functionality.",
+            "Collaborated with product teams to consult on feature proposals, resulting in more efficient and feasible implementation.",
+            "Initiated the development of new features and improvements, driving innovation and progress within the company."
+          ]
+        },
+        {
+          "title": "CTO / Co-Founder",
+          "subtitle": "RWS Sp. z o.o. · VII 2021 - III 2022"
+        },
+        {
+          "title": "Lead Software Developer",
+          "subtitle": "Retailic Sp. z o.o. · 2020 - July 2022",
+          "content": [
+            "Managed a team of frontend developers and successfully delivered multiple eCommerce projects using React and React Native",
+            "Strategized project plans and pricing to ensure smooth delivery within allocated budgets",
+            "Performed high-level responsibilities as a senior member, contributing significantly towards the success of each project."
+          ]
+        },
+        {
+          "title": "Senior Software Developer",
+          "subtitle": "Retailic Sp. z o.o. · 2018 - 2020",
+          "content": [
+            "Led the development of React and React Native projects, delivering high-quality code that resulted in improved user experiences.",
+            "Provided guidance to junior developers through mentoring sessions and conducting thorough code reviews, leading to an increase in team productivity and skills advancement.",
+            "Developed internal tools that streamlined project workflows and increased efficiency across departments."
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "subtitle": "Retailic Sp. z o.o. · VII 2016 - 2018",
+          "content": [
+            "Development and support in creating e-commerce applications based on ReactJS and AngularJS frameworks;",
+            "Implementation of other business applications based on the Clojure, JavaScript and Python programming languages;",
+            "Consultation of business requirements with project managers;",
+            "Valuation of technological works."
+          ]
+        },
+        {
+          "title": "Web developer",
+          "subtitle": "Social Karma Sp. z o.o. · X 2015 - VII 2016",
+          "content": [
+            "Creating websites, managing existing projects, most often using CMS Wordpress, speeding up operations, optimization for search engines;",
+            "Creating graphic designs for websites and presentations."
+          ]
+        }
+      ]
     },
-    "lightTheme": {
-      "title": "Set Light Theme"
+    "education": {
+      "title": "Education",
+      "sections": [
+        {
+          "title": "Computer Science - Masters Degree",
+          "subtitle": "Rzeszów University of Technology · 2018 - 2019"
+        },
+        {
+          "title": "Automatics and Robotics - Bachelors Degree",
+          "subtitle": "Rzeszów University of Technology · 2014 - 2018"
+        }
+      ]
     },
-    "darkTheme": {
-      "title": "Set Dark Theme"
-    },
-    "languagePl": {
-      "title": "Set Polish Language"
-    },
-    "languageEn": {
-      "title": "Set English Language"
+    "skills": {
+      "title": "Skills",
+      "sections": [
+        {
+          "title": "IT Project Management",
+          "content": "Team management, selecting technologies and tools, conducting valuations, managing a technological strategy"
+        },
+        {
+          "title": "Programming Languages",
+          "content": "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS"
+        },
+        {
+          "title": "Deep Learning and Computer Vision (Fundamentals)",
+          "content": "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV"
+        },
+        {
+          "title": "Development of business applications",
+          "content": "React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Gatsby"
+        }
+      ]
     }
-  },
-  "sidebar": {
-    "email": "Email address",
-    "webpage": "Webpage",
-    "links": "Links",
-    "languages": "Languages",
-    "languages-list": [
-      "Polish",
-      "English - B2/C1"
-    ]
-  },
-  "experience": {
-    "title": "Experience",
-    "sections": [
-      {
-        "title": "Senior Clojure Developer",
-        "subtitle": "Kleene · August 2022 - now",
-        "content": [
-          "Development of full stack Clojure-based application",
-          "Doing estimations, consulting UX and feature decisions"
-        ]
-      },
-      {
-        "title": "CTO / Co-Founder",
-        "subtitle": "RWS Sp. z o.o. · VII 2021 - III 2022"
-      },
-      {
-        "title": "Lead Software Developer",
-        "subtitle": "Retailic Sp. z o.o. · 2020 - July 2022",
-        "content": [
-          "Substantive support from the perspective of technology during planning business strategies;",
-          "Making key technological decisions;",
-          "IT project management.",
-          "Team management"
-        ]
-      },
-      {
-        "title": "Senior Software Developer",
-        "subtitle": "Retailic Sp. z o.o. · 2018 - 2020",
-        "content": [
-          "Programming of business applications in Clojure(Script) with React, Python, and Javascript/Typescript with React and React Native",
-          "Support in building a hybrid infrastructure (cloud and on-premise);",
-          "Support in building models of deep machine learning and computer vision algorithms;",
-          "Mentoring for junior programmers."
-        ]
-      },
-      {
-        "title": "Frontend Developer",
-        "subtitle": "Retailic Sp. z o.o. · VII 2016 - 2018",
-        "content": [
-          "Development and support in creating e-commerce applications based on ReactJS and AngularJS frameworks;",
-          "Implementation of other business applications based on the Clojure, JavaScript and Python programming languages;",
-          "Consultation of business requirements with project managers;",
-          "Valuation of technological works."
-        ]
-      },
-      {
-        "title": "Web developer",
-        "subtitle": "Social Karma Sp. z o.o. · X 2015 - VII 2016",
-        "content": [
-          "Creating websites, managing existing projects, most often using CMS Wordpress, speeding up operations, optimization for search engines;",
-          "Creating graphic designs for websites and presentations."
-        ]
-      }
-    ]
-  },
-  "education": {
-    "title": "Education",
-    "sections": [
-      {
-        "title": "Computer Science - Masters Degree",
-        "subtitle": "Rzeszów University of Technology · 2018 - 2019"
-      },
-      {
-        "title": "Automatics and Robotics - Bachelors Degree",
-        "subtitle": "Rzeszów University of Technology · 2014 - 2018"
-      }
-    ]
-  },
-  "skills": {
-    "title": "Skills",
-    "sections": [
-      {
-        "title": "IT Project Management",
-        "content": "Team management, selecting technologies and tools, conducting valuations, managing a technological strategy"
-      },
-      {
-        "title": "Programming Languages",
-        "content": "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS"
-      },
-      {
-        "title": "Deep Learning and Computer Vision (Fundamentals)",
-        "content": "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV"
-      },
-      {
-        "title": "Development of business applications",
-        "content": "React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Gatsby"
-      }
-    ]
   }
 }

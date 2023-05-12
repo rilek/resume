@@ -9,10 +9,9 @@ i18n
   .use(LanguageDetector)
   .init({
     resources: { pl, en },
-    debug: false,
+    debug: true,
     lng: "en",
     defaultNS: "common",
-    ns: Object.keys(pl),
     returnObjects: true,
 
     interpolation: { escapeValue: false },

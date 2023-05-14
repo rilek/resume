@@ -1,7 +1,7 @@
 {
   "common": {
     "title": "Rafał Ileczko",
-    "subtitle": "Team Lead | Senior Software Developer",
+    "subtitle": "Senior Software Developer",
     "sidebar": {
       "email": {
         "title": "E-mail address",
@@ -161,15 +161,11 @@
         },
         {
           "title": "Programming Languages",
-          "content": "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS"
-        },
-        {
-          "title": "Deep Learning and Computer Vision (Fundamentals)",
-          "content": "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV"
+          "content": "JavaScript (TypeScript), Clojure (ClojureScript), HTML, CSS, C#/F#, Python, SQL"
         },
         {
           "title": "Development of business applications",
-          "content": "React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Gatsby"
+          "content": "React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Supabase, Tailwind, tRPC"
         }
       ]
     }

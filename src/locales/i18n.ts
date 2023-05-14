@@ -5,11 +5,11 @@ import en from "./en.json";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .use(LanguageDetector)
   .init({
     resources: { pl, en },
-    debug: true,
+    debug: process.env.NODE_ENV === "development",
     lng: "en",
     defaultNS: "common",
     returnObjects: true,

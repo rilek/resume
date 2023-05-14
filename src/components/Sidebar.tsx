@@ -92,7 +92,7 @@ export const Sidebar = () => {
   const data = t("sidebar") as unknown as SidebarData;
 
   return (
-    <div className="flex flex-col gap-6 print:flex-row print:[&>*]:flex-1 print:gap-6 print:text-sm">
+    <div className="grid grid-cols-2 md:grid-cols-1 print:grid-cols-4 gap-6 print:text-sm">
       {Object.entries(data).map(([key, props]: any) => (
         <SidebarSection key={key} sectionKey={key} props={props} />
       ))}

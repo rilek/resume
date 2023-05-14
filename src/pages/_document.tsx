@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html>
       <Head />
-      <Script>
+      <Script id="localStorageTheme">
         {`const preferredTheme = window.localStorage.getItem("theme");
         if(preferredTheme) document.body.className = preferredTheme;`}
       </Script>

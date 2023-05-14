@@ -15,10 +15,12 @@ const inter = Inter({
 export default function MyApp({ Component, pageProps }: any) {
   const { t } = useTranslation();
 
+  const title = `${t("title") || "Rafał Ileczko"} - ${t("subtitle") || "Senior Developer"}`;
+
   return (
     <>
       <Head>
-        <title>{t("title")} - {t("subtitle")}</title>
+        <title>{title}</title>
       </Head>
       <div className={inter.className}>
         <Component {...pageProps} />

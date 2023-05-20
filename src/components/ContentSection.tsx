@@ -21,14 +21,14 @@ const ContentList = ({ content }: ContentListProps) => (
 );
 
 const SingleSection = ({ title, subtitle, content }: SingleSectionProps) => (
-  <div className="border-t-2 border-slate-200 pt-4 flex flex-col gap-2 break-inside-avoid">
+  <div className="flex flex-col break-inside-avoid">
     <header>
-      <h4 className="text-xl font-medium print:text-lg">{title}</h4>
-      <p className="text-sm text-slate-500">{subtitle}</p>
+      <h4 className="font-semibold print:text-lg">{title}</h4>
+      <p className="text-[max(0.75em,_16px)]">{subtitle}</p>
     </header>
 
     {content && (
-      <div className="prose">
+      <div className="prose prose-lg text-gray-900 leading-relaxed">
         {isArray(content) ? (
           <ContentList content={content} />
         ) : (
@@ -50,12 +50,12 @@ export const ContentSection = ({ i18nKey }: ContentSectionProps) => {
   const { title, sections } = data;
 
   return (
-    <section className="border-t-4 border-slate-200">
-      <header className="py-4">
-        <h3 className="text-2xl font-bold print:text-xl">{title}</h3>
+    <section className="border-t-2 border-slate-400 text-xl print:text-sm">
+      <header className="py-4 mb-4 font-sans">
+        <h3 className="font-bold text-sm uppercase print:text-xs">{title}</h3>
       </header>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-6">
         {map(sections, (section, i) => (
           <SingleSection {...section} key={i} />
         ))}

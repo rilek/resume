@@ -60,19 +60,22 @@
         },
         {
           "title": "CTO / Co-Founder",
-          "subtitle": "RWS Sp. z o.o. · VII 2021 - III 2022",
+          "subtitle": "RWS · VII 2021 - III 2022",
+          "content": [
+            "Leading development of a SaaS IoT web application dedicated for industry sector",
+            "Making architectural decisions of implemented feature"
+          ],
           "skills": [
             "Supabase",
             "Tailwind",
             "Docker",
             "Nextjs",
-            "Typescript",
-            ""
+            "Typescript"
           ]
         },
         {
           "title": "Lead Software Developer",
-          "subtitle": "Retailic Sp. z o.o. · 2020 - July 2022",
+          "subtitle": "Retailic · 2020 - July 2022",
           "skills": [
             "React",
             "ReactNative",
@@ -89,7 +92,7 @@
         },
         {
           "title": "Senior Software Developer",
-          "subtitle": "Retailic Sp. z o.o. · 2018 - 2020",
+          "subtitle": "Retailic · 2018 - 2020",
           "skills": [
             "React",
             "ReactNative",
@@ -106,7 +109,7 @@
         },
         {
           "title": "Frontend Developer",
-          "subtitle": "Retailic Sp. z o.o. · VII 2016 - 2018",
+          "subtitle": "Retailic · VII 2016 - 2018",
           "skills": [
             "React",
             "AngularJS",
@@ -126,7 +129,7 @@
         },
         {
           "title": "Web developer",
-          "subtitle": "Social Karma Sp. z o.o. · X 2015 - VII 2016",
+          "subtitle": "Social Karma · X 2015 - VII 2016",
           "skills": [
             "CSS",
             "HTML",

@@ -20,13 +20,13 @@ const socialIcons = {
 };
 
 const Link = ({ ...props }: LinkProps) => (
-  <a className="text-blue-700 hover:underline print:text-inherit" {...props} />
+  <a className="text-blue-700 hover:text-blue-500 transition-colors print:text-inherit" {...props} />
 );
 
 const SidebarSectionRenderer = ({ title, children }: any) => (
   <div className="flex flex-col gap-1">
     <header>
-      <h3 className="font-medium text-lg">{title}</h3>
+      <h3 className="font-semibold">{title}</h3>
     </header>
     <div>{children}</div>
   </div>
@@ -64,7 +64,7 @@ const LinksSection = ({ title, data }: SidebarData["links"]) => (
             href={href}
             key={i}
           >
-            <Icon className="text-slate-500" size={20} />
+            <Icon className="" size={20} />
             <span className="print:hidden">{title}</span>
             <span className="hidden print:block">{shortUrl}</span>
           </a>
@@ -92,7 +92,7 @@ export const Sidebar = () => {
   const data = t("sidebar") as unknown as SidebarData;
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-1 print:grid-cols-4 gap-6 print:text-sm">
+    <div className="grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs">
       {Object.entries(data).map(([key, props]: any) => (
         <SidebarSection key={key} sectionKey={key} props={props} />
       ))}

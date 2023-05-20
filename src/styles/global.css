@@ -20,5 +20,5 @@ body {
   position: relative;
   font-family: "Inter", "ui-sens-serif", "system-ui";
 
-  @apply text-slate-900;
+  @apply text-gray-900;
 }

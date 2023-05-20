@@ -52,7 +52,7 @@ export const ContentSection = ({ i18nKey }: ContentSectionProps) => {
   return (
     <section className="border-t-2 border-slate-400 text-xl print:text-sm">
       <header className="py-4 mb-4 font-sans">
-        <h3 className="font-bold text-sm uppercase print:text-xs">{title}</h3>
+        <h3 className="font-bold text-base uppercase print:text-xs">{title}</h3>
       </header>
 
       <div className="flex flex-col gap-6">

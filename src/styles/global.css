@@ -17,8 +17,5 @@
 }
 
 body {
-  position: relative;
-  font-family: "Inter", "ui-sens-serif", "system-ui";
-
   @apply text-gray-900;
 }

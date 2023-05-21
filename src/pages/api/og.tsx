@@ -8,17 +8,12 @@ const fontBlack = fetch(
   new URL("../../assets/SourceSerifPro-Black.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-const fontSemibold = fetch(
-  new URL("../../assets/SourceSerifPro-SemiBold.ttf", import.meta.url)
-).then((res) => res.arrayBuffer());
-
 const fontRegular = fetch(
   new URL("../../assets/SourceSerifPro-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export default async function handler() {
   const fontRegularData = await fontRegular;
-  const fontSemiboldData = await fontSemibold;
   const fontBlackData = await fontBlack;
 
   return new ImageResponse(
@@ -54,12 +49,6 @@ export default async function handler() {
           data: fontBlackData,
           style: "normal",
           weight: 900,
-        },
-        {
-          name: "Source Serif Pro",
-          data: fontSemiboldData,
-          style: "normal",
-          weight: 700,
         },
         {
           name: "Source Serif Pro",

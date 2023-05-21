@@ -1,19 +1,20 @@
 import { NextMiddleware, NextRequest, NextResponse } from "next/server";
 import { fallbackLng, headerName } from "./utils/constants";
+import { getLanguage } from "./utils";
 
 export const config = {
-  matcher: ["/((?!api|_next|sw.js|.*\\..*).*)"],
+  matcher: ["/((?!api|_next|sw.js|robots.txt|favicon.ico|.*\\..*).*)"],
 };
 
-const getLanguage = (req: NextRequest) => {
-  const regex = new RegExp("^\/([a-zA-Z]{2})\/?");
-  const matches = new URL(req.url).pathname.match(regex);
-
-  return matches?.[1] || fallbackLng;
-};
+const getPathname = (req: NextRequest) => new URL(req.url).pathname;
 
 export const middleware: NextMiddleware = (req) => {
-  const pathLang = getLanguage(req);
+  const pathname = getPathname(req);
+
+  if (pathname === "/")
+    return NextResponse.rewrite(new URL(`/${fallbackLng}`, req.url));
+
+  const pathLang = getLanguage(pathname);
   const headers = new Headers(req.headers);
 
   headers.set(headerName, pathLang);

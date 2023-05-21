@@ -30,11 +30,11 @@ export default async function handler() {
         }}
       >
         <div tw="flex flex-col">
-          <div tw="font-black text-7xl">Rafał Ileczko</div>
-          <div tw="text-4xl">Senior Software Developer</div>
+          <div tw="font-black text-9xl">Rafał Ileczko</div>
+          <div tw="text-6xl">Senior Software Developer</div>
         </div>
         <div tw="flex">
-          <ul tw="flex flex-col gap-4 text-3xl">
+          <ul tw="flex flex-col gap-4 text-5xl">
             <li tw="mt-2">
               Email: <strong tw="ml-4">rileczko@gmail.com</strong>
             </li>

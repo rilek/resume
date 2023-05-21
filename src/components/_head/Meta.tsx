@@ -52,6 +52,7 @@ const Icons = () => (
     <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
   </>
 );
+
 export const Meta = () => {
   return (
     <>

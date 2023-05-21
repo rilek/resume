@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
+import { getTranslation } from "@/locales/i18n_sc";
 
-export const Header = () => {
-  const { t } = useTranslation("common");
+export const Header = async () => {
+  const { t } = await getTranslation("common");
 
   return (
     <header className="font-serif ">

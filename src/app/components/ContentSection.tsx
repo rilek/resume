@@ -1,8 +1,6 @@
-import { use } from "react";
 import { getTranslation } from "@/locales/i18n_sc";
 import { Locales } from "@/types/utils";
 import { isArray, map } from "lodash";
-import { useTranslation } from "react-i18next";
 
 type ContentSectionProps = {
   i18nKey: string;
@@ -41,9 +39,9 @@ const SingleSection = ({ title, subtitle, content }: SingleSectionProps) => (
   </div>
 );
 
-export const ContentSection = ({ i18nKey }: ContentSectionProps) => {
-  const { t } = useTranslation();
-  const data = t(i18nKey, { returnObjects: true }) as unknown as
+export const ContentSection = async ({ i18nKey }: ContentSectionProps) => {
+  const { t } = await getTranslation();
+  const data = t(i18nKey, { returnObjects: true }) as
     | ContentSectionData
     | undefined;
 

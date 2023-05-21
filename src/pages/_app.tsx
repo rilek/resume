@@ -2,8 +2,7 @@ import { Inter, Source_Serif_Pro } from "next/font/google";
 
 import "../locales/i18n";
 import "../styles/global.css";
-import Head from "next/head";
-import { useTranslation } from "react-i18next";
+import { AppProps } from "next/app";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +17,7 @@ const source = Source_Serif_Pro({
   weight: ["400", "600", "700", "900"],
 });
 
-export default function App({ Component, pageProps }: any) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <div className={`${inter.variable} ${source.variable}`}>

@@ -30,7 +30,7 @@ export const generateMetadata = async (
 ): Promise<Metadata> => {
   const { t } = await getTranslation();
 
-  const host = headers().get("host");
+  const host = headers().get("host") || headers().get("x-forwarded-host");
 
   headers().forEach((x, y) => console.log(x, y));
 

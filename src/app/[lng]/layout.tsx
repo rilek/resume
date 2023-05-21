@@ -29,10 +29,10 @@ export const generateMetadata = async (
   _props: RootLayoutProps
 ): Promise<Metadata> => {
   const { t } = await getTranslation();
+  const headersInstance = headers();
 
-  const host = headers().get("host") || headers().get("x-forwarded-host");
-
-  headers().forEach((x, y) => console.log(x, y));
+  const host = headersInstance.get("host") || headersInstance.get("x-forwarded-host");
+  const proto = headersInstance.get("x-forwarded-proto") || "http";
 
   if(!host) throw new Error("Missing host name");
 
@@ -41,7 +41,7 @@ export const generateMetadata = async (
   const img = `/api/og`;
 
   return {
-    metadataBase: new URL(host),
+    metadataBase: new URL(`${proto}://${host}`),
     title,
     description,
     themeColor: "#FFFFFF",

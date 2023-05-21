@@ -65,11 +65,6 @@ const Meta = () => (
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
-    <meta
-      property="og:image"
-      content="/api/og"
-    />
   </>
 );
 

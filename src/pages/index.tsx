@@ -31,7 +31,7 @@ const IndexPage = ({ origin }: { origin: string }) => {
 
         <meta property="og:title" content="Rafał Ileczko" />
         <meta property="og:description" content="Senior Software Developer" />
-        <meta property="og:image" content={`${origin}/api/og`} />
+        <meta property="og:image" content={`https://rileczko.com/api/og`} />
       </Head>
       <Layout sidebar={<Sidebar />} header={<Header />}>
         <div className="flex flex-col gap-8">

@@ -1,31 +1,18 @@
-import i18n, { createInstance } from "i18next";
-import { initReactI18next } from "react-i18next";
+import { createInstance } from "i18next";
+import { initReactI18next } from "react-i18next/initReactI18next";
 import pl from "./pl.json";
 import en from "./en.json";
-import LanguageDetector from "i18next-browser-languagedetector";
-
-i18n
-  .use(initReactI18next)
-  .use(LanguageDetector)
-  .init({
-    resources: { pl, en },
-    debug: process.env.NODE_ENV === "development",
-    lng: "en",
-    defaultNS: "common",
-    returnObjects: true,
-
-    interpolation: { escapeValue: false },
-  });
+import { headers } from "next/headers";
+import { headerName } from "@/utils/constants";
 
 const initI18next = async () => {
   const instance = createInstance();
 
   await instance
     .use(initReactI18next)
-    .use(LanguageDetector)
     .init({
       resources: { pl, en },
-      debug: process.env.NODE_ENV === "development",
+      debug: false, //process.env.NODE_ENV === "development",
       lng: "en",
       defaultNS: "common",
       returnObjects: true,
@@ -36,10 +23,21 @@ const initI18next = async () => {
   return instance;
 };
 
-export async function useTranslation2() {
+export const getConfig = async () => {
+  const headersInstance = headers();
+  const lng = headersInstance.get(headerName) || "en";
+
+  return {
+    lng,
+  };
+};
+
+export async function getTranslation(
+  ns?: keyof typeof pl,
+  opts = {} as Record<string, unknown>
+) {
   const i18n = await initI18next();
+  const { lng } = await getConfig();
 
-  return i18n;
+  return { ...i18n, t: i18n.getFixedT(lng, ns, opts?.keyPrefix as any) };
 }
-
-export default i18n;

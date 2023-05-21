@@ -1,4 +1,4 @@
-import { getTranslation } from "@/locales/i18n_sc";
+import { getTranslation } from "@/locales/i18n";
 import { SidebarData } from "@/types/utils";
 import { map } from "lodash";
 import { Github, Linkedin } from "lucide-react";

@@ -1,6 +1,6 @@
 import { ContentSection } from "@/app/components/ContentSection";
 import { Header } from "@/app/components/Header";
-import { Layout } from "@/components/Layout";
+import { Layout } from "@/app/components/Layout";
 import { Sidebar } from "@/app/components/Sidebar";
 
 export default async function Page() {

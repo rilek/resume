@@ -1,4 +1,4 @@
-import { getTranslation } from "@/locales/i18n_sc";
+import { getTranslation } from "@/locales/i18n";
 import { Locales } from "@/types/utils";
 import { isArray, map } from "lodash";
 

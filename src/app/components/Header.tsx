@@ -1,4 +1,4 @@
-import { getTranslation } from "@/locales/i18n_sc";
+import { getTranslation } from "@/locales/i18n";
 
 export const Header = async () => {
   const { t } = await getTranslation("common");

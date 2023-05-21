@@ -4,9 +4,10 @@ import { Inter, Source_Serif_Pro } from "next/font/google";
 import { dir } from "i18next";
 
 import "../../styles/global.css";
-import { getTranslation } from "@/locales/i18n_sc";
+import { getTranslation } from "@/locales/i18n";
 import { Metadata } from "next";
 import { headers } from "next/headers";
+import { getLanguage } from "@/utils";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -136,8 +137,10 @@ export default async function RootLayout({
   children,
   params: { lng },
 }: PropsWithChildren<RootLayoutProps>) {
+  const lang = getLanguage(lng);
+
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lang} dir={dir(lang)}>
       <head>
         <Script id="localStorageTheme">
           {`const preferredTheme = window.localStorage.getItem("theme");

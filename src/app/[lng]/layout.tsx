@@ -32,12 +32,16 @@ export const generateMetadata = async (
 
   const host = headers().get("host");
 
+  headers().forEach((x, y) => console.log(x, y));
+
+  if(!host) throw new Error("Missing host name");
+
   const title = t("title");
   const description = t("subtitle");
   const img = `/api/og`;
 
   return {
-    metadataBase: new URL(host || ""),
+    metadataBase: new URL(host),
     title,
     description,
     themeColor: "#FFFFFF",

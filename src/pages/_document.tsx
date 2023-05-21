@@ -53,6 +53,11 @@ const Icons = () => (
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+  </>
+);
+
+const Meta = () => (
+  <>
     <meta name="application-name" content="&nbsp;" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
@@ -60,6 +65,11 @@ const Icons = () => (
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+    <meta
+      property="og:image"
+      content="https://og-examples.vercel.sh/api/static"
+    />
   </>
 );
 
@@ -72,6 +82,7 @@ export default function Document() {
         if(preferredTheme) document.body.className = preferredTheme;`}
         </Script>
 
+        <Meta />
         <Icons />
       </Head>
       <body>

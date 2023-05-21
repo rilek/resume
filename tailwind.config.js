@@ -1,3 +1,5 @@
+// @ts-check
+
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
@@ -7,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       "sans": ["var(--inter-font)", ...defaultTheme.fontFamily.sans],
-      "serif": ["var(--source-font)" ,...defaultTheme.fontFamily.serif]
+      "serif": ["var(--source-font)", ...defaultTheme.fontFamily.serif]
     },
     extend: {
     }

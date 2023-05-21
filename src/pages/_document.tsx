@@ -68,7 +68,7 @@ const Meta = () => (
 
     <meta
       property="og:image"
-      content="https://og-examples.vercel.sh/api/static"
+      content="/api/og"
     />
   </>
 );

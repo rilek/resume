@@ -13,13 +13,14 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--inter-font",
+  weight: ["700"]
 });
 
 const source = Source_Serif_Pro({
   subsets: ["latin"],
   display: "swap",
   variable: "--source-font",
-  weight: ["400", "600", "700", "900"],
+  weight: ["400", "700", "900"],
 });
 
 interface RootLayoutProps {

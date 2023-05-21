@@ -23,7 +23,7 @@ const ContentList = ({ content }: ContentListProps) => (
 const SingleSection = ({ title, subtitle, content }: SingleSectionProps) => (
   <div className="flex flex-col break-inside-avoid">
     <header>
-      <h4 className="font-semibold print:text-lg">{title}</h4>
+      <h4 className="font-bold print:text-lg">{title}</h4>
       <p className="text-[max(0.75em,_16px)]">{subtitle}</p>
     </header>
 

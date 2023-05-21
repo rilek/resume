@@ -36,10 +36,6 @@ export const generateMetadata = async (
 
   if(!host) throw new Error("Missing host name");
 
-  console.log(host);
-  console.log(proto);
-  console.log(`${proto}://${host}`);
-
   const title = t("title");
   const description = t("subtitle");
   const img = `/api/og`;

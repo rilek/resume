@@ -1,7 +1,7 @@
 {
   "common": {
     "title": "Rafał Ileczko",
-    "subtitle": "Lider zespołu | Senior Software Developer",
+    "subtitle": "Senior Software Developer",
     "sidebar": {
       "email": {
         "title": "Adres email",
@@ -9,24 +9,7 @@
       },
       "webpage": {
         "title": "Strona internetowa",
-        "value": "rileczko@com"
-      },
-      "links": {
-        "title": "Linki",
-        "data": [
-          {
-            "title": "LinkedIn",
-            "icon": "icon",
-            "href": "https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/",
-            "shortUrl": "bit.ly/3JiTv61"
-          },
-          {
-            "title": "Github",
-            "icon": "",
-            "href": "https://github.com/rilek",
-            "shortUrl": "bit.ly/3q7b2Xd"
-          }
-        ]
+        "value": "rileczko.com"
       },
       "languages": {
         "title": "Języki",
@@ -35,27 +18,24 @@
           "Angielski - C1",
           "Francuski - A1"
         ]
+      },
+      "links": {
+        "title": "Linki",
+        "data": [
+          {
+            "title": "LinkedIn",
+            "icon": "linkedin",
+            "href": "https://www.linkedin.com/in/rafa%C5%82-ileczko-1a7727114/",
+            "shortUrl": "bit.ly/3JiTv61"
+          },
+          {
+            "title": "Github",
+            "icon": "github",
+            "href": "https://github.com/rilek",
+            "shortUrl": "bit.ly/3q7b2Xd"
+          }
+        ]
       }
-    }
-  },
-  "navigation": {
-    "print": {
-      "title": "Wydrukuj"
-    },
-    "systemTheme": {
-      "title": "Ustaw motyw systemowy"
-    },
-    "lightTheme": {
-      "title": "Ustaw motyw jasny"
-    },
-    "darkTheme": {
-      "title": "Ustaw motyw ciemny"
-    },
-    "languagePl": {
-      "title": "Ustaw język polski"
-    },
-    "languageEn": {
-      "title": "Ustaw język angielski"
     }
   },
   "experience": {
@@ -63,23 +43,36 @@
     "sections": [
       {
         "title": "Senior Clojure Developer",
-        "subtitle": "Kleene · Sierpień 2022 - now",
+        "subtitle": "Kleene · Sierpień 2022 - teraz",
+        "skills": [
+          "React",
+          "Clojure",
+          "ClojureScript",
+          "TailwindCSS",
+          "Radix UI",
+          "AWS"
+        ],
         "content": [
-          "Rozwój aplikacji full-stackowej opartej na Clojure",
-          "Wycenianie zadań, konsultowanie decyzji UXowych oraz funkcjonalności"
+          "Komplekoswe projektowanie i implementowanie funkcjonalności na wielu warstwach serwisów",
+          "Współpraca z zespołem produktowym w celu określenia zakresu funkcjonalności w celu wydajniejszej i pewniejszej implementacji.",
+          "Przygotowanie propozycji nowych funkcjonalności i ulepszeń istniejących rozwijających produkt"
         ]
       },
       {
         "title": "CTO / Co-Founder",
-        "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022"
+        "subtitle": "RWS Sp. z o.o · VII 2021 - III 2022",
+        "content": [
+          "Prowadzenie rozwoju aplikacji SaaS IoT dedykowanego firmom z sektora przemysłowego",
+          "Podejmowanie decyzji na pograniczu technologii i biznesu"
+        ]
       },
       {
         "title": "Lead Software Developer",
         "subtitle": "Retailic Sp. z o.o. · 2020 - now",
         "content": [
-          "Wsparcie merytoryczne z perspektywy technologii podczas planowania strategii biznesowych;",
-          "Podejmowanie kluczowych decyzji technologicznych;",
-          "Zarządzanie projektem IT."
+          "Zarządzanie zespołem developerów i rozwijanie projektów eCommerce opartych o technologie React i React Native",
+          "Planowanie, wycenianie projektów w celu dostarczenia wartości w określonym budżecie",
+          "Wypełnianie obowiazków jako senior developer"
         ]
       },
       {
@@ -135,15 +128,11 @@
       },
       {
         "title": "Języki programowania",
-        "content": "JavaScript (TypeScript), Clojure (ClojureScript), C#/F#, Python, SQL, C, HTML, CSS"
-      },
-      {
-        "title": "Uczenie maszynowe i wizja komputerowa (Podstawy)",
-        "content": "Numpy, Pandas, Scikit-learn, PyTorch; OpenCV"
+        "content": "JavaScript (TypeScript), Clojure (ClojureScript), HTML, CSS, C#/F#, Python, SQL"
       },
       {
         "title": "Tworzenie aplikacji biznesowych",
-        "content": "ReactJS, Rum, React Native, Node.JS, .Net Core, MSSQL, PostgreSQL, Storybook, Gatsby"
+        "content": "React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Supabase, Tailwind, tRPC"
       }
     ]
   }

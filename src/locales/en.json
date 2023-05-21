@@ -47,9 +47,8 @@
             "React",
             "Clojure",
             "ClojureScript",
-            "TailwindCss",
-            "Radix-UI",
-            "Apache Kafka",
+            "TailwindCSS",
+            "Radix UI",
             "AWS"
           ],
           "content": [
@@ -63,13 +62,14 @@
           "subtitle": "RWS · VII 2021 - III 2022",
           "content": [
             "Leading development of a SaaS IoT web application dedicated for industry sector",
-            "Making architectural decisions of implemented feature"
+            "Making all tech decisions in between tech and business"
           ],
           "skills": [
             "Supabase",
             "Tailwind",
             "Docker",
-            "Nextjs",
+            "C#",
+            "NextJs",
             "Typescript"
           ]
         },

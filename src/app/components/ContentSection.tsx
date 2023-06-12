@@ -28,7 +28,7 @@ const SingleSection = ({ title, subtitle, content }: SingleSectionProps) => (
     </header>
 
     {content && (
-      <div className="prose prose-lg text-gray-900 leading-relaxed">
+      <div className="prose prose-lg text-gray-900 leading-relaxed print:mt-2 print:prose">
         {isArray(content) ? (
           <ContentList content={content} />
         ) : (
@@ -50,7 +50,7 @@ export const ContentSection = async ({ i18nKey }: ContentSectionProps) => {
   const { title, sections } = data;
 
   return (
-    <section className="border-t-2 border-slate-400 text-xl print:text-sm">
+    <section className="border-t-2 print:border-t border-slate-400 text-xl print:text-sm">
       <header className="py-4 mb-4 font-sans">
         <h3 className="font-bold text-base uppercase print:text-xs">{title}</h3>
       </header>

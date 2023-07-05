@@ -5,7 +5,7 @@ import en from "./en.json";
 import { headers } from "next/headers";
 import { headerName } from "@/utils/constants";
 
-const initI18next = async () => {
+export const initI18next = async () => {
   const instance = createInstance();
 
   await instance

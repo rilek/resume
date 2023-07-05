@@ -19,3 +19,31 @@
 body {
   @apply text-gray-900;
 }
+
+.markdown {
+  @apply text-lg print:text-base;
+
+  & h2 {
+    @apply font-bold font-sans text-base uppercase print:text-xs py-4 border-t-2 print:border-t border-slate-400 mb-4 print:mb-0 [&:not(:first-of-type)]:mt-8;
+  }
+
+  & h3 {
+    @apply font-bold text-xl print:text-base mt-6 [h2+&]:mt-0;
+  }
+
+  & h2 + h3 {
+    @apply mt-0;
+  }
+
+  & ul {
+    @apply pl-6 list-disc print:text-sm;
+  }
+
+  & li {
+    @apply pl-2 my-2 print:my-0 marker:text-gray-300;
+  }
+
+  & p {
+    @apply print:text-sm;
+  }
+}

@@ -8,6 +8,7 @@ import { dir } from "i18next";
 import "../../styles/global.css";
 import { getTranslation } from "@/locales/i18n";
 import { getLanguage } from "@/utils";
+import Navigation from "../components/Navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -153,7 +154,11 @@ export default async function RootLayout({
         if(preferredTheme) document.body.classList.add(preferredTheme);`}
         </Script>
       </head>
-      <body className={`${inter.variable} ${source.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${source.variable}`}>
+        {children}
+
+        <Navigation />
+      </body>
     </html>
   );
 }

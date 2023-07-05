@@ -10,11 +10,13 @@ const getPathname = (req: NextRequest) => new URL(req.url).pathname;
 
 export const middleware: NextMiddleware = (req) => {
   const pathname = getPathname(req);
-
-  if (pathname === "/")
-    return NextResponse.rewrite(new URL(`/${fallbackLng}`, req.url));
-
   const pathLang = getLanguage(pathname);
+
+  if (pathname === "/" || !pathLang)
+    return NextResponse.redirect(
+      new URL(`/${fallbackLng}/${pathname}`, req.url)
+    );
+
   const headers = new Headers(req.headers);
 
   headers.set(headerName, pathLang);

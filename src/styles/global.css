@@ -4,7 +4,7 @@
 
 @page {
   size: A4;
-  margin: 24pt 32pt;
+  margin: 40pt 56pt;
 }
 
 @media print {
@@ -45,5 +45,9 @@ body {
 
   & p {
     @apply print:text-sm;
+  }
+
+  & p + p {
+    @apply mt-5;
   }
 }

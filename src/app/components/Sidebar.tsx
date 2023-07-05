@@ -1,8 +1,14 @@
 import { getTranslation } from "@/locales/i18n";
 import { SidebarData } from "@/types/utils";
+import clsx from "clsx";
 import { map } from "lodash";
 import { Github, Linkedin } from "lucide-react";
-import type { AnchorHTMLAttributes, DetailedHTMLProps, FC } from "react";
+import type {
+  AnchorHTMLAttributes,
+  DetailedHTMLProps,
+  FC,
+  HTMLAttributes,
+} from "react";
 
 type LinkProps = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -92,12 +98,18 @@ const SidebarSection = ({ sectionKey, props }: SidebarSectionProps) => {
   return <Renderer {...(props as any)} />;
 };
 
-export const Sidebar = async () => {
+export const Sidebar = async (props: HTMLAttributes<HTMLElement>) => {
   const { t } = await getTranslation("common");
   const data = t("sidebar") as unknown as SidebarData;
 
   return (
-    <div className="grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs">
+    <div
+      {...props}
+      className={clsx(
+        "grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs",
+        props.className
+      )}
+    >
       {Object.entries(data).map(([key, props]: any) => (
         <SidebarSection key={key} sectionKey={key} props={props} />
       ))}

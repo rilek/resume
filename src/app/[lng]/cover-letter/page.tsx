@@ -14,13 +14,13 @@ interface Props {
 
 export default async function Page({ params: { lng } }: Props) {
   const content = await fs.readFile(
-    `${process.cwd()}/src/locales/content/${lng}/resume.md`,
+    `${process.cwd()}/src/locales/content/${lng}/cover_letter.md`,
     "utf-8"
   );
 
   return (
     <>
-      <Layout sidebar={<Sidebar />} header={<Header />}>
+      <Layout sidebar={<Sidebar className="print:hidden" />} header={<Header />}>
         <ReactMarkdown className="markdown">{content}</ReactMarkdown>
       </Layout>
     </>

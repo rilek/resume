@@ -1,4 +1,4 @@
-import fs from "fs/promises";
+import fs from "fs";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 import { Header } from "@/app/components/Header";
@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default async function Page({ params: { lng } }: Props) {
-  const content = await fs.readFile(
+  const content = fs.readFileSync(
     `${process.cwd()}/src/locales/content/${lng}/resume.md`,
     "utf-8"
   );

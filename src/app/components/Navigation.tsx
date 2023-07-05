@@ -29,7 +29,7 @@ const Navigation = () => {
       </button>
 
       <div className="border rounded-br -ml-px px-4 py-2 w-56">
-        <nav aria-expanded={expanded}>
+        <nav>
           <ul>
             <li>
               <a href="/" className="flex gap-2 text-blue-700 hover:underline print:text-inherit">Resume</a>

@@ -157,7 +157,7 @@ export default async function RootLayout({
       <body className={`${inter.variable} ${source.variable}`}>
         {children}
 
-        <Navigation />
+        {/* <Navigation /> */}
       </body>
     </html>
   );

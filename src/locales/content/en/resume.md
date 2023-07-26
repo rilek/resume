@@ -2,54 +2,53 @@
 ### Senior Clojure Developer
 *Kleene · August 2022 - now*
 
-- Designed and implemented end-to-end features across multiple layers, ensuring seamless functionality.
-- Collaborated with product teams to consult on feature proposals, resulting in more efficient and feasible implementation.
-- Initiated the development of new features and improvements, driving innovation and progress within the company.
+- Designed and implemented features across multiple services
+- Collaborated with various teams to consult on feature proposals
+- Initiated the development of new features and improvements
 
-### Lead Software Developer
+### Lead Frontend Developer
 *Retailic · 2020 - July 2022*
 
-- Managed a team of frontend developers and successfully delivered multiple eCommerce projects using React and React Native
-- Strategized project plans and pricing to ensure smooth delivery within allocated budgets
-- Performed high-level responsibilities as a senior member, contributing significantly towards the success of each project.
+- Managed a team of frontend developers and led multiple projects using React and React Native
+- Proposed multiple improvements on both technological and organizational levels
+- Performed responsibilities as a senior member
 
-### Senior Software Developer
+### Senior Frontend Developer
 *Retailic · 2018 - 2020*
 
-- Led the development of React and React Native projects, delivering high-quality code that resulted in improved user experiences.
-- Provided guidance to junior developers through mentoring sessions and conducting thorough code reviews, leading to an increase in team productivity and skills advancement.
-- Developed internal tools that streamlined project workflows and increased efficiency across departments.
+- Led the development of React and React Native projects
+- Guided junior developers, conducting thorough code reviews
+- Developed internal tools to increase workflow efficiency across departments.
 
 ### Frontend Developer
 *Retailic · VII 2016 - 2018*
 
-- Development and support in creating e-commerce applications based on ReactJS and AngularJS frameworks;
-- Implementation of other business applications based on the Clojure, JavaScript and Python programming languages;
-- Consultation of business requirements with project managers;
-- Valuation of technological works.
+- Developed multiple web applications using ReactJS and AngularJS frameworks
+- Implemented business applications using Clojure, JavaScript, and Python programming languages
+- Consulted business requirements with project managers
+- Valuated technological works.
 
 
 ### Web developer
 *Social Karma · X 2015 - VII 2016*
 
-- Creating websites, managing existing projects, most often using CMS Wordpress, speeding up operations, optimization for search engines;
-- Creating graphic designs for websites and presentations.
+- Created websites and managed existing projects using CMS WordPress, speeded up operations, and optimized for search engines;
+- Created graphic designs for websites and presentations.
 
 
 ## Education
-### Computer Science - Masters Degree
+### Computer Science, MSc
 *Rzeszów University of Technology · 2018 - 2019*
 
-### Automation and Robotics - Bachelors Degree
+### Automation and Robotics, BSc
 *Rzeszów University of Technology · 2014 - 2018*
-
 
 ## Skills
 ### IT Project Management
-Team management, selecting technologies and tools, conducting valuations, managing a technological strategy
+Team management, choosing technologies and tools, conducting valuations, managing architecture
 
 ### Programming Languages
-JavaScript (TypeScript), Clojure (ClojureScript), HTML, CSS, C#/F#, Python, SQL
+JavaScript, TypeScript, Clojure, ClojureScript, HTML, CSS, C#/F#, Python, SQL
 
 ### Development of business applications
-React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Supabase, Tailwind, tRPC
+React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Supabase, Tailwind, tRPC, Styled Components, Cypress

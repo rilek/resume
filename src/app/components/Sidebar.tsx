@@ -27,7 +27,7 @@ const socialIcons = {
 
 const Link = ({ ...props }: LinkProps) => (
   <a
-    className="text-blue-700 hover:text-blue-500 transition-colors print:text-inherit"
+    className="text-blue-700 hover:text-blue-500 transition-colors"
     {...props}
   />
 );
@@ -69,13 +69,13 @@ const LinksSection = ({ title, data }: SidebarData["links"]) => (
 
         return (
           <a
-            className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
+            className="flex gap-2 text-blue-700 hover:underline"
             href={href}
             key={i}
           >
-            <Icon className="" size={20} />
-            <span className="print:hidden">{title}</span>
-            <span className="hidden print:block">{shortUrl}</span>
+            {/* <Icon className="" size={20} /> */}
+            <span className="_print:hidden">{title}</span>
+            {/* <span className="hidden print:block">{shortUrl}</span> */}
           </a>
         );
       })}
@@ -106,7 +106,7 @@ export const Sidebar = async (props: HTMLAttributes<HTMLElement>) => {
     <div
       {...props}
       className={clsx(
-        "grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs",
+        "grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs print:flex  print:gap-6",
         props.className
       )}
     >

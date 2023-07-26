@@ -18,8 +18,21 @@
           "English - C1"
         ]
       },
+      "details": {
+        "title": "Details",
+        "data": [
+          {
+            "title": "rileczko@gmail.com",
+            "href": "mailto:rileczko@gmail.com"
+          },
+          {
+            "title": "rileczko.com",
+            "href": "https://rileczko.com"
+          }
+        ]
+      },
       "links": {
-        "title": "Links",
+        "title": "Social links",
         "data": [
           {
             "title": "LinkedIn",

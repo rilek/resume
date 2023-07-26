@@ -19,10 +19,8 @@ export default async function Page({ params: { lng } }: Props) {
   );
 
   return (
-    <>
-      <Layout sidebar={<Sidebar />} header={<Header />}>
-        <ReactMarkdown className="markdown">{content}</ReactMarkdown>
-      </Layout>
-    </>
+    <Layout sidebar={<Sidebar />} header={<Header />}>
+      <ReactMarkdown className="markdown">{content}</ReactMarkdown>
+    </Layout>
   );
 }

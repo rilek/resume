@@ -10,9 +10,7 @@
 @media print {
   html,
   body {
-    width: 210mm;
-    height: 297mm;
-    font-size: 12pt;
+    font-size: 11pt;
   }
 }
 
@@ -24,11 +22,11 @@ body {
   @apply text-lg print:text-base;
 
   & h2 {
-    @apply font-bold font-sans text-base uppercase print:text-xs py-4 border-t-2 print:border-t border-slate-400 mb-4 print:mb-0 [&:not(:first-of-type)]:mt-8;
+    @apply font-bold font-sans text-base uppercase print:text-xs py-4 border-t-2 print:border-t border-slate-400 mb-4 print:mb-0 [&:not(:first-of-type)]:mt-8 print:[&:not(:first-of-type)]:mt-4 print:py-2;
   }
 
   & h3 {
-    @apply font-bold text-xl print:text-base mt-6 [h2+&]:mt-0;
+    @apply font-bold text-xl print:text-base mt-6 [h2+&]:mt-0 print:mt-2;
   }
 
   & h2 + h3 {
@@ -40,11 +38,11 @@ body {
   }
 
   & li {
-    @apply pl-2 my-2 print:my-0 marker:text-gray-300;
+    @apply pl-2 my-2 print:my-1 marker:text-gray-300;
   }
 
   & p {
-    @apply print:text-sm;
+    @apply print:text-[10pt];
   }
 
   & p + p {

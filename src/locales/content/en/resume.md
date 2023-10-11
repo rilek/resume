@@ -58,8 +58,8 @@ Team management, choosing technologies and tools, conducting valuations, managin
 
 ### Programming Languages
 
-JavaScript, TypeScript, Clojure, ClojureScript, HTML, CSS, C#/F#, Python, SQL
+JavaScript/TypeScript, Clojure, ClojureScript, HTML, CSS, C#/F#, Python, SQL
 
 ### Development of business applications
 
-React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Supabase, Vite, Tailwind, tRPC, Styled Components, Cypress
+Cypress, NextJS, Node.JS, Playwright, PostgreSQL, RadixUI, React, React Native, React Query, Rum/Reagent, Storybook, Styled Components, Supabase, TailwindCSS, TanStack Router, Vite, tRPC

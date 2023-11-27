@@ -43,7 +43,7 @@ body {
   }
 
   & li {
-    @apply pl-2 my-2 print:my-0.5 marker:text-gray-300;
+    @apply pl-2 my-1.5 print:my-px marker:text-gray-300;
   }
 
   & p {

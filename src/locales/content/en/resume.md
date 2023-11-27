@@ -8,6 +8,7 @@ _Kleene · August 2022 - now_
 - Collaborated with various teams to consult on feature proposals
 - Initiated the design and development of new features and improvements
 
+
 ### Lead Frontend Developer
 
 _Retailic · 2020 - July 2022_

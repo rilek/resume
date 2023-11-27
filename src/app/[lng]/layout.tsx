@@ -8,7 +8,6 @@ import { dir } from "i18next";
 import "../../styles/global.css";
 import { getTranslation } from "@/locales/i18n";
 import { getLanguage } from "@/utils";
-import Navigation from "../components/Navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -147,14 +146,14 @@ export default async function RootLayout({
   const lang = getLanguage(lng);
 
   return (
-    <html lang={lang} dir={dir(lang)}>
+    <html lang={lang} dir={dir(lang)} className={`${inter.variable} ${source.variable}`}>
       <head>
-        <Script id="localStorageTheme">
+        {/* <Script id="localStorageTheme">
           {`const preferredTheme = window.localStorage.getItem("theme");
         if(preferredTheme) document.body.classList.add(preferredTheme);`}
-        </Script>
+        </Script> */}
       </head>
-      <body className={`${inter.variable} ${source.variable}`}>
+      <body>
         {children}
 
         {/* <Navigation /> */}

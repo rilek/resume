@@ -27,13 +27,17 @@ const socialIcons = {
 
 const Link = ({ ...props }: LinkProps) => (
   <a
-    className="text-blue-700 hover:text-blue-500 transition-colors"
+    className="text-blue-700 transition-colors hover:text-blue-500"
     {...props}
   />
 );
 
-const SidebarSectionRenderer = ({ title, children }: any) => (
-  <div className="flex flex-col gap-1">
+const SidebarSectionRenderer = ({
+  title,
+  children,
+  ...props
+}: HTMLAttributes<HTMLDivElement> & { title: string }) => (
+  <div className={clsx("flex flex-col gap-1", props.className)}>
     <header>
       <h3 className="font-semibold">{title}</h3>
     </header>
@@ -54,7 +58,7 @@ const WebsiteSection = ({ title, value }: SidebarData["webpage"]) => (
 );
 
 const LanguagesSection = ({ title, data }: SidebarData["languages"]) => (
-  <SidebarSectionRenderer title={title}>
+  <SidebarSectionRenderer title={title} className="print:hidden">
     {map(data, (language, i) => {
       return <p key={i}>{language}</p>;
     })}

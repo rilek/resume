@@ -8,19 +8,22 @@
 }
 
 @media print {
+
   html,
   body {
     font-size: 11pt;
+    print-color-adjust: exact !important;
   }
 }
 
+/*
 #page-counter:after {
   counter-increment: page;
   content: counter(page);
-}
+} */
 
 body {
-  @apply text-gray-900 w-screen overflow-x-hidden;
+  @apply w-screen overflow-x-hidden text-gray-900;
 }
 
 .markdown {
@@ -31,10 +34,10 @@ body {
   }
 
   & h3 {
-    @apply font-bold text-xl mt-6 [h2+&]:mt-0 print:text-sm print:mt-2;
+    @apply font-bold text-xl mt-7 [h2+&]:mt-0 print:text-sm print:mt-3;
   }
 
-  & h2 + h3 {
+  & h2+h3 {
     @apply mt-0;
   }
 
@@ -50,7 +53,20 @@ body {
     @apply print:text-sm;
   }
 
-  & p + p {
+  & p+p {
     @apply mt-5;
+  }
+
+
+  & h3+h5 {
+    @apply absolute right-0 -mt-px text-base italic -translate-y-full text-slate-800 print:text-xs;
+  }
+
+  & h5+ul:has(+ ul) {
+    @apply flex gap-1 pl-0 my-2 print:my-1;
+
+    & li {
+      @apply block py-0.5 px-2 m-0 text-sm rounded-full bg-slate-200 print:px-[4pt] print:py-[1pt] print:text-xs;
+    }
   }
 }

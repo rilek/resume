@@ -24,7 +24,6 @@ const source = Source_Serif_4({
 });
 
 const defaultMeta = {
-  themeColor: "#FFFFFF",
   icons: [
     {
       rel: "apple-touch-icon-precomposed",
@@ -139,6 +138,12 @@ export const generateMetadata = async (
   };
 };
 
+
+
+export const viewport = {
+  themeColor: "#FFFFFF",
+};
+
 export default async function RootLayout({
   children,
   params: { lng },
@@ -146,7 +151,11 @@ export default async function RootLayout({
   const lang = getLanguage(lng);
 
   return (
-    <html lang={lang} dir={dir(lang)} className={`${inter.variable} ${source.variable}`}>
+    <html
+      lang={lang}
+      dir={dir(lang)}
+      className={`${inter.variable} ${source.variable}`}
+    >
       <head>
         {/* <Script id="localStorageTheme">
           {`const preferredTheme = window.localStorage.getItem("theme");

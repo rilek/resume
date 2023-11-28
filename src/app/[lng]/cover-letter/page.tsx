@@ -1,5 +1,5 @@
 import fs from "fs";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ReactMarkdown from "react-markdown";
 
 import { Header } from "@/app/components/Header";
 import { Layout } from "@/app/components/Layout";

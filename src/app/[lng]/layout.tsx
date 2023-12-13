@@ -138,8 +138,6 @@ export const generateMetadata = async (
   };
 };
 
-
-
 export const viewport = {
   themeColor: "#FFFFFF",
 };
@@ -161,6 +159,24 @@ export default async function RootLayout({
           {`const preferredTheme = window.localStorage.getItem("theme");
         if(preferredTheme) document.body.classList.add(preferredTheme);`}
         </Script> */}
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          async
+          strategy="beforeInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XLQH7JW38B"
+        ></Script>
+        <Script
+          id="google-analytics"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XLQH7JW38B');`,
+          }}
+        />
       </head>
       <body>
         {children}

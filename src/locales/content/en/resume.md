@@ -29,8 +29,8 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 - IIoT
 - Cloud Infrastructure
 
-* Orchestrated all stages of the product lifecycle, from initial concept, features planning, through development and cloud infrastructure setup, to deployment of 2 full stack web, and single RaspberryPi applications.
-* Developed a CMMS aplication, designed to improve equipment uptime and reduce maintenance costs through predictive maintenance and real-time monitoring and alerting.
+* Orchestrated all stages of the product lifecycle, from initial concept, and features planning, through development and cloud infrastructure setup, to deployment of 2 full stack web, and single Raspberry Pi applications.
+* Developed a CMMS application, designed to improve equipment uptime and reduce maintenance costs through predictive maintenance and real-time monitoring and alerting.
 * Engineered an IoT platform for remote monitoring of industrial equipment, aiming to enhance operational efficiency and support data-driven decision-making.
 
 ### Lead Frontend Engineer
@@ -44,7 +44,7 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 - Tech Leadership
 
 * Managed a team of 5 developers, leading the successful delivery of two major e-commerce projects.
-* Devised a strategic plan for a technology stack continuous transition of a large code base, allowing to use 50% less developers and finish 30% faster comparing to original separate rewrite plan.
+* Devised a strategic plan for a technology stack continuous transition of a large code base, allowing the use of 50% fewer developers and finishing 30% faster compared to the original separate rewrite plan.
 * Implemented organizational improvements that reduced communication bottlenecks and accelerated development workflows by approximately 20%.
 
 ### Senior Frontend Engineer

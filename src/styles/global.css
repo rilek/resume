@@ -42,7 +42,7 @@ body {
   }
 
   & ul {
-    @apply pl-6 list-disc print:text-sm;
+    @apply pl-6 list-disc print:text-xs;
   }
 
   & li {
@@ -50,7 +50,7 @@ body {
   }
 
   & p {
-    @apply print:text-sm;
+    @apply print:text-xs;
   }
 
   & p+p {

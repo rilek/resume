@@ -1,6 +1,6 @@
 ## Summary
 
-Senior Engineer and Co-founder with over 8 years of comprehensive experience in startup environments. Drives product development with a keen focus on delivering business value, enhancing UX and DX, simplifying processes. Language-agnostic, but most efficient in the Clojure and Typescript environments. Managed team of up to 5 developers.
+Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experience in startup environments. Drives product development with a keen focus on delivering business value, enhancing UX and DX, simplifying processes. Language-agnostic, but most efficient in the Clojure and Typescript environments. Managed team of up to 5 developers.
 
 ## Experience
 

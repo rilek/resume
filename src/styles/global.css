@@ -57,6 +57,9 @@ body {
     @apply mt-5;
   }
 
+  & a {
+    @apply text-blue-900;
+  }
 
   & h3+h5 {
     @apply absolute right-0 -mt-px text-base italic -translate-y-full text-slate-800 print:text-xs;

@@ -5,7 +5,7 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 ## Experience
 
 ### Senior Fullstack Engineer
-##### Kleene · August 2022 - Present
+##### [Kleene](https://kleene.ai/) · August 2022 - Present
 
 - Clojure
 - ClojureScript
@@ -18,10 +18,10 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 
 * Proposed and developed the standardization of code and API schemas, reducing bug reports by approximately 15%.
 * Led the development of a design system, cutting down the time required to launch new designs by 30%.
-* Architected and executed feature developments across 8 microservices.
+* Architected and executed feature developments across 8 services.
 
 ### Co-Founder / CTO
-##### Maintei · July 2023 - Present
+##### [Maintei](https://maintei.com/) · July 2023 - Present
 
 - Typescript
 - React
@@ -34,7 +34,7 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 * Engineered an IoT platform for remote monitoring of industrial equipment, aiming to enhance operational efficiency and support data-driven decision-making.
 
 ### Lead Frontend Engineer
-##### Retailic · January 2020 - July 2022 (2y 6m)
+##### [Retailic](https://retailic.com/) · January 2020 - July 2022 (2y 6m)
 
 - Clojure
 - ClojureScript
@@ -48,7 +48,7 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 * Implemented organizational improvements that reduced communication bottlenecks and accelerated development workflows by approximately 20%.
 
 ### Senior Frontend Engineer
-##### Retailic · January 2018 - December 2019 (2y)
+##### [Retailic](https://retailic.com/) · January 2018 - December 2019 (2y)
 
 - Clojure
 - ClojureScript

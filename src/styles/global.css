@@ -65,7 +65,7 @@ body {
     @apply absolute right-0 -mt-px text-base italic -translate-y-full text-slate-800 print:text-xs;
   }
 
-  & h5+ul:has(+ ul) {
+  & h5+ul {
     @apply flex gap-1 pl-0 my-2 print:my-1;
 
     & li {

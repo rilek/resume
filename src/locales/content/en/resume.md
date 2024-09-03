@@ -1,51 +1,53 @@
 ## Summary
 
-Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experience in startup environments. Drives product development with a keen focus on delivering business value, enhancing UX and DX, simplifying processes. Language-agnostic, but most efficient in the Clojure and Typescript environments. Managed team of up to 5 developers.
+Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive experience in startup environments. Absolutely product-oriented with a keen focus on delivering business value, enhancing UX and DX, simplifying processes. Language-agnostic, but most efficient in the Clojure and Typescript environments. Managed teams of up to 5 developers.
 
 ## Experience
 
 ### Senior Fullstack Engineer
 ##### [Kleene](https://kleene.ai/) · August 2022 - Present
 
+- Fullstack
 - Clojure
 - ClojureScript
 - React
 - PostgreSQL
-- Microservices
 - ELT
 - AWS
 - Kafka
 
 * Proposed and developed the standardization of code and API schemas, reducing bug reports by approximately 15%.
 * Led the development of a design system, cutting down the time required to launch new designs by 30%.
-* Architected and executed feature developments across 8 services.
+* Led feature implementation end-to-end: from gathering requirements, through design to implementation
 
 ### Co-Founder / CTO
-##### [Maintei](https://maintei.com/) · July 2023 - Present
+##### [Maintei](https://maintei.com/) · July 2021 - July 2024
 
+- Fullstack
 - Typescript
 - React
 - PostgreSQL
 - IIoT
+- Supabase
 - Cloud Infrastructure
 
-* Orchestrated all stages of the product lifecycle, from initial concept, and features planning, through development and cloud infrastructure setup, to deployment of 2 full stack web, and single Raspberry Pi applications.
+* Led all stages of the product lifecycle, from initial concept, and features planning, through development and cloud infrastructure setup, to deployment of 2 full stack web, and single IoT application.
 * Developed a CMMS application, designed to improve equipment uptime and reduce maintenance costs through predictive maintenance and real-time monitoring and alerting.
 * Engineered an IoT platform for remote monitoring of industrial equipment, aiming to enhance operational efficiency and support data-driven decision-making.
 
 ### Lead Frontend Engineer
 ##### [Retailic](https://retailic.com/) · January 2020 - July 2022 (2y 6m)
 
+- Tech Leadership
 - Clojure
 - ClojureScript
 - TypeScript
 - React
 - ReactNative
-- Tech Leadership
 
-* Managed a team of 5 developers, leading the successful delivery of two major e-commerce projects.
-* Devised a strategic plan for a technology stack continuous transition of a large code base, allowing the use of 50% fewer developers and finishing 30% faster compared to the original separate rewrite plan.
-* Implemented organizational improvements that reduced communication bottlenecks and accelerated development workflows by approximately 20%.
+* Managed a team of 5 developers, leading two major e-commerce projects.
+* Prepared a strategic plan for a technology stack continuous transition of a large code base, allowing the use of 50% fewer developers and finishing 30% faster compared to the original separate rewrite plan.
+* Led a design system implementation, reducing the development time for new views and components by about 40%.
 
 ### Senior Frontend Engineer
 ##### [Retailic](https://retailic.com/) · January 2018 - December 2019 (2y)
@@ -57,9 +59,13 @@ Senior Engineer, Lead and Co-founder with over 8 years of comprehensive experien
 - ReactNative
 - Playwright
 
-* Pioneered a design system implementation, reducing the development time for new views by about 40%.
-* Initiated and led the adoption of an end-to-end testing suite for a large codebase, improving code quality and reducing post-deployment bugs and issues reducing regression reports by approximately 20%.
-* Applied various optimization techniques to decrease the initial loading time of applications by approximately 40% and improved total Web Vitals score by 30 points.
+### Web developer
+##### Social Karma · X 2015 - VII 2016 (10m)
+
+- Web design
+- Wordpress
+- Shopify
+- Prestashop
 
 ## Skills
 

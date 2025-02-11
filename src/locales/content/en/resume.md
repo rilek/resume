@@ -36,7 +36,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 * Engineered an IoT platform for remote monitoring of industrial equipment, aiming to enhance operational efficiency and support data-driven decision-making.
 
 ### Lead Frontend Engineer
-##### [Retailic](https://retailic.com/) · January 2020 - July 2022 (2y 6m)
+##### [Retailic](https://retailic.com/) · January 2020 - July 2022
 
 - Tech Leadership
 - Clojure
@@ -50,7 +50,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 * Led a design system implementation, reducing the development time for new views and components by about 40%.
 
 ### Senior Frontend Engineer
-##### [Retailic](https://retailic.com/) · January 2018 - December 2019 (2y)
+##### [Retailic](https://retailic.com/) · January 2018 - December 2019
 
 - Clojure
 - ClojureScript
@@ -59,8 +59,16 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 - ReactNative
 - Playwright
 
+### Software Engineer
+##### [Retailic](https://retailic.com/) · August 2016 - December 2017
+
+- Clojure
+- ClojureScript
+- Python
+- AngularJS
+
 ### Web developer
-##### Social Karma · X 2015 - VII 2016 (10m)
+##### Social Karma · October 2015 - July 2016
 
 - Web design
 - Wordpress
@@ -75,7 +83,7 @@ JavaScript/TypeScript, Clojure, ClojureScript, HTML, CSS, C#/F#, Python, SQL
 
 ### Development of business applications
 
-Cypress, Fastify, NextJS, Node.JS, Playwright, PostgreSQL, RadixUI, React, React Native, React Query, Rum/Reagent, Storybook, Styled Components, Supabase, TailwindCSS, tRPC, TanStack Router, Vite
+Cypress, Fastify, FastAPI, NextJS, Node.JS, Playwright, PostgreSQL, RadixUI, React, React Native, React Query, Rum/Reagent, Storybook, Styled Components, Supabase, TailwindCSS, tRPC, TanStack, Vite
 
 ### Others
 

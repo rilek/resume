@@ -1,9 +1,10 @@
 import { getTranslation } from "@/locales/i18n";
 import { SidebarData } from "@/types/utils";
+import type { Language } from "@/utils/constants";
 import clsx from "clsx";
-import { map } from "lodash";
-import { Github, Linkedin } from "lucide-react";
 import type { AnchorHTMLAttributes, DetailedHTMLProps, FC, HTMLAttributes } from "react";
+import { GithubIcon } from "./icons/il-github";
+import { LinkedinIcon } from "./icons/il-linkedin";
 
 type LinkProps = DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
 
@@ -13,8 +14,8 @@ type SidebarSectionProps = {
 };
 
 const socialIcons = {
-  github: Github,
-  linkedin: Linkedin,
+  github: GithubIcon,
+  linkedin: LinkedinIcon,
 };
 
 const TextLink = ({ children, ...props }: LinkProps) => (
@@ -50,7 +51,7 @@ const WebsiteSection = ({ title, value }: SidebarData["webpage"]) => (
 
 const LanguagesSection = ({ title, data }: SidebarData["languages"]) => (
   <SidebarSectionRenderer title={title} className="print:hidden">
-    {map(data, (language, i) => {
+    {data.map((language, i) => {
       return <p key={i}>{language}</p>;
     })}
   </SidebarSectionRenderer>
@@ -59,12 +60,12 @@ const LanguagesSection = ({ title, data }: SidebarData["languages"]) => (
 const LinksSection = ({ title, data }: SidebarData["links"]) => (
   <SidebarSectionRenderer title={title}>
     <div className="flex flex-col">
-      {map(data, ({ href, icon, title: linkTitle }, i) => {
+      {data.map(({ href, icon, title: linkTitle }, i) => {
         const Icon = socialIcons[icon as keyof typeof socialIcons];
 
         return (
-          <a className="flex gap-2 text-blue-700 hover:underline" href={href} key={i}>
-            <Icon size={20} />
+          <a className="flex items-center gap-2 text-blue-700 hover:underline" href={href} key={i}>
+            <Icon size={16} />
             <span className="_print:hidden">{linkTitle}</span>
             {/* <span className="hidden print:block">{shortUrl}</span> */}
           </a>
@@ -89,8 +90,8 @@ const SidebarSection = ({ sectionKey, props }: SidebarSectionProps) => {
   return <Renderer {...(props as any)} />;
 };
 
-export const Sidebar = async (props: HTMLAttributes<HTMLElement>) => {
-  const { t } = await getTranslation("common");
+export const Sidebar = ({ lng, ...props }: HTMLAttributes<HTMLElement> & { lng: Language }) => {
+  const { t } = getTranslation(lng, "common");
   const data = t("sidebar") as unknown as SidebarData;
 
   return (

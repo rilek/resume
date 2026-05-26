@@ -1,7 +1,8 @@
 import { getTranslation } from "@/locales/i18n";
+import type { Language } from "@/utils/constants";
 
-export const Header = async () => {
-  const { t } = await getTranslation("common");
+export const Header = ({ lng }: { lng: Language }) => {
+  const { t } = getTranslation(lng, "common");
 
   return (
     <header className="font-serif ">

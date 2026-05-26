@@ -1,8 +1,6 @@
-"use client";
-
+import { Link } from "@tanstack/react-router";
 import clsx from "clsx";
 import { Menu } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 
 const Navigation = () => {
@@ -32,7 +30,8 @@ const Navigation = () => {
           <ul>
             <li>
               <Link
-                href="/"
+                to="/$lng"
+                params={{ lng: "en" }}
                 className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
               >
                 Resume
@@ -40,7 +39,8 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                href="/cover-letter"
+                to="/$lng/cover-letter"
+                params={{ lng: "en" }}
                 className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
               >
                 Cover letter

@@ -15,7 +15,7 @@ interface Props {
 export default async function Page({ params: { lng } }: Props) {
   const content = await fs.readFileSync(
     `${process.cwd()}/src/locales/content/${lng}/cover_letter.md`,
-    "utf-8"
+    "utf-8",
   );
 
   return (

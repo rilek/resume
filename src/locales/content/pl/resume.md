@@ -1,5 +1,7 @@
 ## Doświadczenie
+
 ### Senior Clojure Developer
+
 Kleene · Sierpień 2022 - now
 
 - Kompleksowe projektowanie i implementowanie funkcjonalności na wielu warstwach serwisów
@@ -7,6 +9,7 @@ Kleene · Sierpień 2022 - now
 - Przygotowanie propozycji nowych funkcjonalności i ulepszeń istniejących rozwijających produkt
 
 ### Lead Software Developer
+
 Retailic · 2020 - Lipiec 2022
 
 - Zarządzanie zespołem developerów i rozwijanie projektów eCommerce opartych o technologie React i React Native
@@ -14,6 +17,7 @@ Retailic · 2020 - Lipiec 2022
 - Wypełnianie obowiazków jako senior developer
 
 ### Senior Software Developer
+
 Retailic · 2018 - 2020
 
 - Programowanie biznesowych aplikacji w językach Clojure, Javascript, Pyton
@@ -23,6 +27,7 @@ Retailic · 2018 - 2020
 - Mentoring młodszych stażem programistów
 
 ### Frontend Developer
+
 Retailic · VII 2016 - 2018
 
 - Rozwijanie i wsparcie w tworzeniu aplikacji e-commerce opartych o frameworki ReactJS oraz AngularJS
@@ -31,26 +36,32 @@ Retailic · VII 2016 - 2018
 - Wyceny prac technologicznych
 
 ### Web developer
+
 Social Karma · X 2015 - VII 2016
 
 - Tworzenie stron internetowych, zarządzanie istniejącymi projektami, najczęściej wykorzystującymi CMS Wordpress, przyspieszanie działania, optymalizacja pod kątem wyszukiwarek internetowych
 - Tworzenie projektów graficznych stron internetowych, prezentacji
 
-
 ## Edukacja
+
 ### Informatyka - studia magisterskie
+
 Informatyka - studia magisterskie · 2018 - 2019
 
 ### Automatyka i Robotyka - Bachelors Degree
+
 Informatyka - studia magisterskie · 2014 - 2018
 
-
 ## Umiejętności
+
 ### Prowadzenie projektów IT
+
 Zarządzanie zespołem programistów, wybór technologii i narzędzi, przeprowadzanie wycen, kierowanie strategią technologiczną, analiza ryzyka
 
 ### Języki programowania
+
 JavaScript (TypeScript), Clojure (ClojureScript), HTML, CSS, C#/F#, Python, SQL
 
 ### Tworzenie aplikacji biznesowych
+
 React, React Native, Rum/Reagent, Node.JS, NextJS, PostgreSQL, Storybook, Supabase, Tailwind, tRPC

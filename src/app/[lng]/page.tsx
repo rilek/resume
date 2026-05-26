@@ -14,10 +14,7 @@ interface Props {
 }
 
 export default async function Page({ params: { lng } }: Props) {
-  const content = fs.readFileSync(
-    `${process.cwd()}/src/locales/content/${lng}/resume.md`,
-    "utf-8"
-  );
+  const content = fs.readFileSync(`${process.cwd()}/src/locales/content/${lng}/resume.md`, "utf-8");
 
   return (
     <Layout sidebar={<Sidebar />} header={<Header />}>

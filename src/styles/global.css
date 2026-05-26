@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 
@@ -7,11 +7,9 @@
 @theme {
   --font-*: initial;
   --font-sans:
-    var(--inter-font), ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif:
-    var(--source-font), ui-serif, Georgia, Cambria, 'Times New Roman', Times,
-    serif;
+    var(--inter-font), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--source-font), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 /*
@@ -38,7 +36,6 @@
 }
 
 @media print {
-
   html,
   body {
     font-size: 11pt;
@@ -67,7 +64,7 @@ body {
     @apply font-bold text-xl mt-7 [h2+&]:mt-0 print:text-sm print:mt-3;
   }
 
-  & h2+h3 {
+  & h2 + h3 {
     @apply mt-0;
   }
 
@@ -83,7 +80,7 @@ body {
     @apply print:text-xs;
   }
 
-  & p+p {
+  & p + p {
     @apply mt-5;
   }
 
@@ -91,11 +88,11 @@ body {
     @apply text-blue-900;
   }
 
-  & h3+h5 {
+  & h3 + h5 {
     @apply absolute right-0 -mt-px text-base italic -translate-y-full text-slate-800 print:text-xs;
   }
 
-  & h5+ul {
+  & h5 + ul {
     @apply flex gap-1 pl-0 my-2 print:my-1;
 
     & li {

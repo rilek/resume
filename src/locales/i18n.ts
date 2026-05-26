@@ -8,17 +8,15 @@ import { headerName } from "@/utils/constants";
 export const initI18next = async () => {
   const instance = createInstance();
 
-  await instance
-    .use(initReactI18next)
-    .init({
-      resources: { pl, en },
-      debug: false, //process.env.NODE_ENV === "development",
-      lng: "en",
-      defaultNS: "common",
-      returnObjects: true,
+  await instance.use(initReactI18next).init({
+    resources: { pl, en },
+    debug: false, //process.env.NODE_ENV === "development",
+    lng: "en",
+    defaultNS: "common",
+    returnObjects: true,
 
-      interpolation: { escapeValue: false },
-    });
+    interpolation: { escapeValue: false },
+  });
 
   return instance;
 };
@@ -32,10 +30,7 @@ export const getConfig = async () => {
   };
 };
 
-export async function getTranslation(
-  ns?: keyof typeof pl,
-  opts = {} as Record<string, unknown>
-) {
+export async function getTranslation(ns?: keyof typeof pl, opts = {} as Record<string, unknown>) {
   const i18n = await initI18next();
   const { lng } = await getConfig();
 

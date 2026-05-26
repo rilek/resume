@@ -3,17 +3,9 @@ import { SidebarData } from "@/types/utils";
 import clsx from "clsx";
 import { map } from "lodash";
 import { Github, Linkedin } from "lucide-react";
-import type {
-  AnchorHTMLAttributes,
-  DetailedHTMLProps,
-  FC,
-  HTMLAttributes,
-} from "react";
+import type { AnchorHTMLAttributes, DetailedHTMLProps, FC, HTMLAttributes } from "react";
 
-type LinkProps = DetailedHTMLProps<
-  AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement
->;
+type LinkProps = DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
 
 type SidebarSectionProps = {
   sectionKey: keyof SidebarData;
@@ -26,10 +18,7 @@ const socialIcons = {
 };
 
 const TextLink = ({ children, ...props }: LinkProps) => (
-  <a
-    className="text-blue-700 transition-colors hover:text-blue-500"
-    {...props}
-  >
+  <a className="text-blue-700 transition-colors hover:text-blue-500" {...props}>
     {children}
   </a>
 );
@@ -74,11 +63,7 @@ const LinksSection = ({ title, data }: SidebarData["links"]) => (
         const Icon = socialIcons[icon as keyof typeof socialIcons];
 
         return (
-          <a
-            className="flex gap-2 text-blue-700 hover:underline"
-            href={href}
-            key={i}
-          >
+          <a className="flex gap-2 text-blue-700 hover:underline" href={href} key={i}>
             <Icon size={20} />
             <span className="_print:hidden">{linkTitle}</span>
             {/* <span className="hidden print:block">{shortUrl}</span> */}
@@ -113,7 +98,7 @@ export const Sidebar = async (props: HTMLAttributes<HTMLElement>) => {
       {...props}
       className={clsx(
         "grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs print:flex  print:gap-6",
-        props.className
+        props.className,
       )}
     >
       {Object.entries(data).map(([key, sectionProps]: any) => (

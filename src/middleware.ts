@@ -13,9 +13,7 @@ export const middleware: NextMiddleware = (req) => {
   const pathLang = getLanguage(pathname);
 
   if (pathname === "/" || !pathLang)
-    return NextResponse.redirect(
-      new URL(`/${fallbackLng}/${pathname}`, req.url)
-    );
+    return NextResponse.redirect(new URL(`/${fallbackLng}/${pathname}`, req.url));
 
   const headers = new Headers(req.headers);
 

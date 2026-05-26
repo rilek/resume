@@ -13,10 +13,7 @@
       },
       "languages": {
         "title": "Języki",
-        "data": [
-          "Polski",
-          "Angielski - C1"
-        ]
+        "data": ["Polski", "Angielski - C1"]
       },
       "links": {
         "title": "Linki",

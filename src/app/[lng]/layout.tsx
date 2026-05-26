@@ -102,14 +102,11 @@ interface RootLayoutProps {
   params: { lng: string };
 }
 
-export const generateMetadata = async (
-  _props: RootLayoutProps
-): Promise<Metadata> => {
+export const generateMetadata = async (_props: RootLayoutProps): Promise<Metadata> => {
   const { t } = await getTranslation();
   const headersInstance = headers();
 
-  const host =
-    headersInstance.get("host") || headersInstance.get("x-forwarded-host");
+  const host = headersInstance.get("host") || headersInstance.get("x-forwarded-host");
   const proto = headersInstance.get("x-forwarded-proto") || "http";
 
   if (!host) throw new Error("Missing host name");
@@ -149,11 +146,7 @@ export default async function RootLayout({
   const lang = getLanguage(lng);
 
   return (
-    <html
-      lang={lang}
-      dir={dir(lang)}
-      className={`${inter.variable} ${source.variable}`}
-    >
+    <html lang={lang} dir={dir(lang)} className={`${inter.variable} ${source.variable}`}>
       <head>
         {/* <Script id="localStorageTheme">
           {`const preferredTheme = window.localStorage.getItem("theme");

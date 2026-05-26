@@ -13,10 +13,7 @@
       },
       "languages": {
         "title": "Languages",
-        "data": [
-          "Polish",
-          "English - C1"
-        ]
+        "data": ["Polish", "English - C1"]
       },
       "details": {
         "title": "Details",

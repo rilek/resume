@@ -5,6 +5,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 ## Experience
 
 ### Senior Fullstack Engineer
+
 ##### [Kleene](https://kleene.ai/) · August 2022 - Present
 
 - Fullstack
@@ -21,6 +22,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 * Led feature implementation end-to-end: from gathering requirements, through design to implementation
 
 ### Co-Founder / CTO
+
 ##### [Maintei](https://maintei.com/) · July 2021 - July 2024
 
 - Fullstack
@@ -36,6 +38,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 * Engineered an IoT platform for remote monitoring of industrial equipment, aiming to enhance operational efficiency and support data-driven decision-making.
 
 ### Lead Frontend Engineer
+
 ##### [Retailic](https://retailic.com/) · January 2020 - July 2022
 
 - Tech Leadership
@@ -50,6 +53,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 * Led a design system implementation, reducing the development time for new views and components by about 40%.
 
 ### Senior Frontend Engineer
+
 ##### [Retailic](https://retailic.com/) · January 2018 - December 2019
 
 - Clojure
@@ -60,6 +64,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 - Playwright
 
 ### Software Engineer
+
 ##### [Retailic](https://retailic.com/) · August 2016 - December 2017
 
 - Clojure
@@ -68,6 +73,7 @@ Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive expe
 - AngularJS
 
 ### Web developer
+
 ##### Social Karma · October 2015 - July 2016
 
 - Web design

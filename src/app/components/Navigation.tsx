@@ -12,8 +12,8 @@ const Navigation = () => {
   return (
     <div
       className={clsx("absolute top-8 right-0 flex items-start transition-transform", {
-        "-translate-x-0": expanded,
-        "translate-x-[calc(100%_-_52px)]": !expanded,
+        "translate-x-0": expanded,
+        "translate-x-[calc(100%-52px)]": !expanded,
       })}
     >
       <h1 className="hidden">Navigation Menu</h1>

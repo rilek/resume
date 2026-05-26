@@ -1,6 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-*: initial;
+  --font-sans:
+    var(--inter-font), ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif:
+    var(--source-font), ui-serif, Georgia, Cambria, 'Times New Roman', Times,
+    serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @page {
   size: A4;
@@ -30,7 +60,7 @@ body {
   @apply text-lg print:text-base;
 
   & h2 {
-    @apply font-bold font-sans text-base uppercase print:text-xs py-4 border-t-2 print:border-t border-slate-400 mb-4 print:mb-0 [&:not(:first-of-type)]:mt-8 print:[&:not(:first-of-type)]:mt-4 print:pt-2;
+    @apply font-bold font-sans text-base uppercase print:text-xs py-4 border-t-2 print:border-t border-slate-400 mb-4 print:mb-0 not-first-of-type:mt-8 print:not-first-of-type:mt-4 print:pt-2;
   }
 
   & h3 {

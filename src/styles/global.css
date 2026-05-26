@@ -152,16 +152,20 @@ body {
     @apply text-blue-900;
   }
 
-  & h3 + h5 {
+  & h3 + .markdown-meta-block .markdown-meta {
     @apply absolute right-0 -mt-px text-base italic -translate-y-full text-slate-800 print:text-xs;
   }
 
-  & h5 + ul {
+  & .markdown-tags {
     @apply flex gap-1 pl-0 my-2 print:my-1;
 
     & li {
       @apply block py-0.5 px-2 m-0 text-sm rounded-full bg-slate-200 print:px-[4pt] print:py-[1pt] print:text-xs;
     }
+  }
+
+  & .markdown-meta-block + ul {
+    @apply mt-2;
   }
 }
 

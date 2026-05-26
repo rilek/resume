@@ -51,6 +51,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
+  notFoundComponent: () => "Resume not found",
 });
 
 function RootComponent() {

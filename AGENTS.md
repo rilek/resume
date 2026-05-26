@@ -12,7 +12,36 @@ When the user provides a job description and asks to tailor the resume, create a
 - Polish cover letter: `src/locales/content/pl/cover_letter.md`
 - Markdown registry: `src/locales/content.ts`
 - Default resume route: `src/routes/{-$lng}.index.tsx`
+- Dynamic resume variant route: `src/routes/resume.$company.tsx`
 - Cover-letter route: `src/routes/{-$lng}.cover-letter.tsx`
+
+## Markdown Rendering Structure
+
+Resume and cover-letter markdown headings carry layout meaning:
+
+- `##` is a top-level section title.
+- `###` is a subsection title.
+- Metadata lines immediately after `###` can define right-side supplementary information:
+  - `company:` or `institution:` for organization names.
+  - `period:` for dates.
+- `tags:` is a comma-separated list rendered as horizontal tags.
+- Metadata labels are always lowercase and English, even in localized markdown files.
+- If the content after a heading is a paragraph instead of a list, it is rendered as normal paragraph text.
+- Everything after that is rendered as normal content until the next heading.
+
+When editing or creating variants, preserve this structure unless the layout intentionally needs to change.
+
+Example:
+
+```md
+### Senior Fullstack Engineer
+
+company: [Kleene](https://kleene.ai/)
+period: August 2022 - Present
+tags: Frontend Architecture, TypeScript, React, PostgreSQL
+
+- Built a user-configurable BI-style analytics feature backed by warehouse data.
+```
 
 ## Tailoring Workflow
 
@@ -40,14 +69,13 @@ When the user provides a job description and asks to tailor the resume, create a
    - Preserve markdown link style and section heading conventions.
 
 5. Register the new markdown in `src/locales/content.ts`:
-   - Import the new file with `?raw`.
-   - Add a new `ContentPage` entry.
-   - Add the imported markdown under the matching language.
+   - Resume variants named `resume-<slug>.md` are loaded dynamically by `getResumeVariantHtml`.
+   - Do not add one-off imports or `ContentPage` entries for English job-specific resume variants.
 
 6. Add a route for the variant:
-   - Create `src/routes/{-$lng}.resume-<slug>.tsx`.
-   - Copy the pattern from `src/routes/{-$lng}.index.tsx`.
-   - Change the loader page from `"resume"` to the new `ContentPage` key.
+   - Use the existing dynamic route at `src/routes/resume.$company.tsx`.
+   - The URL for `src/locales/content/en/resume-acme.md` is `/resume/acme`.
+   - Do not create one-off route files unless the user explicitly asks for a custom route.
 
 7. Optionally add a navigation link only if the user wants the variant visible in the menu. Job-specific variants are often better left accessible by direct URL only.
 
@@ -61,9 +89,7 @@ When the user provides a job description and asks to tailor the resume, create a
 For a job at Acme:
 
 - Markdown file: `src/locales/content/en/resume-acme.md`
-- Content key: `resumeAcme`
-- Route file: `src/routes/{-$lng}.resume-acme.tsx`
-- URL: `/en/resume-acme`
+- URL: `/resume/acme`
 
 ## Recommended Response To The User
 

@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123LngChar125RouteImport } from './routes/{-$lng}'
 import { Route as Char123LngChar125IndexRouteImport } from './routes/{-$lng}.index'
 import { Route as Char123LngChar125CoverLetterRouteImport } from './routes/{-$lng}.cover-letter'
+import { Route as ResumeCompanyRouteImport } from './routes/resume.$company'
 
 const Char123LngChar125Route = Char123LngChar125RouteImport.update({
   id: '/{-$lng}',
@@ -29,32 +30,50 @@ const Char123LngChar125CoverLetterRoute =
     path: '/cover-letter',
     getParentRoute: () => Char123LngChar125Route,
   } as any)
+const ResumeCompanyRoute = ResumeCompanyRouteImport.update({
+  id: '/resume/$company',
+  path: '/resume/$company',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/{-$lng}': typeof Char123LngChar125RouteWithChildren
+  '/resume/$company': typeof ResumeCompanyRoute
   '/{-$lng}/cover-letter': typeof Char123LngChar125CoverLetterRoute
   '/{-$lng}/': typeof Char123LngChar125IndexRoute
 }
 export interface FileRoutesByTo {
+  '/resume/$company': typeof ResumeCompanyRoute
   '/{-$lng}/cover-letter': typeof Char123LngChar125CoverLetterRoute
   '/{-$lng}': typeof Char123LngChar125IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/{-$lng}': typeof Char123LngChar125RouteWithChildren
+  '/resume/$company': typeof ResumeCompanyRoute
   '/{-$lng}/cover-letter': typeof Char123LngChar125CoverLetterRoute
   '/{-$lng}/': typeof Char123LngChar125IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/{-$lng}' | '/{-$lng}/cover-letter' | '/{-$lng}/'
+  fullPaths:
+    | '/{-$lng}'
+    | '/resume/$company'
+    | '/{-$lng}/cover-letter'
+    | '/{-$lng}/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/{-$lng}/cover-letter' | '/{-$lng}'
-  id: '__root__' | '/{-$lng}' | '/{-$lng}/cover-letter' | '/{-$lng}/'
+  to: '/resume/$company' | '/{-$lng}/cover-letter' | '/{-$lng}'
+  id:
+    | '__root__'
+    | '/{-$lng}'
+    | '/resume/$company'
+    | '/{-$lng}/cover-letter'
+    | '/{-$lng}/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   Char123LngChar125Route: typeof Char123LngChar125RouteWithChildren
+  ResumeCompanyRoute: typeof ResumeCompanyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -80,6 +99,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LngChar125CoverLetterRouteImport
       parentRoute: typeof Char123LngChar125Route
     }
+    '/resume/$company': {
+      id: '/resume/$company'
+      path: '/resume/$company'
+      fullPath: '/resume/$company'
+      preLoaderRoute: typeof ResumeCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -98,6 +124,7 @@ const Char123LngChar125RouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   Char123LngChar125Route: Char123LngChar125RouteWithChildren,
+  ResumeCompanyRoute: ResumeCompanyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

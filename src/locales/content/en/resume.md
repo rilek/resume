@@ -1,85 +1,56 @@
 ## Summary
 
-Founder, Lead, Senior Fullstack Engineer with over 9 years of comprehensive experience in startup environments. Absolutely product-oriented with a keen focus on delivering business value, enhancing UX and DX, simplifying processes. Language-agnostic, but most efficient in the Clojure and Typescript environments. Managed teams of up to 5 developers.
+Founder, technical lead, and senior fullstack engineer with 11 years of experience in startup environments. I work close to product and care about shipping useful software, keeping systems understandable, and improving both user and developer experience. Comfortable across stacks, with the deepest experience in Clojure(Script), TypeScript, and React. Managed teams of up to 5 developers.
 
 ## Experience
 
 ### Senior Fullstack Engineer
 
-##### [Kleene](https://kleene.ai/) · August 2022 - Present
+company: [Kleene](https://kleene.ai/)
+period: August 2022 - Present
+tags: Fullstack, Clojure, ClojureScript, React, PostgreSQL, ELT, AWS, Kafka
 
-- Fullstack
-- Clojure
-- ClojureScript
-- React
-- PostgreSQL
-- ELT
-- AWS
-- Kafka
-
-* Proposed and developed the standardization of code and API schemas, reducing bug reports by approximately 15%.
-* Led the development of a design system, cutting down the time required to launch new designs by 30%.
-* Led feature implementation end-to-end: from gathering requirements, through design to implementation
+* Standardized code and API schemas across the product, reducing bug reports by approximately 15%.
+* Led the development of a design system, cutting the time needed to ship new designs by 30%.
+* Owned features from requirements and design through implementation and release.
 
 ### Co-Founder / CTO
 
-##### [Maintei](https://maintei.com/) · July 2021 - July 2024
+company: [Maintei](https://maintei.com/)
+period: July 2021 - July 2024
+tags: Fullstack, Typescript, React, PostgreSQL, IIoT, Supabase, Cloud Infrastructure
 
-- Fullstack
-- Typescript
-- React
-- PostgreSQL
-- IIoT
-- Supabase
-- Cloud Infrastructure
-
-* Led all stages of the product lifecycle, from initial concept, and features planning, through development and cloud infrastructure setup, to deployment of 2 full stack web, and single IoT application.
-* Developed a CMMS application, designed to improve equipment uptime and reduce maintenance costs through predictive maintenance and real-time monitoring and alerting.
-* Engineered an IoT platform for remote monitoring of industrial equipment, aiming to enhance operational efficiency and support data-driven decision-making.
+* Led the product and engineering work from early concept and feature planning through development, cloud infrastructure, and deployment of 2 fullstack web applications and 1 IoT application.
+* Built a CMMS application focused on equipment uptime, maintenance planning, real-time monitoring, and alerting.
+* Built an IoT platform for remote monitoring of industrial equipment, giving teams better visibility into machine state and operational data.
 
 ### Lead Frontend Engineer
 
-##### [Retailic](https://retailic.com/) · January 2020 - July 2022
+company: [Retailic](https://retailic.com/)
+period: January 2020 - July 2022
+tags: Tech Leadership, Clojure, ClojureScript, TypeScript, React, ReactNative
 
-- Tech Leadership
-- Clojure
-- ClojureScript
-- TypeScript
-- React
-- ReactNative
-
-* Managed a team of 5 developers, leading two major e-commerce projects.
-* Prepared a strategic plan for a technology stack continuous transition of a large code base, allowing the use of 50% fewer developers and finishing 30% faster compared to the original separate rewrite plan.
-* Led a design system implementation, reducing the development time for new views and components by about 40%.
+* Managed a team of 5 developers and led delivery on two large e-commerce projects.
+* Planned a gradual technology-stack migration for a large codebase, avoiding a separate rewrite and finishing with 50% fewer developers and 30% less time than the original plan.
+* Led a design system implementation that reduced development time for new views and components by about 40%.
 
 ### Senior Frontend Engineer
 
-##### [Retailic](https://retailic.com/) · January 2018 - December 2019
-
-- Clojure
-- ClojureScript
-- Typescript
-- React
-- ReactNative
-- Playwright
+company: [Retailic](https://retailic.com/)
+period: January 2018 - December 2019
+tags: Clojure, ClojureScript, Typescript, React, ReactNative, Playwright
 
 ### Software Engineer
 
-##### [Retailic](https://retailic.com/) · August 2016 - December 2017
-
-- Clojure
-- ClojureScript
-- Python
-- AngularJS
+company: [Retailic](https://retailic.com/)
+period: August 2016 - December 2017
+tags: Clojure, ClojureScript, Python, AngularJS
 
 ### Web developer
 
-##### Social Karma · October 2015 - July 2016
-
-- Web design
-- Wordpress
-- Shopify
-- Prestashop
+company: Social Karma
+period: October 2015 - July 2016
+tags: Web design, Wordpress, Shopify, Prestashop
 
 ## Skills
 
@@ -99,8 +70,10 @@ CI/CD, priority management, software architecture design, team leadership, respo
 
 ### Computer Science, MSc
 
-##### Rzeszów University of Technology · 2018 - 2019
+institution: Rzeszów University of Technology
+period: 2018 - 2019
 
 ### Automation and Robotics, BSc
 
-##### Rzeszów University of Technology · 2014 - 2018
+institution: Rzeszów University of Technology
+period: 2014 - 2018

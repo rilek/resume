@@ -30,8 +30,8 @@ const Navigation = () => {
           <ul>
             <li>
               <Link
-                to="/$lng"
-                params={{ lng: "en" }}
+                to="/{-$lng}"
+                params={{ lng: undefined }}
                 className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
               >
                 Resume
@@ -39,8 +39,8 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                to="/$lng/cover-letter"
-                params={{ lng: "en" }}
+                to="/{-$lng}/cover-letter"
+                params={{ lng: undefined }}
                 className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
               >
                 Cover letter

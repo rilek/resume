@@ -1,8 +1,11 @@
 import { getTranslation } from "@/locales/i18n";
 import { fallbackLng, languages, type Language } from "@/utils/constants";
 
-export const getRouteLanguage = (value: string): Language =>
-  languages.includes(value as Language) ? (value as Language) : fallbackLng;
+export const isRouteLanguage = (value: string): value is Language =>
+  languages.includes(value as Language);
+
+export const getRouteLanguage = (value?: string): Language =>
+  value && isRouteLanguage(value) ? value : fallbackLng;
 
 const getDirection = (lng: Language) => (lng === "en" || lng === "pl" ? "ltr" : "ltr");
 

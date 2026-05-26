@@ -9,111 +9,95 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as LngRouteImport } from './routes/$lng'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as LngIndexRouteImport } from './routes/$lng.index'
-import { Route as LngCoverLetterRouteImport } from './routes/$lng.cover-letter'
+import { Route as Char123LngChar125RouteImport } from './routes/{-$lng}'
+import { Route as Char123LngChar125IndexRouteImport } from './routes/{-$lng}.index'
+import { Route as Char123LngChar125CoverLetterRouteImport } from './routes/{-$lng}.cover-letter'
 
-const LngRoute = LngRouteImport.update({
-  id: '/$lng',
-  path: '/$lng',
+const Char123LngChar125Route = Char123LngChar125RouteImport.update({
+  id: '/{-$lng}',
+  path: '/{-$lng}',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
+const Char123LngChar125IndexRoute = Char123LngChar125IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => Char123LngChar125Route,
 } as any)
-const LngIndexRoute = LngIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => LngRoute,
-} as any)
-const LngCoverLetterRoute = LngCoverLetterRouteImport.update({
-  id: '/cover-letter',
-  path: '/cover-letter',
-  getParentRoute: () => LngRoute,
-} as any)
+const Char123LngChar125CoverLetterRoute =
+  Char123LngChar125CoverLetterRouteImport.update({
+    id: '/cover-letter',
+    path: '/cover-letter',
+    getParentRoute: () => Char123LngChar125Route,
+  } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/$lng': typeof LngRouteWithChildren
-  '/$lng/cover-letter': typeof LngCoverLetterRoute
-  '/$lng/': typeof LngIndexRoute
+  '/{-$lng}': typeof Char123LngChar125RouteWithChildren
+  '/{-$lng}/cover-letter': typeof Char123LngChar125CoverLetterRoute
+  '/{-$lng}/': typeof Char123LngChar125IndexRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/$lng/cover-letter': typeof LngCoverLetterRoute
-  '/$lng': typeof LngIndexRoute
+  '/{-$lng}/cover-letter': typeof Char123LngChar125CoverLetterRoute
+  '/{-$lng}': typeof Char123LngChar125IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/$lng': typeof LngRouteWithChildren
-  '/$lng/cover-letter': typeof LngCoverLetterRoute
-  '/$lng/': typeof LngIndexRoute
+  '/{-$lng}': typeof Char123LngChar125RouteWithChildren
+  '/{-$lng}/cover-letter': typeof Char123LngChar125CoverLetterRoute
+  '/{-$lng}/': typeof Char123LngChar125IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$lng' | '/$lng/cover-letter' | '/$lng/'
+  fullPaths: '/{-$lng}' | '/{-$lng}/cover-letter' | '/{-$lng}/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$lng/cover-letter' | '/$lng'
-  id: '__root__' | '/' | '/$lng' | '/$lng/cover-letter' | '/$lng/'
+  to: '/{-$lng}/cover-letter' | '/{-$lng}'
+  id: '__root__' | '/{-$lng}' | '/{-$lng}/cover-letter' | '/{-$lng}/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  LngRoute: typeof LngRouteWithChildren
+  Char123LngChar125Route: typeof Char123LngChar125RouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/$lng': {
-      id: '/$lng'
-      path: '/$lng'
-      fullPath: '/$lng'
-      preLoaderRoute: typeof LngRouteImport
+    '/{-$lng}': {
+      id: '/{-$lng}'
+      path: '/{-$lng}'
+      fullPath: '/{-$lng}'
+      preLoaderRoute: typeof Char123LngChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
+    '/{-$lng}/': {
+      id: '/{-$lng}/'
       path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      fullPath: '/{-$lng}/'
+      preLoaderRoute: typeof Char123LngChar125IndexRouteImport
+      parentRoute: typeof Char123LngChar125Route
     }
-    '/$lng/': {
-      id: '/$lng/'
-      path: '/'
-      fullPath: '/$lng/'
-      preLoaderRoute: typeof LngIndexRouteImport
-      parentRoute: typeof LngRoute
-    }
-    '/$lng/cover-letter': {
-      id: '/$lng/cover-letter'
+    '/{-$lng}/cover-letter': {
+      id: '/{-$lng}/cover-letter'
       path: '/cover-letter'
-      fullPath: '/$lng/cover-letter'
-      preLoaderRoute: typeof LngCoverLetterRouteImport
-      parentRoute: typeof LngRoute
+      fullPath: '/{-$lng}/cover-letter'
+      preLoaderRoute: typeof Char123LngChar125CoverLetterRouteImport
+      parentRoute: typeof Char123LngChar125Route
     }
   }
 }
 
-interface LngRouteChildren {
-  LngCoverLetterRoute: typeof LngCoverLetterRoute
-  LngIndexRoute: typeof LngIndexRoute
+interface Char123LngChar125RouteChildren {
+  Char123LngChar125CoverLetterRoute: typeof Char123LngChar125CoverLetterRoute
+  Char123LngChar125IndexRoute: typeof Char123LngChar125IndexRoute
 }
 
-const LngRouteChildren: LngRouteChildren = {
-  LngCoverLetterRoute: LngCoverLetterRoute,
-  LngIndexRoute: LngIndexRoute,
+const Char123LngChar125RouteChildren: Char123LngChar125RouteChildren = {
+  Char123LngChar125CoverLetterRoute: Char123LngChar125CoverLetterRoute,
+  Char123LngChar125IndexRoute: Char123LngChar125IndexRoute,
 }
 
-const LngRouteWithChildren = LngRoute._addFileChildren(LngRouteChildren)
+const Char123LngChar125RouteWithChildren =
+  Char123LngChar125Route._addFileChildren(Char123LngChar125RouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  LngRoute: LngRouteWithChildren,
+  Char123LngChar125Route: Char123LngChar125RouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

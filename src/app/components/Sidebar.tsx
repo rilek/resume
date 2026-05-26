@@ -25,11 +25,13 @@ const socialIcons = {
   linkedin: Linkedin,
 };
 
-const Link = ({ ...props }: LinkProps) => (
+const TextLink = ({ children, ...props }: LinkProps) => (
   <a
     className="text-blue-700 transition-colors hover:text-blue-500"
     {...props}
-  />
+  >
+    {children}
+  </a>
 );
 
 const SidebarSectionRenderer = ({
@@ -47,13 +49,13 @@ const SidebarSectionRenderer = ({
 
 const EmailSection = ({ title, value }: SidebarData["email"]) => (
   <SidebarSectionRenderer title={title}>
-    <Link href={`mailto:${value}`}>{value}</Link>
+    <TextLink href={`mailto:${value}`}>{value}</TextLink>
   </SidebarSectionRenderer>
 );
 
 const WebsiteSection = ({ title, value }: SidebarData["webpage"]) => (
   <SidebarSectionRenderer title={title}>
-    <Link href={`https://${value}`}>{value}</Link>
+    <TextLink href={`https://${value}`}>{value}</TextLink>
   </SidebarSectionRenderer>
 );
 
@@ -68,8 +70,8 @@ const LanguagesSection = ({ title, data }: SidebarData["languages"]) => (
 const LinksSection = ({ title, data }: SidebarData["links"]) => (
   <SidebarSectionRenderer title={title}>
     <div className="flex flex-col">
-      {map(data, ({ href, icon, title, shortUrl }, i) => {
-        const Icon = socialIcons[icon as "github" | "linkedin"];
+      {map(data, ({ href, icon, title: linkTitle }, i) => {
+        const Icon = socialIcons[icon as keyof typeof socialIcons];
 
         return (
           <a
@@ -77,8 +79,8 @@ const LinksSection = ({ title, data }: SidebarData["links"]) => (
             href={href}
             key={i}
           >
-            {/* <Icon className="" size={20} /> */}
-            <span className="_print:hidden">{title}</span>
+            <Icon size={20} />
+            <span className="_print:hidden">{linkTitle}</span>
             {/* <span className="hidden print:block">{shortUrl}</span> */}
           </a>
         );
@@ -114,8 +116,8 @@ export const Sidebar = async (props: HTMLAttributes<HTMLElement>) => {
         props.className
       )}
     >
-      {Object.entries(data).map(([key, props]: any) => (
-        <SidebarSection key={key} sectionKey={key} props={props} />
+      {Object.entries(data).map(([key, sectionProps]: any) => (
+        <SidebarSection key={key} sectionKey={key} props={sectionProps} />
       ))}
     </div>
   );

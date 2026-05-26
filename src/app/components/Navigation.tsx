@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navigation = () => {
@@ -32,10 +33,10 @@ const Navigation = () => {
         <nav>
           <ul>
             <li>
-              <a href="/" className="flex gap-2 text-blue-700 hover:underline print:text-inherit">Resume</a>
+              <Link href="/" className="flex gap-2 text-blue-700 hover:underline print:text-inherit">Resume</Link>
             </li>
             <li>
-              <a href="/cover-letter" className="flex gap-2 text-blue-700 hover:underline print:text-inherit">Cover letter</a>
+              <Link href="/cover-letter" className="flex gap-2 text-blue-700 hover:underline print:text-inherit">Cover letter</Link>
             </li>
           </ul>
         </nav>

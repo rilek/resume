@@ -7,7 +7,7 @@ export const Header = ({ lng }: { lng: Language }) => {
   return (
     <header className="font-serif ">
       <h1 className="text-4xl font-black">{t("title")}</h1>
-      <h2 className="text-xl print:hidden">{t("subtitle")}</h2>
+      <h2 className="text-xl">{t("subtitle")}</h2>
     </header>
   );
 };

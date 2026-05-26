@@ -1,14 +1,90 @@
-import { HeadContent, Outlet, createRootRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
+import {
+  HeadContent,
+  Outlet,
+  Scripts,
+  createRootRoute,
+  useRouterState,
+} from "@tanstack/react-router";
+
+import { getRouteLanguage } from "@/locales/language";
+import "@/styles/global.css";
+import { getLanguage } from "@/utils";
 
 export const Route = createRootRoute({
+  head: () => ({
+    meta: [
+      { charSet: "UTF-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { name: "theme-color", content: "#FFFFFF" },
+    ],
+    links: [
+      { rel: "apple-touch-icon-precomposed", sizes: "57x57", href: "/apple-touch-icon-57x57.png" },
+      {
+        rel: "apple-touch-icon-precomposed",
+        sizes: "114x114",
+        href: "/apple-touch-icon-114x114.png",
+      },
+      { rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "/apple-touch-icon-72x72.png" },
+      {
+        rel: "apple-touch-icon-precomposed",
+        sizes: "144x144",
+        href: "/apple-touch-icon-144x144.png",
+      },
+      { rel: "apple-touch-icon-precomposed", sizes: "60x60", href: "/apple-touch-icon-60x60.png" },
+      {
+        rel: "apple-touch-icon-precomposed",
+        sizes: "120x120",
+        href: "/apple-touch-icon-120x120.png",
+      },
+      { rel: "apple-touch-icon-precomposed", sizes: "76x76", href: "/apple-touch-icon-76x76.png" },
+      {
+        rel: "apple-touch-icon-precomposed",
+        sizes: "152x152",
+        href: "/apple-touch-icon-152x152.png",
+      },
+      { rel: "icon", type: "image/png", sizes: "196x196", href: "/favicon-196x196.png" },
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/favicon-96x96.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+      { rel: "icon", type: "image/png", sizes: "128x128", href: "/favicon-128x128.png" },
+    ],
+  }),
   component: RootComponent,
 });
 
 function RootComponent() {
   return (
-    <>
-      <HeadContent />
+    <RootDocument>
       <Outlet />
-    </>
+    </RootDocument>
+  );
+}
+
+function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const lng = getRouteLanguage(getLanguage(pathname));
+
+  return (
+    <html lang={lng} dir="ltr">
+      <head>
+        <HeadContent />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLQH7JW38B" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-XLQH7JW38B");
+`.trim(),
+          }}
+        />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
   );
 }

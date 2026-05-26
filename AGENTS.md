@@ -2,7 +2,7 @@
 
 This repo is a TanStack Start resume site. Resume and cover-letter bodies are stored as markdown and rendered through `src/locales/content.ts`.
 
-When the user provides a job description and asks to tailor the resume, create a new resume variant instead of overwriting the canonical resume. At any cost do not make up any information not available already in canonical resume. Raise any missing skills if needed.
+When the user provides a job description and asks to tailor the resume, create a new resume variant instead of overwriting the canonical resume. At any cost do not make up any information not available already in existing resumes. Raise any missing skills if needed.
 
 ## Current Content Structure
 

@@ -21,11 +21,11 @@ company: [Kleene](https://kleene.ai/)
 period: August 2022 - Present
 tags: Full-stack, Clojure, ClojureScript, TypeScript, React, Architecture, PostgreSQL, Data Visualisation, ELT, AWS, Kafka, LLMs
 
-* Owned feature delivery across the web application and back-end services, partnering with product to clarify requirements and scope before design, implementation, and release.
-* Standardized frontend architecture, code conventions, and API schemas.
+* Owned feature delivery across the web application and multiple back-end services, partnering with product and data teams to refine requirements and scope before design and implementation.
+* Standardized architecture, code conventions, and API schemas across apps.
 * Built user-configurable analytics over warehouse data, including Recharts visualizations for self-service operational analysis.
-* Contributed to implementing agentic analytics chat workflows that let users query system data through natural language.
-* Designed feature UI/UX and led development of a design system and component library, reducing implementation time by 30%.
+* Contributed to implementing agentic analytics workflows that let users analyse system data through natural language.
+* Designed and took ownership of the app's UI/UX, implementing a design system and component library.
 
 ### Co-Founder / CTO
 
@@ -51,7 +51,7 @@ tags: Technical Leadership, Clojure, ClojureScript, TypeScript, React, React Nat
 
 company: [Retailic](https://retailic.com/)
 period: January 2018 - December 2019
-tags: Clojure, ClojureScript, TypeScript, React, React Native, Python, Playwright, Hybrid Infrastructure, Deep Learning, Computer Vision
+tags: Clojure, ClojureScript, TypeScript, React, React Native, Python, Playwright
 
 ### Software Engineer
 

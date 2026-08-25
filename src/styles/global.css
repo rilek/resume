@@ -287,6 +287,10 @@ body {
       @apply text-sm font-normal text-slate-500;
     }
 
+    & .markdown {
+      @apply text-[1.0625rem];
+    }
+
     & .markdown h2 {
       @apply border-t border-slate-300 py-3 mb-3 not-first-of-type:mt-9;
     }

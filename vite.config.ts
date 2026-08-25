@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [tanstackStart(), nitro(), react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
 });

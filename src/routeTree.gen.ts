@@ -10,13 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123LngChar125RouteImport } from './routes/{-$lng}'
+import { Route as ResumeCompanyRouteImport } from './routes/resume.$company'
 import { Route as Char123LngChar125IndexRouteImport } from './routes/{-$lng}.index'
 import { Route as Char123LngChar125CoverLetterRouteImport } from './routes/{-$lng}.cover-letter'
-import { Route as ResumeCompanyRouteImport } from './routes/resume.$company'
 
 const Char123LngChar125Route = Char123LngChar125RouteImport.update({
   id: '/{-$lng}',
   path: '/{-$lng}',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResumeCompanyRoute = ResumeCompanyRouteImport.update({
+  id: '/resume/$company',
+  path: '/resume/$company',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Char123LngChar125IndexRoute = Char123LngChar125IndexRouteImport.update({
@@ -30,11 +35,6 @@ const Char123LngChar125CoverLetterRoute =
     path: '/cover-letter',
     getParentRoute: () => Char123LngChar125Route,
   } as any)
-const ResumeCompanyRoute = ResumeCompanyRouteImport.update({
-  id: '/resume/$company',
-  path: '/resume/$company',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/{-$lng}': typeof Char123LngChar125RouteWithChildren
@@ -85,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LngChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resume/$company': {
+      id: '/resume/$company'
+      path: '/resume/$company'
+      fullPath: '/resume/$company'
+      preLoaderRoute: typeof ResumeCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/{-$lng}/': {
       id: '/{-$lng}/'
       path: '/'
@@ -98,13 +105,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$lng}/cover-letter'
       preLoaderRoute: typeof Char123LngChar125CoverLetterRouteImport
       parentRoute: typeof Char123LngChar125Route
-    }
-    '/resume/$company': {
-      id: '/resume/$company'
-      path: '/resume/$company'
-      fullPath: '/resume/$company'
-      preLoaderRoute: typeof ResumeCompanyRouteImport
-      parentRoute: typeof rootRouteImport
     }
   }
 }

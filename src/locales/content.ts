@@ -191,11 +191,11 @@ const renderMarkdown = async (value: string) => {
 };
 
 export const getContentHtml = createServerFn({ method: "GET" })
-  .inputValidator((data: ContentRequest) => data)
+  .validator((data: ContentRequest) => data)
   .handler(({ data }) => renderMarkdown(markdown[data.lng][data.page]));
 
 export const getResumeVariantHtml = createServerFn({ method: "GET" })
-  .inputValidator((data: { company: string }) => data)
+  .validator((data: { company: string }) => data)
   .handler(({ data }) => {
     const company = data.company.toLowerCase().replace(/[^a-z0-9-]/g, "");
     const variantMarkdown = resumeVariants[`/src/locales/content/en/resume-${company}.md`];

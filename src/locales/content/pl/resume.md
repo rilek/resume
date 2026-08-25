@@ -1,3 +1,10 @@
+---
+document: resume
+variant: master
+language: pl
+description: Canonical Polish resume used to generate tailored Polish variants.
+---
+
 ## Doświadczenie
 
 ### Senior Clojure Developer

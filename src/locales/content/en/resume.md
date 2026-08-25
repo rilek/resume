@@ -1,3 +1,10 @@
+---
+document: resume
+variant: master
+language: en
+description: Canonical source resume used to generate tailored variants. Every claim in a variant must be grounded in this document. Generated document must fit on single A4 page.
+---
+
 ## Summary
 
 Co-founder, product-oriented technical lead, and senior full-stack engineer with 11 years of experience in startup environments. I start by understanding customer problems, then take products from early concept and business requirements through development, deployment, and production release. I have led teams of up to five developers and proactively identify product opportunities and delivery risks early. Strongest in TypeScript, Clojure, and ClojureScript across front-end and back-end development.
@@ -8,7 +15,7 @@ Co-founder, product-oriented technical lead, and senior full-stack engineer with
 
 company: [Kleene](https://kleene.ai/)
 period: August 2022 - Present
-tags: Full-stack, Frontend Architecture, TypeScript, Clojure, ClojureScript, React, Recharts, PostgreSQL, ELT, AWS, Kafka, LLMs
+tags: Full-stack, Architecture, TypeScript, Clojure, ClojureScript, React, Data Visualisation, PostgreSQL, ELT, AWS, Kafka, LLMs
 
 * Owned feature delivery across the web application and back-end services, partnering with product to clarify requirements and scope before design, implementation, and release.
 * Standardized frontend data fetching, state management, and UI composition by defining and rolling out shared architecture patterns.

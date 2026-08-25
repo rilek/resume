@@ -1,3 +1,13 @@
+---
+document: resume
+variant: tailored
+language: en
+description: Tailored resume generated from the canonical English master resume.
+source: resume.md
+company: Equilibrium
+job-link: ""
+---
+
 ## Summary
 
 Senior fullstack engineer, technical lead, and startup co-founder with 11 years of experience building data-heavy business applications. Strongest in TypeScript, React, Clojure(Script), frontend architecture, and product-oriented delivery.

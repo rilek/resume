@@ -15,6 +15,41 @@ When the user provides a job description and asks to tailor the resume, create a
 - Dynamic resume variant route: `src/routes/resume.$company.tsx`
 - Cover-letter route: `src/routes/{-$lng}.cover-letter.tsx`
 
+## Resume Document Metadata
+
+Every resume markdown file begins with YAML frontmatter. The renderer strips this metadata before producing HTML, so it is not visible on the resume page.
+
+Canonical master resumes use:
+
+```yaml
+---
+document: resume
+variant: master
+language: en
+description: Canonical source resume used to generate tailored variants. Every claim in a variant must be grounded in this document.
+---
+```
+
+Tailored resumes use:
+
+```yaml
+---
+document: resume
+variant: tailored
+language: en
+description: Tailored resume generated from the canonical English master resume.
+source: resume.md
+company: Acme
+job-link: ""
+---
+```
+
+- `variant` is either `master` or `tailored`.
+- `source` is the master resume filename used to create the variant.
+- `company` is the target company, or a concise target label when no company is known.
+- `job-link` is the original job-posting URL. Leave it empty only when no URL is available.
+- Preserve and update the frontmatter when editing or generating resume variants.
+
 ## Markdown Rendering Structure
 
 Resume and cover-letter markdown headings carry layout meaning:

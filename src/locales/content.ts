@@ -233,13 +233,16 @@ const enhanceResumeMetadata = () => (tree: HastNode) => {
   groupHeadingMetadata(tree);
 };
 
+const stripDocumentFrontmatter = (value: string) =>
+  value.replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, "");
+
 const renderMarkdown = async (value: string) => {
   const html = await unified()
     .use(remarkParse)
     .use(remarkRehype)
     .use(enhanceResumeMetadata)
     .use(rehypeStringify)
-    .process(value);
+    .process(stripDocumentFrontmatter(value));
 
   return String(html);
 };

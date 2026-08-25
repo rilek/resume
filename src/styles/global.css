@@ -212,7 +212,7 @@ body {
     }
 
     & header h2 {
-      @apply text-lg font-normal tracking-wide text-gray-700;
+      @apply text-lg font-normal tracking-wide;
     }
 
     & .resume-layout-content {
@@ -224,7 +224,7 @@ body {
     }
 
     & .resume-sidebar h3 {
-      @apply text-sm font-normal text-gray-500;
+      @apply text-sm font-normal;
     }
 
     & .markdown {

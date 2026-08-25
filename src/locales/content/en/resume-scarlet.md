@@ -19,7 +19,7 @@ Senior full-stack engineer, product-oriented technical lead, and co-founder with
 
 company: [Kleene](https://kleene.ai/)
 period: August 2022 - Present
-tags: Full-stack, Clojure, ClojureScript, TypeScript, React, Architecture, PostgreSQL, Data Visualisation, ELT, AWS, Kafka, LLMs
+tags: Full-stack, Clojure, ClojureScript, TypeScript, React, Architecture, PostgreSQL, Data Visualisation, ELT, AWS, LLMs
 
 * Owned feature delivery across the web application and multiple back-end services, partnering with product and data teams to refine requirements and scope before design and implementation.
 * Standardized architecture, code conventions, and API schemas across apps.
@@ -77,7 +77,7 @@ Feature planning, end-to-end SDLC ownership, software architecture, REST API des
 
 ### Data, Infrastructure & Delivery
 
-AWS, Supabase, Kafka, ELT, CI/CD, Cypress, Playwright, Python, SQL
+AWS, Supabase, ELT, CI/CD, Cypress, Playwright, Python, SQL
 
 ## Education
 

@@ -309,6 +309,17 @@ body {
 }
 
 @media print {
+  .resume-layout .markdown h2,
+  .resume-layout .markdown h3 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  .resume-layout .markdown .markdown-heading-row {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
   .resume-layout .markdown .markdown-heading-row {
     @apply mt-2;
   }

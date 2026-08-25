@@ -2,6 +2,7 @@
   "common": {
     "title": "Rafał Ileczko",
     "subtitle": "Lead | Full-stack Product Engineer",
+    "themeToggle": "Toggle dark theme",
     "sidebar": {
       "email": {
         "title": "E-mail address",

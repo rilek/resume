@@ -3,19 +3,20 @@
 @import "shadcn/tailwind.css";
 @plugin '@tailwindcss/typography';
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-*: initial;
   --font-sans:
-    var(--sans-font), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+    var(--sans-font), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: var(--serif-font), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 :root {
-  --sans-font: 'Geist Variable';
-  --serif-font: 'Source Serif 4 Variable';
+  color-scheme: light;
+  --sans-font: "Geist Variable";
+  --serif-font: "Source Serif 4 Variable";
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -48,6 +49,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --link: oklch(0.42 0.14 260);
+  --link-hover: oklch(0.36 0.14 260);
 }
 
 /*
@@ -64,7 +67,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--border, currentcolor);
   }
   * {
     @apply border-border outline-ring/50;
@@ -73,7 +76,7 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-serif text-gray-950;
+    @apply font-serif text-foreground;
   }
 }
 
@@ -84,12 +87,44 @@
 
 @media print {
   html,
+  html.dark {
+    background: #fff !important;
+    color-scheme: light !important;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --link: oklch(0.42 0.14 260);
+    --link-hover: oklch(0.36 0.14 260);
+  }
+
+  html,
   body {
+    background: #fff !important;
+    color: #252525 !important;
     font-size: 11pt;
     print-color-adjust: exact !important;
   }
 
   .resume-layout {
+    background: #fff !important;
+    color: #252525 !important;
     max-width: none !important;
     min-height: 0 !important;
     margin: 0 !important;
@@ -125,14 +160,14 @@
 } */
 
 body {
-  @apply w-screen overflow-x-hidden text-gray-900;
+  @apply w-screen overflow-x-hidden text-foreground;
 }
 
 .markdown {
   @apply text-lg print:text-base;
 
   & h2 {
-    @apply font-bold font-sans text-base uppercase py-4 border-t-2 print:border-t border-gray-400 mb-4 print:mb-0 not-first-of-type:mt-8 print:not-first-of-type:mt-4 print:pt-2 print:text-xs;
+    @apply font-bold font-sans text-base uppercase py-4 border-t-2 print:border-t border-border mb-4 print:mb-0 not-first-of-type:mt-8 print:not-first-of-type:mt-4 print:pt-2 print:text-xs;
   }
 
   & h3 {
@@ -148,7 +183,7 @@ body {
   }
 
   & li {
-    @apply pl-2 my-1.5 print:my-px marker:text-gray-300;
+    @apply pl-2 my-1.5 print:my-px marker:text-muted-foreground;
   }
 
   & p {
@@ -160,7 +195,7 @@ body {
   }
 
   & a {
-    @apply text-blue-900;
+    @apply text-link;
   }
 
   & .markdown-heading-row {
@@ -191,7 +226,7 @@ body {
     @apply flex flex-wrap gap-1 pl-0 my-2 print:my-1;
 
     & li {
-      @apply block py-0.5 px-2 m-0 text-sm rounded-full bg-gray-200 print:px-[4pt] print:py-[1pt] print:text-xs;
+      @apply block py-0.5 px-2 m-0 text-sm rounded-full bg-muted print:px-[4pt] print:py-[1pt] print:text-xs;
     }
   }
 
@@ -200,11 +235,11 @@ body {
   }
 }
 
-/* Small homepage-only refinements that retain the original print-first design. */
+/* Shared screen refinements that retain the original print-first design. */
 @media screen {
-  .resume-homepage {
+  .resume-layout {
     & a {
-      @apply text-blue-900 transition-colors hover:text-blue-700;
+      @apply text-link transition-colors hover:text-link-hover;
     }
 
     & header h1 {
@@ -220,7 +255,7 @@ body {
     }
 
     & .resume-sidebar {
-      @apply gap-5 text-gray-600;
+      @apply gap-5 text-muted-foreground;
     }
 
     & .resume-sidebar h3 {
@@ -232,11 +267,11 @@ body {
     }
 
     & .markdown h2 {
-      @apply border-t border-gray-300 py-3 mb-3 not-first-of-type:mt-9;
+      @apply border-t border-border py-3 mb-3 not-first-of-type:mt-9;
     }
 
     & .markdown h3 {
-      @apply mt-3 text-gray-700;
+      @apply mt-3 text-foreground;
     }
 
     & .markdown .markdown-heading-row {
@@ -244,57 +279,57 @@ body {
     }
 
     & .markdown .markdown-meta {
-      @apply text-base text-gray-500;
+      @apply text-base text-muted-foreground;
     }
 
     & .markdown ul:not(.markdown-tags) li {
-      @apply my-1 marker:text-gray-400;
+      @apply my-1 marker:text-muted-foreground;
     }
 
     & .markdown .markdown-tags {
       @apply gap-0 mt-1 mb-1.5;
 
       & li {
-        @apply border-0 bg-transparent p-0 font-sans text-[0.8rem] font-medium tracking-[0.02em] text-gray-500;
+        @apply border-0 bg-transparent p-0 font-sans text-[0.8rem] font-medium tracking-[0.02em] text-muted-foreground;
       }
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .resume-homepage {
+  .resume-layout {
     & .resume-layout-content {
       @apply gap-y-6;
     }
 
     & .resume-sidebar {
-      @apply border-t border-gray-200 pt-5;
+      @apply border-t border-border pt-5;
     }
   }
 }
 
 @media print {
-  .resume-homepage .markdown .markdown-heading-row {
+  .resume-layout .markdown .markdown-heading-row {
     @apply mt-2;
   }
 
-  .resume-homepage .markdown h2 + .markdown-heading-row {
+  .resume-layout .markdown h2 + .markdown-heading-row {
     @apply mt-0;
   }
 
-  .resume-homepage .markdown .markdown-heading-row .markdown-tags {
+  .resume-layout .markdown .markdown-heading-row .markdown-tags {
     @apply mt-0 mb-0;
   }
 
-  .resume-homepage .markdown .markdown-tags li {
-    @apply inline-flex items-center border-0 bg-transparent p-0 font-sans text-[0.6rem] leading-none font-medium tracking-[0.02em] text-gray-500;
+  .resume-layout .markdown .markdown-tags li {
+    @apply inline-flex items-center border-0 bg-transparent p-0 font-sans text-[0.6rem] leading-none font-medium tracking-[0.02em] text-muted-foreground;
   }
 }
 
-.resume-homepage .markdown .markdown-tags li + li::before {
+.resume-layout .markdown .markdown-tags li + li::before {
   content: "/";
   margin: 0 0.35rem;
-  color: var(--color-gray-400);
+  color: var(--muted-foreground);
 }
 
 /*
@@ -335,6 +370,8 @@ body {
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -349,6 +386,7 @@ body {
 */
 
 .dark {
+  color-scheme: dark;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -380,4 +418,6 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --link: oklch(0.72 0.14 260);
+  --link-hover: oklch(0.8 0.1 260);
 }

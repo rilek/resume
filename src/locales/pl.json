@@ -2,6 +2,7 @@
   "common": {
     "title": "Rafał Ileczko",
     "subtitle": "Full-stack Product Developer",
+    "themeToggle": "Przełącz tryb ciemny",
     "sidebar": {
       "email": {
         "title": "Adres email",

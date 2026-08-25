@@ -19,7 +19,7 @@ const socialIcons = {
 };
 
 const TextLink = ({ children, ...props }: LinkProps) => (
-  <a className="text-blue-700 transition-colors hover:text-blue-500" {...props}>
+  <a className="text-link transition-colors hover:text-link-hover" {...props}>
     {children}
   </a>
 );
@@ -64,7 +64,11 @@ const LinksSection = ({ title, data }: SidebarData["links"]) => (
         const Icon = socialIcons[icon as keyof typeof socialIcons];
 
         return (
-          <a className="flex items-center gap-2 text-blue-700 hover:underline" href={href} key={i}>
+          <a
+            className="flex items-center gap-2 text-link hover:text-link-hover hover:underline"
+            href={href}
+            key={i}
+          >
             <Icon size={16} />
             <span>{linkTitle}</span>
           </a>

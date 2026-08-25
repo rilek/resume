@@ -18,7 +18,7 @@ const Navigation = () => {
       <h1 className="hidden">Navigation Menu</h1>
 
       <button
-        className="bg-white border rounded-l py-2 px-3 border-r-0 -mr-px flex flex-col z-10 items-center justify-center w-14 h-14"
+        className="bg-background text-foreground border-border rounded-l border border-r-0 py-2 px-3 -mr-px flex flex-col z-10 items-center justify-center w-14 h-14"
         onClick={onToggle}
       >
         <Menu />
@@ -32,7 +32,7 @@ const Navigation = () => {
               <Link
                 to="/{-$lng}"
                 params={{ lng: undefined }}
-                className="flex gap-2 text-blue-700 hover:underline"
+                className="flex gap-2 text-link hover:text-link-hover hover:underline"
               >
                 Resume
               </Link>
@@ -41,7 +41,7 @@ const Navigation = () => {
               <Link
                 to="/{-$lng}/cover-letter"
                 params={{ lng: undefined }}
-                className="flex gap-2 text-blue-700 hover:underline"
+                className="flex gap-2 text-link hover:text-link-hover hover:underline"
               >
                 Cover letter
               </Link>

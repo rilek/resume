@@ -18,10 +18,8 @@ function RouteComponent() {
   const html = Route.useLoaderData();
 
   return (
-    <div className="resume-homepage">
-      <Layout sidebar={<Sidebar lng={lng} />} header={<Header lng={lng} />}>
-        <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
-      </Layout>
-    </div>
+    <Layout sidebar={<Sidebar lng={lng} />} header={<Header lng={lng} />}>
+      <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
   );
 }

@@ -162,6 +162,51 @@ const metadataToNode = ({ title, period, tags }: ResumeMetadata): HastNode =>
       : []),
   ]);
 
+const hasClass = (node: HastNode, className: string) =>
+  node.type === "element" &&
+  node.tagName === "div" &&
+  Array.isArray(node.properties?.className) &&
+  node.properties.className.includes(className);
+
+const isMetadataBlock = (node: HastNode) => hasClass(node, "markdown-meta-block");
+
+const isHeadingMetadataRow = (node: HastNode) => hasClass(node, "markdown-heading-row");
+
+const isWhitespace = (node: HastNode | undefined) =>
+  node?.type === "text" && !node.value?.trim();
+
+const groupHeadingMetadata = (node: HastNode) => {
+  if (!node.children) {
+    return;
+  }
+
+  const children: HastNode[] = [];
+
+  for (let index = 0; index < node.children.length; index += 1) {
+    const child = node.children[index];
+    let metadataIndex = index + 1;
+
+    while (isWhitespace(node.children[metadataIndex])) {
+      metadataIndex += 1;
+    }
+
+    const metadata = node.children[metadataIndex];
+
+    if (child?.type === "element" && child.tagName === "h3" && metadata && isMetadataBlock(metadata)) {
+      children.push(element("div", { className: ["markdown-heading-row"] }, [child, metadata]));
+      index = metadataIndex;
+      continue;
+    }
+
+    if (child) {
+      children.push(child);
+    }
+  }
+
+  node.children = children;
+  node.children.filter((child) => !isHeadingMetadataRow(child)).forEach(groupHeadingMetadata);
+};
+
 const enhanceResumeMetadata = () => (tree: HastNode) => {
   const transformChildren = (node: HastNode) => {
     if (!node.children) {
@@ -177,6 +222,7 @@ const enhanceResumeMetadata = () => (tree: HastNode) => {
   };
 
   transformChildren(tree);
+  groupHeadingMetadata(tree);
 };
 
 const renderMarkdown = async (value: string) => {

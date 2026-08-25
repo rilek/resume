@@ -50,7 +50,7 @@ const WebsiteSection = ({ title, value }: SidebarData["webpage"]) => (
 );
 
 const LanguagesSection = ({ title, data }: SidebarData["languages"]) => (
-  <SidebarSectionRenderer title={title} className="print:hidden">
+  <SidebarSectionRenderer title={title} className="sidebar-languages md:hidden">
     {data.map((language, i) => {
       return <p key={i}>{language}</p>;
     })}
@@ -66,8 +66,7 @@ const LinksSection = ({ title, data }: SidebarData["links"]) => (
         return (
           <a className="flex items-center gap-2 text-blue-700 hover:underline" href={href} key={i}>
             <Icon size={16} />
-            <span className="_print:hidden">{linkTitle}</span>
-            {/* <span className="hidden print:block">{shortUrl}</span> */}
+            <span>{linkTitle}</span>
           </a>
         );
       })}
@@ -98,7 +97,7 @@ export const Sidebar = ({ lng, ...props }: HTMLAttributes<HTMLElement> & { lng: 
     <div
       {...props}
       className={clsx(
-        "grid grid-cols-2 lg:text-lg md:grid-cols-1 print:grid-cols-4 gap-6 print:text-xs print:flex  print:gap-6",
+        "resume-sidebar flex max-w-[28rem] flex-wrap justify-end gap-6 max-md:grid max-md:grid-cols-2",
         props.className,
       )}
     >

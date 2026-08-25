@@ -18,7 +18,7 @@ function RouteComponent() {
   const html = Route.useLoaderData();
 
   return (
-    <Layout sidebar={<Sidebar lng={lng} className="print:hidden" />} header={<Header lng={lng} />}>
+    <Layout sidebar={<Sidebar lng={lng} className="cover-letter-sidebar" />} header={<Header lng={lng} />}>
       <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );

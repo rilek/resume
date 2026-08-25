@@ -7,11 +7,11 @@ type LayoutProps = PropsWithChildren<{
 
 export const Layout = ({ sidebar, header, children }: LayoutProps) => {
   return (
-    <div className="relative max-w-5xl py-6 mx-4 overflow-hidden font-serif md:mx-12 md:py-8 lg:mx-auto lg:py-16 print:mx-0! print:py-0!">
-      <main className="grid grid-cols-1 md:grid-cols-[256px_1fr] gap-y-8 gap-x-4 lg:gap-x-12 print:gap-y-8! print:grid-cols-[1fr_auto]!">
-        <div className="md:col-span-2 print:col-span-1">{header}</div>
+    <div className="resume-layout relative w-full max-w-6xl min-h-[297mm] mx-auto px-6 py-10 overflow-hidden font-serif md:px-[56pt] md:py-[40pt]">
+      <main className="resume-layout-content grid grid-cols-[minmax(0,1fr)_minmax(22rem,28rem)] max-md:grid-cols-1 gap-y-8 gap-x-6">
+        <div>{header}</div>
         <div>{sidebar}</div>
-        <div className="print:col-span-2">{children}</div>
+        <div className="resume-layout-body col-span-2 max-md:col-span-1">{children}</div>
       </main>
     </div>
   );

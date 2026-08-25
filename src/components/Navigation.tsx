@@ -32,7 +32,7 @@ const Navigation = () => {
               <Link
                 to="/{-$lng}"
                 params={{ lng: undefined }}
-                className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
+                className="flex gap-2 text-blue-700 hover:underline"
               >
                 Resume
               </Link>
@@ -41,7 +41,7 @@ const Navigation = () => {
               <Link
                 to="/{-$lng}/cover-letter"
                 params={{ lng: undefined }}
-                className="flex gap-2 text-blue-700 hover:underline print:text-inherit"
+                className="flex gap-2 text-blue-700 hover:underline"
               >
                 Cover letter
               </Link>

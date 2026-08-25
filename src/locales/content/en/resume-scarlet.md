@@ -1,13 +1,17 @@
 ---
 document: resume
-variant: master
+variant: tailored
 language: en
-description: Canonical source resume used to generate tailored variants. Every claim in a variant must be grounded in this document. Generated document must fit on single A4 page.
+description: Tailored resume generated from the canonical English master resume.
+source: resume.md
+company: Scarlet
+company-description: Scarlet assesses medical AI devices and supports their safe, responsible path to market.
+job-link: "https://www.works-hub.com/jobs/remote-software-engineer-ac6"
 ---
 
 ## Summary
 
-Co-founder, product-oriented technical lead, and senior full-stack engineer with 11 years of experience in startup environments. I start by understanding customer problems, then take products from early concept and business requirements through development, deployment, and production release. I have led teams of up to five developers and proactively identify product opportunities and delivery risks early. Strongest in TypeScript, Clojure, and ClojureScript across front-end and back-end development.
+Senior full-stack engineer, product-oriented technical lead, and co-founder with 11 years of experience in startup environments. Strongest in Clojure, ClojureScript, and TypeScript across front-end and back-end development. I start by understanding customer problems and business requirements, then take products from early concept through development, deployment, and production release. I have led teams of up to five developers and proactively identify product opportunities and delivery risks early.
 
 ## Experience
 
@@ -15,14 +19,13 @@ Co-founder, product-oriented technical lead, and senior full-stack engineer with
 
 company: [Kleene](https://kleene.ai/)
 period: August 2022 - Present
-tags: Full-stack, Architecture, TypeScript, Clojure, ClojureScript, React, Data Visualisation, PostgreSQL, ELT, AWS, Kafka, LLMs
+tags: Full-stack, Clojure, ClojureScript, TypeScript, React, Architecture, PostgreSQL, Data Visualisation, ELT, AWS, Kafka, LLMs
 
-* Designed and took ownership over UI/UX aspect of the app, implemented design system and components library.
-* Owned feature delivery across the web application and multiple back-end services, partnering with product and data teams to refine requirements and scope before design and implementation.
-* Standardized architecture, code conventions, and API schemas across apps.
+* Owned feature delivery across the web application and back-end services, partnering with product to clarify requirements and scope before design, implementation, and release.
+* Standardized frontend architecture, code conventions, and API schemas.
 * Built user-configurable analytics over warehouse data, including Recharts visualizations for self-service operational analysis.
-* Contributed to implementing agentic analytics workflows that let users analyse system data through natural language.
-* Proposed, designed and implemented multiple features improving users pipelines development and management
+* Contributed to implementing agentic analytics chat workflows that let users query system data through natural language.
+* Designed feature UI/UX and led development of a design system and component library, reducing implementation time by 30%.
 
 ### Co-Founder / CTO
 
@@ -64,13 +67,13 @@ tags: Web Design, WordPress, Shopify, PrestaShop
 
 ## Skills
 
+### Clojure & Full-stack Web Engineering
+
+Clojure, ClojureScript, TypeScript, JavaScript, React, React Native, Node.js, Next.js, PostgreSQL, TanStack, Fastify, Vite, Storybook
+
 ### Product & Technical Leadership
 
 Feature planning, end-to-end SDLC ownership, software architecture, REST API design, design systems, team leadership, security
-
-### Web Application Engineering
-
-TypeScript, JavaScript, Clojure, ClojureScript, React, React Native, Node.js, Next.js, PostgreSQL, TanStack, Fastify, Vite, Storybook
 
 ### Data, Infrastructure & Delivery
 

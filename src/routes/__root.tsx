@@ -11,6 +11,10 @@ import { getRouteLanguage } from "@/locales/language";
 import "@/styles/global.css";
 import { getLanguage } from "@/utils";
 
+
+import '@fontsource-variable/source-serif-4/wght.css';
+import '@fontsource-variable/geist/wght.css';
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [

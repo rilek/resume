@@ -8,74 +8,14 @@
 @theme {
   --font-*: initial;
   --font-sans:
-    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    var(--sans-font), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --font-serif: var(--source-font), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-@font-face {
-  font-family: "Source Serif Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../assets/SourceSerifPro-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Source Serif Pro";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../assets/SourceSerifPro-Black.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Geist Variable";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("@fontsource-variable/geist/files/geist-cyrillic-ext-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-
-@font-face {
-  font-family: "Geist Variable";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("@fontsource-variable/geist/files/geist-cyrillic-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-@font-face {
-  font-family: "Geist Variable";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("@fontsource-variable/geist/files/geist-vietnamese-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-
-@font-face {
-  font-family: "Geist Variable";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("@fontsource-variable/geist/files/geist-latin-ext-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: "Geist Variable";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("@fontsource-variable/geist/files/geist-latin-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  --font-serif: var(--serif-font), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 :root {
-  --source-font: "Source Serif Pro";
+  --sans-font: 'Geist Variable';
+  --serif-font: 'Source Serif 4 Variable';
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -133,7 +73,7 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-serif text-gray-950;
   }
 }
 
@@ -192,7 +132,7 @@ body {
   @apply text-lg print:text-base;
 
   & h2 {
-    @apply font-bold font-sans text-base uppercase py-4 border-t-2 print:border-t border-slate-400 mb-4 print:mb-0 not-first-of-type:mt-8 print:not-first-of-type:mt-4 print:pt-2 print:text-xs;
+    @apply font-bold font-sans text-base uppercase py-4 border-t-2 print:border-t border-gray-400 mb-4 print:mb-0 not-first-of-type:mt-8 print:not-first-of-type:mt-4 print:pt-2 print:text-xs;
   }
 
   & h3 {
@@ -251,7 +191,7 @@ body {
     @apply flex flex-wrap gap-1 pl-0 my-2 print:my-1;
 
     & li {
-      @apply block py-0.5 px-2 m-0 text-sm rounded-full bg-slate-200 print:px-[4pt] print:py-[1pt] print:text-xs;
+      @apply block py-0.5 px-2 m-0 text-sm rounded-full bg-gray-200 print:px-[4pt] print:py-[1pt] print:text-xs;
     }
   }
 
@@ -272,7 +212,7 @@ body {
     }
 
     & header h2 {
-      @apply text-lg font-normal tracking-wide text-slate-600;
+      @apply text-lg font-normal tracking-wide text-gray-700;
     }
 
     & .resume-layout-content {
@@ -280,11 +220,11 @@ body {
     }
 
     & .resume-sidebar {
-      @apply gap-5 text-slate-600;
+      @apply gap-5 text-gray-600;
     }
 
     & .resume-sidebar h3 {
-      @apply text-sm font-normal text-slate-500;
+      @apply text-sm font-normal text-gray-500;
     }
 
     & .markdown {
@@ -292,11 +232,11 @@ body {
     }
 
     & .markdown h2 {
-      @apply border-t border-slate-300 py-3 mb-3 not-first-of-type:mt-9;
+      @apply border-t border-gray-300 py-3 mb-3 not-first-of-type:mt-9;
     }
 
     & .markdown h3 {
-      @apply mt-3;
+      @apply mt-3 text-gray-700;
     }
 
     & .markdown .markdown-heading-row {
@@ -304,18 +244,18 @@ body {
     }
 
     & .markdown .markdown-meta {
-      @apply text-base text-slate-500;
+      @apply text-base text-gray-500;
     }
 
     & .markdown ul:not(.markdown-tags) li {
-      @apply my-1 marker:text-slate-400;
+      @apply my-1 marker:text-gray-400;
     }
 
     & .markdown .markdown-tags {
       @apply gap-0 mt-1 mb-1.5;
 
       & li {
-        @apply border-0 bg-transparent p-0 font-sans text-[0.8rem] font-medium tracking-[0.02em] text-slate-500;
+        @apply border-0 bg-transparent p-0 font-sans text-[0.8rem] font-medium tracking-[0.02em] text-gray-500;
       }
     }
   }
@@ -328,7 +268,7 @@ body {
     }
 
     & .resume-sidebar {
-      @apply border-t border-slate-200 pt-5;
+      @apply border-t border-gray-200 pt-5;
     }
   }
 }
@@ -347,14 +287,14 @@ body {
   }
 
   .resume-homepage .markdown .markdown-tags li {
-    @apply inline-flex items-center border-0 bg-transparent p-0 font-sans text-[0.6rem] leading-none font-medium tracking-[0.02em] text-slate-500;
+    @apply inline-flex items-center border-0 bg-transparent p-0 font-sans text-[0.6rem] leading-none font-medium tracking-[0.02em] text-gray-500;
   }
 }
 
 .resume-homepage .markdown .markdown-tags li + li::before {
   content: "/";
   margin: 0 0.35rem;
-  color: var(--color-slate-400);
+  color: var(--color-gray-400);
 }
 
 /*

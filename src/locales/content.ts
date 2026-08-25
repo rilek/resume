@@ -147,7 +147,15 @@ const metadataToNode = ({ title, period, tags }: ResumeMetadata): HastNode =>
           element(
             "p",
             { className: ["markdown-meta"] },
-            [...(title ?? []), ...(title && period ? [text(" · ")] : []), ...(period ?? [])],
+            [
+              ...(title
+                ? [element("span", { className: ["markdown-meta-title"] }, title)]
+                : []),
+              ...(title && period ? [text(" · ")] : []),
+              ...(period
+                ? [element("span", { className: ["markdown-meta-period"] }, period)]
+                : []),
+            ],
           ),
         ]
       : []),
